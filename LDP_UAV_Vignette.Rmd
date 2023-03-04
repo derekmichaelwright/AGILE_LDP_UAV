@@ -1116,28 +1116,21 @@ mp <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6322,
 ggsave("Figure_03.png", mp, width = 6, height = 3, dpi = 600)
 ```
 
-```{r eval = F, echo = F}
+```{r}
 #
 mp1 <- ggGrowthCoefs(xd = it17_gc.v, xf = it17_f, myPlot = 229, myTitle = "Italy 2017",
                      myYmax = 0.6, minDAP = 100, maxDAP = 155)
 mp2 <- ggGrowthCoefs(xd = it17_gc.v, xf = it17_f, myPlot = 225, myTitle = "Italy 2017", 
                      myYmax = 0.6, minDAP = 100, maxDAP = 155)
 mp <- ggarrange(mp1, mp2, ncol = 1)
-ggsave("Additional/Figure_x_1.png", mp, width = 10.6, height = 6)
+ggsave("Additional/GrowthCurves/06_It17_E155.png", mp, width = 10.6, height = 6)
 #
 mp1 <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6986, myTitle = "Rosthern 2017", 
                      myYmax = 0.3, minDAP = 25, maxDAP = 65)
 mp2 <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6322, myTitle = "Rosthern 2017",
                      myYmax = 0.3, minDAP = 25, maxDAP = 65)
 mp <- ggarrange(mp1, mp2, ncol = 1)
-ggsave("Additional/Figure_x_2.png", mp, width = 10.6, height = 6)
-#
-mp1 <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6986, myTitle = "Rosthern 2017", 
-                     myYmax = 0.3, minDAP = 25, maxDAP = 65)
-mp2 <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6322, myTitle = "Rosthern 2017",
-                     myYmax = 0.3, minDAP = 25, maxDAP = 65)
-mp <- ggarrange(mp1, mp2, ncol = 1)
-ggsave("Additional/Figure_x_3.png", mp, width = 10.6, height = 6)
+ggsave("Additional/GrowthCurves/06_Ro17_E065.png", mp, width = 10.6, height = 6)
 ```
 
 ---
@@ -1184,7 +1177,6 @@ mp1 <- ggDroneTrait(xx = xx, myTitle = "A) Metaponto, Italy 2017",
                                 "mean_crop_height_m_excess.green.based",
                                 "crop_area_m2_excess.green.based"),
                    myTraitNames = c("Volume", "Height", "Area"))
-ggsave("Additional/Additional_Figure_1_It17.png", mp1, width = 10, height = 4.5)
 # Rosthern 2017
 mp2 <- ggDroneTrait(xx = ro17_d, myTitle = "B) Rosthern, Canada", 
                    myDAPs = c(24,32,40,54,61,67,74,80,89,95),
@@ -1192,7 +1184,6 @@ mp2 <- ggDroneTrait(xx = ro17_d, myTitle = "B) Rosthern, Canada",
                                 "mean_crop_height_m_blue.ndvi.based",
                                 "crop_area_m2_blue.ndvi.based"),
                    myTraitNames = c("Volume", "Height", "Area"))
-ggsave("Additional/Additional_Figure_1_Ro17.png", mp2, width = 12, height = 3.5)
 # Sutherland 2017
 mp3 <- ggDroneTrait(xx = su17_d, myTitle = "C) Sutherland, Canada", 
                    myDAPs = c(32,40,46,51,57,61,68,72,75,77,83),
@@ -1200,7 +1191,6 @@ mp3 <- ggDroneTrait(xx = su17_d, myTitle = "C) Sutherland, Canada",
                                 "mean_crop_height_m_blue.ndvi.based",
                                 "crop_area_m2_blue.ndvi.based"),
                    myTraitNames = c("Volume", "Height", "Area"))
-ggsave("Additional/Additional_Figure_1_Su17.png", mp3, width = 12, height = 3.5)
 # Sutherland 2018
 mp4 <- ggDroneTrait(xx = su18_d, myTitle = "D) Sutherland, Canada 2018", 
                    myDAPs = c(42,55,58,61,65,68,72,76,79,86),
@@ -1208,7 +1198,6 @@ mp4 <- ggDroneTrait(xx = su18_d, myTitle = "D) Sutherland, Canada 2018",
                                 "mean_crop_height_m_excess.green.based",
                                 "crop_area_m2_excess.green.based"),
                    myTraitNames = c("Volume", "Height", "Area"))
-ggsave("Additional/Additional_Figure_1_Su18.png", mp4, width = 12, height = 3.5)
 #
 mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 1, nrow = 4, 
                 common.legend = T, legend = "bottom")
@@ -1258,7 +1247,7 @@ pca_gc <- function(xx, clustNum = 8) {
 myClustnum <- 8
 #
 x1 <- it17_gc.v[[2]] %>% 
-  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>% #g.r
+  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>%
   left_join(phenolGrowth(xd = it17_gc.v[[2]], xf = it17_f), by = "Plot") %>% 
   select(-xmid.DTF, -xmid.DTM, -xmax.DTM, -at.DTM)
 colnames(x1)[4:ncol(x1)] <- paste0("It17_v.", colnames(x1)[4:ncol(x1)])
@@ -1282,7 +1271,7 @@ myX1 <- left_join(x2, x3, by = c("Plot","Entry","Name")) %>%
   spread(Trait, Value) %>% select(-Entry)
 #
 x1 <- su17_gc.v[[2]] %>% 
-  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>% #g.r
+  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>% 
   left_join(phenolGrowth(xd = su17_gc.v[[2]], xf = su17_f), by = "Plot") %>% 
   select(-xmid.DTF, -xmid.DTM, -xmax.DTM, -at.DTM)
 colnames(x1)[4:ncol(x1)] <- paste0("Su17_v.", colnames(x1)[4:ncol(x1)])
@@ -1305,36 +1294,10 @@ myX2 <- left_join(x2, x3, by = c("Plot","Entry","Name")) %>%
   ungroup() %>%
   spread(Trait, Value) %>% select(-Entry)
 #
-x1 <- ro17_gc.v[[2]] %>% 
-  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>% #g.r
-  left_join(phenolGrowth(xd = ro17_gc.v[[2]], xf = ro17_f), by = "Plot") %>% 
-  select(-xmid.DTF, -xmid.DTM, -xmax.DTM, -at.DTM)
-colnames(x1)[4:ncol(x1)] <- paste0("Ro17_v.", colnames(x1)[4:ncol(x1)])
-x2 <- ro17_gc.a[[2]] %>% 
-  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>%
-  left_join(phenolGrowth(xd = ro17_gc.a[[2]], xf = ro17_f), by = "Plot") %>% 
-  select(-xmid.DTF, -xmid.DTM, -xmax.DTM, -at.DTM)
-colnames(x2)[4:ncol(x2)] <- paste0("Ro17_a.", colnames(x2)[4:ncol(x2)])
-x3 <- ro17_gc.h[[2]] %>% 
-  select(Plot, Entry, Name, k, x.mid, x.d, g.r) %>%
-  left_join(phenolGrowth(xd = ro17_gc.h[[2]], xf = ro17_f), by = "Plot") %>% 
-  select(-xmid.DTF, -xmid.DTM, -xmax.DTM, -at.DTM)
-colnames(x3)[4:ncol(x3)] <- paste0("Ro17_h.", colnames(x3)[4:ncol(x3)])
-myX3 <- left_join(x2, x3, by = c("Plot","Entry","Name")) %>% 
-  left_join(x1, by = c("Plot","Entry","Name")) %>%
-  select(-Plot) %>%
-  gather(Trait, Value, 3:ncol(.)) %>%
-  group_by(Entry, Name, Trait) %>% 
-  summarise(Value = mean(Value, na.rm = T)) %>%
-  ungroup() %>%
-  spread(Trait, Value) %>% select(-Entry)
-#
 myPCAinput <- left_join(myX1, myX2, by = "Name") %>%
-  #left_join(myX3, by = "Name") %>%
   column_to_rownames("Name")
 sum(is.na(myPCAinput))
 #
-#myPCA <- pca_gc(xx = myPCAinput, clustNum = myClustnum) %>%
 mypca <- PCA(myPCAinput, ncp = 10, graph = F)
 mypcaH <- HCPC(mypca, nb.clust = myClustnum, graph = F)
 perc <- round(mypca[[1]][,2], 1)
@@ -1349,29 +1312,26 @@ myPCA <- left_join(x1, x2, by = "Name") %>%
 write.csv(myPCA, "myPCA.csv", row.names = F)
 write.csv(myPCAinput, "myPCAinput.csv", row.names = F)
 #
-myTraits1 <- c("It17_v.k", "It17_h.k", "It17_a.k", "It17_v.x.mid", "It17_h.x.mid", "It17_a.x.mid",
-               "Su17_v.k", "Su17_h.k", "Su17_a.k", "Su17_v.x.mid", "Su17_h.x.mid", "Su17_a.x.mid",
-               #"Ro17_v.k", "Ro17_h.k", "Ro17_a.k", "Ro17_v.x.mid", "Ro17_h.x.mid", "Ro17_a.x.mid",
-               #
-               "It17_v.perc.DTF", "It17_h.perc.DTF", "It17_a.perc.DTF",
-               "It17_v.at.DTF", "It17_h.at.DTF", "It17_a.at.DTF",
-               
-               "Su17_v.perc.DTF", "Su17_h.perc.DTF", "Su17_a.perc.DTF",
-               "Su17_v.at.DTF", "Su17_h.at.DTF", "Su17_a.at.DTF",
-               "It17_v.xmax.DTF", "It17_h.xmax.DTF", "It17_a.xmax.DTF", 
-               "Su17_v.xmax.DTF", "Su17_h.xmax.DTF", "Su17_a.xmax.DTF",
-               #"Ro17_v.perc.DTF", "Ro17_h.perc.DTF", "Ro17_a.perc.DTF",
-               #"Ro17_v.xmax.DTF", "Ro17_h.xmax.DTF", "Ro17_a.xmax.DTF",
-               #
-               "It17_v.x.d", "It17_h.x.d", "It17_a.x.d", "It17_v.g.r", "It17_h.g.r", "It17_a.g.r",
-               "Su17_v.x.d", "Su17_h.x.d", "Su17_a.x.d", "Su17_v.g.r", "Su17_h.g.r", "Su17_a.g.r"#, 
-               #"Ro17_v.x.d", "Ro17_h.x.d", "Ro17_a.x.d", "Ro17_v.g.r", "Ro17_h.g.r", "Ro17_a.g.r"
-               )
+myTs <- c("It17_v.k", "It17_h.k", "It17_a.k", "It17_v.x.mid", "It17_h.x.mid", "It17_a.x.mid",
+          "Su17_v.k", "Su17_h.k", "Su17_a.k", "Su17_v.x.mid", "Su17_h.x.mid", "Su17_a.x.mid",
+          #
+          "It17_v.perc.DTF", "It17_h.perc.DTF", "It17_a.perc.DTF",
+          "It17_v.at.DTF", "It17_h.at.DTF", "It17_a.at.DTF",
+          #
+          "Su17_v.perc.DTF", "Su17_h.perc.DTF", "Su17_a.perc.DTF",
+          "Su17_v.at.DTF", "Su17_h.at.DTF", "Su17_a.at.DTF",
+          "It17_v.xmax.DTF", "It17_h.xmax.DTF", "It17_a.xmax.DTF", 
+          "Su17_v.xmax.DTF", "Su17_h.xmax.DTF", "Su17_a.xmax.DTF",
+          #
+          "It17_v.x.d", "It17_h.x.d", "It17_a.x.d", "It17_v.g.r", "It17_h.g.r", "It17_a.g.r",
+          "Su17_v.x.d", "Su17_h.x.d", "Su17_a.x.d", "Su17_v.g.r", "Su17_h.g.r", "Su17_a.g.r"
+          )
+#
 xx <- myPCAinput %>% rownames_to_column("Name") %>%
   left_join(select(myPCA, Entry, Name, Origin, Cluster), by = "Name") %>%
   select(Entry, Name, Origin, Cluster, everything()) %>%
   gather(Trait, Value, 5:ncol(.)) %>%
-  mutate(Trait = factor(Trait, levels = myTraits1))
+  mutate(Trait = factor(Trait, levels = myTs))
 mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
   geom_quasirandom(alpha = 0.7) +
   facet_wrap(Trait ~ ., scales = "free_y", ncol = 6) +
@@ -1402,7 +1362,7 @@ mp <- ggplot(xx, aes(x = Cluster, y = HA_Ratio, size = Volume, fill = Cluster)) 
   theme_AGL +
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank())
-ggsave("Additional/Additional_Figure_02_1.png", mp, width = 8, height = 4, dpi = 600)
+ggsave("Additional/PCA/Additional_Figure_01.png", mp, width = 8, height = 4, dpi = 600)
 #
 xx <- myPCAinput %>% rownames_to_column("Name") %>% 
   as.data.frame() %>%
@@ -1419,7 +1379,7 @@ mp <- ggplot(xx, aes(x = Cluster, y = Value, fill = Cluster)) +
   theme_AGL +
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank())
-ggsave("Additional/Additional_Figure_02_2.png", mp, width = 8, height = 4, dpi = 600)
+ggsave("Additional/PCA/Additional_Figure_02.png", mp, width = 8, height = 4, dpi = 600)
 ```
 
 ## Clusters Test
@@ -1480,28 +1440,27 @@ ggplot(xx, aes(x = Cluster, y = x.min)) +
 
 ```{r}
 # Prep data
-# v.k, h.k, a.k, h.x.mid, a.x.mid, v.perc.DTF, v.x.d 
-myTraits <- c("It17_v.k", "It17_h.k", "It17_a.k", 
-              "It17_h.x.mid", "It17_a.x.mid", 
-              "It17_v.perc.DTF", "It17_v.at.DTF", #"It17_v.x.d", 
-              #
-              "Su17_v.k", "Su17_h.k", "Su17_a.k",
-              "Su17_h.x.mid", "Su17_a.x.mid",
-              "Su17_v.perc.DTF", "Su17_v.at.DTF") #"Su17_v.x.d",
-myTraits_new <- c("A) It17 Max V", "B) It17 Max H", "C) It17 Max A", 
-                  "D) It17 H x.mid", "E) It17 A x.mid", 
-                  "F) It17 % V at DTF", "G) It17 V at DTF", #"F) It17 V x.d",
-                  #
-                  "H) Su17 Max V", "I) Su17 Max H", "J) Su17 Max A",
-                  "K) Su17 H x.mid", "L) Su17 A x.mid",
-                  "M) Su17 % V at DTF", "N) Su17 V at DTF") #"M) Su17 V x.d",
+myTs1 <- c("It17_v.k", "It17_h.k", "It17_a.k", 
+           "It17_h.x.mid", "It17_a.x.mid", 
+           "It17_v.perc.DTF", "It17_v.at.DTF", 
+           #
+           "Su17_v.k", "Su17_h.k", "Su17_a.k",
+           "Su17_h.x.mid", "Su17_a.x.mid",
+           "Su17_v.perc.DTF", "Su17_v.at.DTF") 
+myTs2 <- c("A) It17 Max V", "B) It17 Max H", "C) It17 Max A", 
+           "D) It17 H x.mid", "E) It17 A x.mid", 
+           "F) It17 % V at DTF", "G) It17 V at DTF",
+           #
+           "H) Su17 Max V", "I) Su17 Max H", "J) Su17 Max A",
+           "K) Su17 H x.mid", "L) Su17 A x.mid",
+           "M) Su17 % V at DTF", "N) Su17 V at DTF")
 xx <- myPCAinput %>% rownames_to_column("Name") %>%
   left_join(select(myPCA, Entry, Name, Origin, Cluster), by = "Name") %>%
   select(Entry, Name, Origin, Cluster, everything()) %>%
   gather(Trait, Value, 5:ncol(.)) %>%
   filter(Trait %in% myTraits) %>%
-  mutate(Trait = plyr::mapvalues(Trait, myTraits, myTraits_new),
-         Trait = factor(Trait, levels = myTraits_new))
+  mutate(Trait = plyr::mapvalues(Trait, myTs1, myTs2),
+         Trait = factor(Trait, levels = myTs2))
 # Plot
 mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
   geom_quasirandom(alpha = 0.7) +
@@ -1524,47 +1483,50 @@ ggHC_test <- function(cnum) {
   mypcaH <- HCPC(mypca, nb.clust = cnum, graph = F)
   x1 <- mypcaH[[1]] %>% rownames_to_column("Name") %>% select(Name, Cluster=clust)
   #
-  myTraits <- c("It17_v.k", "It17_h.k", "It17_a.k", 
-                "It17_h.x.mid", "It17_a.x.mid", 
-                "It17_v.perc.DTF", #"It17_v.x.d", 
-                #
-                "Su17_v.k", "Su17_h.k", "Su17_a.k",
-                "Su17_h.x.mid", "Su17_a.x.mid",
-                "Su17_v.perc.DTF") #"Su17_v.x.d",
-  myTraits_new <- c("A) It17 Max V", "B) It17 Max H", "C) It17 Max A", 
-                    "D) It17 H x.mid", "E) It17 A x.mid", 
-                    "F) It17 % V at DTF", #"F) It17 V x.d",
-                    #
-                    "G) Su17 Max V", "H) Su17 Max H", "I) Su17 Max A",
-                    "J) Su17 H x.mid", "K) Su17 A x.mid",
-                    "L) Su17 % V at DTF") #"M) Su17 V x.d",
+  myTs1 <- c("It17_v.k", "It17_h.k", "It17_a.k", 
+             "It17_h.x.mid", "It17_a.x.mid", 
+             "It17_v.perc.DTF", "It17_v.at.DTF", 
+             #
+             "Su17_v.k", "Su17_h.k", "Su17_a.k",
+             "Su17_h.x.mid", "Su17_a.x.mid",
+             "Su17_v.perc.DTF", "Su17_v.at.DTF") 
+  myTs2 <- c("A) It17 Max V", "B) It17 Max H", "C) It17 Max A", 
+             "D) It17 H x.mid", "E) It17 A x.mid", 
+             "F) It17 % V at DTF", "G) It17 V at DTF",
+             #
+             "H) Su17 Max V", "I) Su17 Max H", "J) Su17 Max A",
+             "K) Su17 H x.mid", "L) Su17 A x.mid",
+             "M) Su17 % V at DTF", "N) Su17 V at DTF") 
   xx <- myPCAinput %>% rownames_to_column("Name") %>%
     left_join(x1, by = "Name") %>%
     select(Name, Cluster, everything()) %>%
     gather(Trait, Value, 3:ncol(.)) %>%
     filter(Trait %in% myTraits) %>%
-    mutate(Trait = plyr::mapvalues(Trait, myTraits, myTraits_new),
-           Trait = factor(Trait, levels = myTraits_new))
+    mutate(Trait = plyr::mapvalues(Trait, myTs1, myTs2),
+           Trait = factor(Trait, levels = myTs2))
   # Plot
   mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
     geom_quasirandom(alpha = 0.7) +
     facet_wrap(Trait ~ ., scales = "free_y", ncol = 6) +
-    scale_color_manual(values = c(myColors_Cluster,"violetred3", "tan3") ) +
+    scale_color_manual(values = c(myColors_Cluster,
+       "violetred3", "tan3", "aquamarine4", "deeppink4") ) +
     theme_AGL +
     theme(legend.position = "bottom") +
     guides(color = guide_legend(nrow = 1)) +
     labs(x = NULL, y = NULL)
   mp
 }
-ggsave("Additional/PCA_test/Cluster02.png", ggHC_test(2), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster03.png", ggHC_test(3), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster04.png", ggHC_test(4), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster05.png", ggHC_test(5), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster06.png", ggHC_test(6), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster07.png", ggHC_test(7), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster08.png", ggHC_test(8), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster09.png", ggHC_test(9), width = 10, height = 4, dpi = 600)
-ggsave("Additional/PCA_test/Cluster10.png", ggHC_test(10), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters02.png", ggHC_test(2), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters03.png", ggHC_test(3), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters04.png", ggHC_test(4), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters05.png", ggHC_test(5), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters06.png", ggHC_test(6), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters07.png", ggHC_test(7), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters08.png", ggHC_test(8), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters09.png", ggHC_test(9), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters10.png", ggHC_test(10), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters11.png", ggHC_test(11), width = 10, height = 4, dpi = 600)
+ggsave("Additional/PCA/Test_Clusters12.png", ggHC_test(12), width = 10, height = 4, dpi = 600)
 ```
 
 ---
@@ -1696,48 +1658,27 @@ mp_b <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
   bgcolor("white") + border("white")
 mp <- ggarrange(mp_a, mp_b, nrow = 2, labels = c("A)","B)"))
 ggsave("Supplemental_Figure_02.png", mp, width = 10, height = 6, dpi = 600)
+ggsave("Additional/DroneData/Supplemental_Figure_02_A.png", mp_a, width = 10, height = 3, dpi = 600)
+ggsave("Additional/DroneData/Supplemental_Figure_02_B.png", mp_b, width = 10, height = 3, dpi = 600)
 ```
 
----
-
-## S Figures xx - Volume x Biomass x Yield
-
-```{r eval = F}
-mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1], #xpca = myPCA,
-                   myTitle = "Italy 2017",    yLab = "Plot Volume (Drone)", 
-                   myTrait = "Straw.Biomass", xLab = "Straw Biomass (Manual)")
-mp2 <- ggDroneCorr(xd = ro17_gc.v, xf = ro17_f, myColor = myColors_Expt[2], #xpca = myPCA,
-                   myTitle = "Rosthern 2017", yLab = "Plot Volume (Drone)", 
-                   myTrait = "Straw.Biomass",  xLab = "Straw Biomass (Manual)")
-mp3 <- ggDroneCorr(xd = su17_gc.v, xf = su17_f, myColor = myColors_Expt[3], #xpca = myPCA,
-                   myTitle = "Sutherland 2017", yLab = "Plot Volume (Drone)", 
-                   myTrait = "Straw.Biomass",  xLab = "Straw Biomass (Manual)")
-mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4], #xpca = myPCA,
-                   myTitle = "Sutherland 2018", yLab = "Plot Volume (Drone)", 
-                   myTrait = "Straw.Biomass",  xLab = "Straw Biomass (Manual)")
-mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
-  annotate_figure(top = "Plot Volume (Drone) x Biomass (Manual)") + 
-  bgcolor("white") + border("white")
-ggsave("Additional/Supplemental_Figure_x1.png", mp, width = 10, height = 3, dpi = 600)
-```
-
-```{r eval = F}
-mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1], #xpca = myPCA,
+```{r}
+mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1],
                    myTitle = "Italy 2017", yLab = "Plot Volume (Drone)", 
                    myTrait = "Seed.Mass",  xLab = "Seed Yield (Manual)")
-mp2 <- ggDroneCorr(xd = ro17_gc.v, xf = ro17_f, myColor = myColors_Expt[2], #xpca = myPCA,
+mp2 <- ggDroneCorr(xd = ro17_gc.v, xf = ro17_f, myColor = myColors_Expt[2],
                   myTitle = "Rosthern 2017", yLab = "Plot Volume (Drone)", 
                   myTrait = "Seed.Mass",     xLab = "Seed Yeild (Manual)")
-mp3 <- ggDroneCorr(xd = su17_gc.v, xf = su17_f, myColor = myColors_Expt[3], #xpca = myPCA, 
+mp3 <- ggDroneCorr(xd = su17_gc.v, xf = su17_f, myColor = myColors_Expt[3], 
                   myTitle = "Sutherland 2017", yLab = "Plot Volume (Drone)", 
                   myTrait = "Seed.Mass",        xLab = "Seed Yield (Manual)")
-mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4], #xpca = myPCA, 
+mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4],
                   myTitle = "Sutherland 2018", yLab = "Plot Volume (Drone)", 
                   myTrait = "Seed.Mass",        xLab = "Seed Yield (Manual)")
 mp_a <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
   annotate_figure(top = "Volume x Seed Yield") + 
   bgcolor("white") + border("white")
-ggsave("Additional/Supplemental_Figure_x2.png", mp, width = 10, height = 3, dpi = 600)
+ggsave("Additional/DroneData/Supplemental_Figure_02_C.png", mp, width = 10, height = 6, dpi = 600)
 ```
 
 ---
@@ -1814,16 +1755,16 @@ mp3 <- ggplot(xx, aes(x = DTF, y = Volume, key1 = Origin, fill = Group)) +
 #
 mp <- ggarrange(mp1, mp2, mp3, nrow = 3, ncol = 1, common.legend = T, legend = "bottom")
 ggsave("Figure_04.png", mp, width = 6, height = 7, dpi = 600, bg = "white")
-ggsave("Figure_04_A.png", mp1, width = 6, height = 2.5, dpi = 600)
-ggsave("Figure_04_B.png", mp2, width = 6, height = 2.5, dpi = 600)
-ggsave("Figure_04_C.png", mp3, width = 6, height = 2.5, dpi = 600)
+ggsave("Additional/DroneData/Figure_04_A.png", mp1, width = 6, height = 2.5, dpi = 600)
+ggsave("Additional/DroneData/Figure_04_B.png", mp2, width = 6, height = 2.5, dpi = 600)
+ggsave("Additional/DroneData/Figure_04_C.png", mp3, width = 6, height = 2.5, dpi = 600)
 #
-saveWidget(ggplotly(mp1), file="Figure_04_A.html")
-saveWidget(ggplotly(mp2), file="Figure_04_B.html")
-saveWidget(ggplotly(mp3), file="Figure_04_C.html")
+saveWidget(ggplotly(mp1), file="Additional/DroneData/Figure_04_A.html")
+saveWidget(ggplotly(mp2), file="Additional/DroneData/Figure_04_B.html")
+saveWidget(ggplotly(mp3), file="Additional/DroneData/Figure_04_C.html")
 ```
 
-```{r eval = F}
+```{r}
 #
 #library(ggdensity)
 ggHA2 <- function(xH, xA, xF, xlims, ylims) {
@@ -1864,11 +1805,11 @@ mp4 <- ggHA2(xH = su18_gc.h[[2]], xA = su18_gc.a[[2]],
              xlims = myxlims, ylims = myylims)
 mp1 <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1,
                 common.legend = T, legend = "bottom")
-ggsave("Figure_04_1.png", mp1, width = 12, height = 4, dpi = 600, bg = "white")
+ggsave("Additional/DroneData/Additional_Figure_01_1.png", mp1, width = 12, height = 4, dpi = 600, bg = "white")
 mp4 <- ggplotly(mp1)
 mp3 <- ggplotly(mp3)
-saveWidget(mp4, file="Figure_04_4.html")
-saveWidget(mp3, file="Figure_04_3.html")
+saveWidget(mp4, file="Additional/DroneData/Additional_Figure_01_2.html")
+saveWidget(mp3, file="Additional/DroneData/Additional_Figure_01_3.html")
 ```
 
 ---
@@ -1882,17 +1823,20 @@ ggGrowthCurve <- function(xpm, xF, myTitle = NULL, #myPrefix, mySuffix, days,
                           ylab = "Predicted Values", xlab = "Days After Planting",
                           myEntries = c(9, 35, 73, 94, 113),
                           myColors = c("darkgreen", "darkgoldenrod3", "darkred",
-                                       "steelblue4", "darkslategray"), linesize = 2 ) {
+                                       "steelblue4", "darkslategray"), 
+                          linesize = 2,
+                          plotAll = T) {
   #
   xF <- xF %>% filter(Trait == "DTF", Entry %in% myEntries) %>%
     group_by(Name, Entry) %>% summarise(Value = mean(Value, na.rm = T))
   if(sum(colnames(xpm)=="Expt")==0) { xpm <- xpm %>% mutate(Expt = myTitle) }
   xpe <- xpm %>% filter(Entry %in% myEntries) %>%
     mutate(Entry = factor(Entry, levels = myEntries))
-  mp <- ggplot(xpm, aes(x = DAP, y = Predicted.Values, group = Entry, key1 = Name)) +
-    geom_line(alpha = 0.1) +
+  mp <- ggplot(xpm, aes(x = DAP, y = Predicted.Values, group = Entry, key1 = Name))
+  if(plotAll == T) { mp <- mp + geom_line(alpha = 0.1) }
+  mp <- mp +
     geom_line(data = xpe, size = linesize, alpha = 0.8,
-              aes(color = Name)) + # paste0(Name," (",Entry,")")
+              aes(color = Name)) +  # paste0(Name," (",Entry,")")
     geom_point(data = xF, y = 0, size = 2, alpha = 0.8,
                aes(x = Value, color = Name)) +
     facet_grid(. ~ Expt, scales = "free_x", space = "free_x") +
@@ -1948,9 +1892,8 @@ mp9 <- ggGrowthCurve(xpm = ro17_gc.a[[4]], xF = ro17_f,
 mp <- ggarrange(mp1, mp4, mp7, mp2, mp5, mp8, mp3, mp6, mp9, ncol = 3, nrow = 3, common.legend = T)
 ggsave("Figure_05.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
 mp <- ggarrange(mp2, mp5, mp3, mp6, ncol = 2, nrow = 2, common.legend = T)
-ggsave("Figure_05_1.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+ggsave("Additional/GrowthCurves/07_GrowthCurves_1.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ```
-
 
 ```{r}
 myEntries = c(83, 94)#19 # 292, 33, c(9, 35, 101,  113,  73  94),
@@ -1976,12 +1919,11 @@ mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f,
                      myEntries = myEntries, myColors = myColors,
                      myTitle = "Sutherland 2017 - Area", linesize = 3)
 mpA <- ggarrange(mp1, mp4, mp2, mp5, mp3, mp6, ncol = 2, nrow = 3, common.legend = T)
-ggsave("Additional/Supplemental_Figure_04_A.png", mpA, width = 10, height = 8, dpi = 600, bg = "white")
-#mp <- ggarrange(mp2, mp5, mp3, mp6, ncol = 2, nrow = 2, common.legend = T)
-#ggsave("Figure_02_3.png", mp, width = 10, height = 6, dpi = 600, bg = "white")
+ggsave("Additional/GrowthCurves/07_GrowthCurves_A.png", 
+       mpA, width = 10, height = 8, dpi = 600, bg = "white")
 #
-myEntries = c(107, 252 )#, 188, 108
-myColors = myColors_Cluster[c(4,5)] #c("darkblue", "steelblue")
+myEntries = c(107, 252 )
+myColors = myColors_Cluster[c(4,5)]
 #
 mp1 <- ggGrowthCurve(xpm = it17_gc.v[[4]], xF = it17_f, 
                      myEntries = myEntries, myColors = myColors,
@@ -2003,12 +1945,11 @@ mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f,
                      myEntries = myEntries, myColors = myColors,
                      myTitle = "Sutherland 2017 - Area", linesize = 3)
 mpB <- ggarrange(mp1, mp4, mp2, mp5, mp3, mp6, ncol = 2, nrow = 3, common.legend = T)
-ggsave("Additional/Supplemental_Figure_04_B.png", mpB, width = 10, height = 8, dpi = 600, bg = "white")
-#mp <- ggarrange(mp2, mp5, mp3, mp6, ncol = 2, nrow = 2, common.legend = T)
-#ggsave("Figure_02_5.png", mp, width = 10, height = 6, dpi = 600, bg = "white")
+ggsave("Additional/GrowthCurves/07_GrowthCurves_B.png", 
+       mpB, width = 10, height = 8, dpi = 600, bg = "white")
 #
-myEntries = c(22, 311)#91, 205, 97,91)# ,  292, 33, c(9, 35, 101,  113,  73  94,),
-myColors = myColors_Cluster[c(8,6)] #c("darkgreen", "darkorchid4")#, "darkorchid3")
+myEntries = c(22, 311)
+myColors = myColors_Cluster[c(8,6)]
 #
 mp1 <- ggGrowthCurve(xpm = it17_gc.v[[4]], xF = it17_f, 
                      myEntries = myEntries, myColors = myColors,
@@ -2030,10 +1971,10 @@ mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f,
                      myEntries = myEntries, myColors = myColors,
                      myTitle = "Sutherland 2017 - Area", linesize = 3)
 mpC <- ggarrange(mp1, mp4, mp2, mp5, mp3, mp6, ncol = 2, nrow = 3, common.legend = T)
-ggsave("Additional/Supplemental_Figure_04_C.png", mpC, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Additional/GrowthCurves/07_GrowthCurves_C.png", mpC, width = 10, height = 8, dpi = 600, bg = "white")
 #
-myEntries = c(33, 30)#18 #91, 205, 97,91)# ,  292, 33, c(9, 35, 101,  113,  73  94,),
-myColors = myColors_Cluster[c(2,3)] #c("darkgreen", "darkorchid4")#, "darkorchid3")
+myEntries = c(33, 30)
+myColors = myColors_Cluster[c(2,3)] 
 #
 mp1 <- ggGrowthCurve(xpm = it17_gc.v[[4]], xF = it17_f, 
                      myEntries = myEntries, myColors = myColors,
@@ -2055,60 +1996,11 @@ mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f,
                      myEntries = myEntries, myColors = myColors,
                      myTitle = "Sutherland 2017 - Area", linesize = 3)
 mpD <- ggarrange(mp1, mp4, mp2, mp5, mp3, mp6, ncol = 2, nrow = 3, common.legend = T)
-ggsave("Additional/Supplemental_Figure_04_D.png", mpD, width = 10, height = 8, dpi = 600, bg = "white")
-#
+ggsave("Additional/GrowthCurves/07_GrowthCurves_D.png", 
+       mpD, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ```{r}
-xx <- myPCA %>% filter(Entry %in% c(19,94,107,252,22,311,18,30))
-```
-
-```{r}
-#
-pdf("Supplemental_Figure_xx.pdf", width = 8, height = 8)
-# i<-1
-for (i in myPCA %>% arrange(Cluster) %>% pull(Entry) ) {
-  #
-  myColors = myColors_Cluster[myPCA$Cluster[myPCA$Entry==i]]#"darkred"
-  #
-  mp1 <- ggGrowthCurve(xpm = it17_gc.v[[4]], xF = it17_f, 
-                       myEntries = i, myTitle = "It17 - Plot Volume",
-                       myColors = myColors, linesize = 3)
-  mp2 <- ggGrowthCurve(xpm = it17_gc.h[[4]], xF = it17_f, 
-                       myEntries = i, myTitle = "It17 - Canopy Height",
-                       myColors = myColors, linesize = 3)
-  mp3 <- ggGrowthCurve(xpm = it17_gc.a[[4]], xF = it17_f, 
-                       myEntries = i, myTitle = "It17 - Plot Area",
-                       myColors = myColors, linesize = 3)
-  #
-  mp4 <- ggGrowthCurve(xpm = su17_gc.v[[4]], xF = su17_f, 
-                       myEntries = i, myTitle = "Su17 - Plot Volume",
-                       myColors = myColors, linesize = 3)
-  mp5 <- ggGrowthCurve(xpm = su17_gc.h[[4]], xF = su17_f, 
-                       myEntries = i, myTitle = "Su17 - Canopy Height",
-                       myColors = myColors, linesize = 3)
-  mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f, 
-                       myEntries = i, myTitle = "Su17 - Plot Area",
-                       myColors = myColors, linesize = 3)
-  #
-  mp7 <- ggGrowthCurve(xpm = ro17_gc.v[[4]], xF = ro17_f, 
-                       myEntries = i, myTitle = "Ro17 - Plot Volume",
-                       myColors = myColors, linesize = 3)
-  mp8 <- ggGrowthCurve(xpm = ro17_gc.h[[4]], xF = ro17_f, 
-                       myEntries = i, myTitle = "Ro17 - Canopy Height",
-                       myColors = myColors, linesize = 3)
-  mp9 <- ggGrowthCurve(xpm = ro17_gc.a[[4]], xF = ro17_f, 
-                       myEntries = i, myTitle = "Ro17 - Plot Area",
-                       myColors = myColors, linesize = 3)
-  mp <- ggarrange(mp1, mp4, mp7, mp2, mp5, mp8, mp3, mp6, mp9, 
-                  ncol = 3, nrow = 3, common.legend = T)
-  print(mp)
-}
-dev.off()
-#dev.set(dev.next())
-```
-
-```{r eval = F}
 #
 myEntries = c(19, 22, 94, 215, 107, 190)# ,  292, 33, c(9, 35, 101,  113,  73  94,),
 myColors = c("darkgreen", "darkgoldenrod3", "darkred", 
@@ -2134,9 +2026,57 @@ mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f,
                      myEntries = myEntries, myColors = myColors,
                      myTitle = "Sutherland 2017 - Area")
 mp <- ggarrange(mp1, mp4, mp2, mp5, mp3, mp6, ncol = 2, nrow = 3, common.legend = T)
-ggsave("Figure_02_8.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
-#mp <- ggarrange(mp2, mp5, mp3, mp6, ncol = 2, nrow = 2, common.legend = T)
-#ggsave("Figure_02_9.png", mp, width = 10, height = 6, dpi = 600, bg = "white")
+ggsave("Additional/GrowthCurves/08_GrowthCurves.png", 
+       mp, width = 10, height = 8, dpi = 600, bg = "white")
+```
+
+```{r}
+xx <- myPCA %>% filter(Entry %in% c(19,94,107,252,22,311,18,30))
+```
+
+```{r}
+#
+pdf("Additional/GrowthCurves/09_GrowthCurves.pdf", width = 8, height = 8)
+# i<-1
+for (i in myPCA %>% arrange(Cluster) %>% pull(Entry) ) {
+  #
+  myColors = myColors_Cluster[myPCA$Cluster[myPCA$Entry==i]]#"darkred"
+  #
+  mp1 <- ggGrowthCurve(xpm = it17_gc.v[[4]], xF = it17_f, 
+                       myEntries = i, myTitle = "It17 - Plot Volume",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp2 <- ggGrowthCurve(xpm = it17_gc.h[[4]], xF = it17_f, 
+                       myEntries = i, myTitle = "It17 - Canopy Height",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp3 <- ggGrowthCurve(xpm = it17_gc.a[[4]], xF = it17_f, 
+                       myEntries = i, myTitle = "It17 - Plot Area",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  #
+  mp4 <- ggGrowthCurve(xpm = su17_gc.v[[4]], xF = su17_f, 
+                       myEntries = i, myTitle = "Su17 - Plot Volume",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp5 <- ggGrowthCurve(xpm = su17_gc.h[[4]], xF = su17_f, 
+                       myEntries = i, myTitle = "Su17 - Canopy Height",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f, 
+                       myEntries = i, myTitle = "Su17 - Plot Area",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  #
+  mp7 <- ggGrowthCurve(xpm = ro17_gc.v[[4]], xF = ro17_f, 
+                       myEntries = i, myTitle = "Ro17 - Plot Volume",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp8 <- ggGrowthCurve(xpm = ro17_gc.h[[4]], xF = ro17_f, 
+                       myEntries = i, myTitle = "Ro17 - Canopy Height",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp9 <- ggGrowthCurve(xpm = ro17_gc.a[[4]], xF = ro17_f, 
+                       myEntries = i, myTitle = "Ro17 - Plot Area",
+                       myColors = myColors, linesize = 3, plotAll = F)
+  mp <- ggarrange(mp1, mp4, mp7, mp2, mp5, mp8, mp3, mp6, mp9, 
+                  ncol = 3, nrow = 3, common.legend = T)
+  print(mp)
+}
+dev.off()
+#dev.set(dev.next())
 ```
 
 ---
@@ -2185,7 +2125,7 @@ mp1 <- ggplot(yy, aes(x = Cluster, y = EnvChange, color = Cluster)) +
   theme(legend.position = "bottom",
         legend.margin=margin(c(0,0,0,0)),
         axis.text.x = element_blank(),
-        axis.ticks.x = element_blank()) + #t=0, r=0, b=-0.2, l=0, unit="cm")) +
+        axis.ticks.x = element_blank()) +
   facet_wrap(. ~ Trait, scales = "free_y") +
   scale_color_manual(values = myColors_Cluster) +
   guides(color = guide_legend(nrow = 1)) +
@@ -2193,20 +2133,18 @@ mp1 <- ggplot(yy, aes(x = Cluster, y = EnvChange, color = Cluster)) +
 #
 yy <- yy %>% select(Name, Cluster, Trait, b,c, EnvChange) %>%
   spread(Trait, EnvChange)
-myMin <- min(c(yy$Area,yy$Height))
-myMax <- max(c(yy$Area,yy$Height))
-mp2 <- ggplot(yy, aes(x = `Plot Area`, y = `Plot Height`, 
-                      color = Cluster, size = c*10000)) +
-  geom_point(alpha = 0.4) + 
-  geom_vline(xintercept = 0) +
-  geom_hline(yintercept = 0) +
-  scale_color_manual(values = myColors_Cluster) +
-  theme_AGL +
-  labs(x = "Change in Area (It17 - Su17)",
-       y = "Change in Height (It17 - Su17)")
+#myMin <- min(c(yy$Area,yy$Height))
+#myMax <- max(c(yy$Area,yy$Height))
+#mp2 <- ggplot(yy, aes(x = `Plot Area`, y = `Plot Height`, 
+#                      color = Cluster, size = c*10000)) +
+#  geom_point(alpha = 0.4) + 
+#  geom_vline(xintercept = 0) +
+#  geom_hline(yintercept = 0) +
+#  scale_color_manual(values = myColors_Cluster) +
+#  theme_AGL +
+#  labs(x = "Change in Area (It17 - Su17)",
+#       y = "Change in Height (It17 - Su17)")
 #
-#mp <- mp + ylim(c(myMin,myMax)) + xlim(c(myMin,myMax)) 
-#ggsave("Figure_30_6.png", mp, width = 6, height = 4, dpi = 600)
 yy <- yy %>% left_join(
   myPCAinput %>% rownames_to_column("Name") %>% 
     select(Name, It17_v.perc.DTF, Su17_v.perc.DTF), by = "Name" ) %>%
@@ -2214,7 +2152,7 @@ yy <- yy %>% left_join(
          Group = ifelse(`Plot Area` > 0 | `Plot Height` > 0, "abnormal", "normal"),
          Group = ifelse(`Plot Area` > 0 & `Plot Height` > 0, "normal", Group))
 #
-mp3 <- ggplot(yy) +#%>% filter(!Entry %in% c(94,105))) +
+mp2 <- ggplot(yy) +
   geom_label(x = -0.4, y = 0.135, size = 3, label = "Taller\n&\nThiner") +
   geom_label(x = 1.4, y = -0.05, size = 3, label = "Shorter\n&\nWider") +
   geom_point(aes(x = `Plot Area`, y = `Plot Height`, color = Cluster), 
@@ -2223,7 +2161,6 @@ mp3 <- ggplot(yy) +#%>% filter(!Entry %in% c(94,105))) +
              aes(x = `Plot Area`, y = `Plot Height`), pch = 21) +
   geom_vline(xintercept = 0, size = 1, alpha = 0.7) +
   geom_hline(yintercept = 0, size = 1, alpha = 0.7) +
-  #facet_wrap(. ~ Trait) +#, scales = "free_y") +
   scale_color_manual(values = myColors_Cluster) +
   scale_size_continuous(range = c(0.5, 3)) +
   theme_AGL +
@@ -2238,19 +2175,26 @@ y2 <- yy %>% ungroup() %>%
   select(Name, Cluster, It17=It17_v.perc.DTF, Su17=Su17_v.perc.DTF) %>%
   gather(Expt, Value, 3:4)
 # 
-mp4 <- ggplot(y2, aes(x = Expt, y = Value, color = Cluster)) +
+mp3 <- ggplot(y2, aes(x = Expt, y = Value, color = Cluster)) +
   geom_beeswarm(cex = 1, alpha = 0.7, size = 1) +
   scale_color_manual(values = myColors_Cluster) +
   theme_AGL +
   theme(legend.position = "none") +
   labs(title = "C)", y = "% of Volume Growth at Flowering", x = "")
-mp <- ggarrange(mp1, ggarrange(mp3, mp4, ncol = 2, nrow = 1), ncol = 1, nrow = 2, align = "h")
+mp <- ggarrange(mp1, ggarrange(mp2, mp3, ncol = 2, nrow = 1), ncol = 1, nrow = 2, align = "h")
 ggsave("Figure_07.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+saveWidget(ggplotly(mp1), file="Additional/DroneData/Figure_07_A.html")
+saveWidget(ggplotly(mp2), file="Additional/DroneData/Figure_07_B.html")
+saveWidget(ggplotly(mp3), file="Additional/DroneData/Figure_07_C.html")
 #override.aes = list(size = 3, alpha = 1)
 ```
 
+# Additional Figures
+
+## Additional Figure 02 - Harvest Index
 
 ```{r}
+# Prep data
 x1 <- bind_rows(it17_f %>% filter(Trait == "Seed.Mass") %>%
                   select(Plot, Expt, Entry, Name, Seed.Mass=Value),
                 su17_f %>% filter(Trait == "Seed.Mass") %>%
@@ -2263,30 +2207,33 @@ xx <- full_join(x1, x2, by = c("Plot", "Expt", "Entry", "Name")) %>%
   group_by(Expt, Entry, Name, Cluster) %>%
   summarise(Harvest.Index = mean(Harvest.Index, na.rm = T),
             Seed.Mass = mean(Seed.Mass, na.rm = T))
-mp <- ggplot(xx, aes(x = Cluster, y = Harvest.Index, color = Cluster, size = Seed.Mass)) +
+#
+mp1 <- ggplot(xx, aes(x = Cluster, y = Harvest.Index, color = Cluster, size = Seed.Mass)) +
   geom_quasirandom(alpha = 0.7) +
   facet_grid(.~Expt) +
   scale_color_manual(values = myColors_Cluster) +
   scale_size_continuous(range = c(0.2,4)) +
   theme_AGL
-ggsave("Figure_13.png", mp, width = 8, height = 4, dpi = 600, bg = "white")
-mp <- ggplot(xx, aes(x = Expt, y = Harvest.Index, color = Cluster, group = Entry)) +
+#
+mp2 <- ggplot(xx, aes(x = Expt, y = Harvest.Index, color = Cluster, group = Entry)) +
   geom_line(alpha = 0.2) +
   geom_point(aes(size = Seed.Mass), alpha = 0.7) +
   facet_grid(. ~ Cluster) +
   scale_color_manual(values = myColors_Cluster) +
   scale_size_continuous(range = c(0.2,4)) +
-  theme_AGL
-ggsave("Figure_11.png", mp, width = 8, height = 4, dpi = 600, bg = "white")
+  theme_AGL +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+#
 xx <- xx %>% select(-Seed.Mass) %>%
   spread(Expt, Harvest.Index) %>%
   mutate(Diff = `Sutherland 2017` - `Italy 2017`)
-mp <- ggplot(xx, aes(x = Cluster, y = Diff, color = Cluster)) +
+mp3 <- ggplot(xx, aes(x = Cluster, y = Diff, color = Cluster)) +
   geom_quasirandom() +
   scale_color_manual(values = myColors_Cluster) +
   theme_AGL
-ggsave("Figure_12.png", mp, width = 8, height = 4, dpi = 600, bg = "white")
-#unique(it17_f$Trait)
+mp <- ggarrange(mp1, mp2, mp3, ncol = 1, common.legend = T)
+ggsave("Additional/DroneData/Additional_Figure_02.png", 
+       mp, width = 8, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
@@ -2313,7 +2260,10 @@ xx <- it17_d %>%
   mutate(Trait = plyr::mapvalues(Trait, myT1, myT2),
          Trait = paste0("It17_",Trait, ".d", DAP)) %>%
   select(-DAP) %>%
-  spread(Trait, Value_f)
+  spread(Trait, Value_f) %>%
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
+         Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 yy <- xx %>% gather(Trait, Value, 2:ncol(.)) %>% filter(!is.na(Value)) %>% 
   group_by(Trait) %>% summarise(n = n())
 write.csv(xx, "Data_GWAS/myY_it17_d.csv", row.names = F)
@@ -2330,7 +2280,10 @@ xx <- ro17_d %>%
   mutate(Trait = plyr::mapvalues(Trait, myT1, myT2),
          Trait = paste0("Ro17_", Trait, ".d", DAP)) %>%
   select(-DAP) %>%
-  spread(Trait, Value_f)
+  spread(Trait, Value_f) %>%
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
+         Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 xx[is.na(xx)] <- NA
 yy <- xx %>% gather(Trait, Value, 2:ncol(.)) %>% filter(!is.na(Value)) %>% 
   group_by(Trait) %>% summarise(n = n())
@@ -2353,7 +2306,10 @@ xx <- su17_d %>%
   mutate(Trait = plyr::mapvalues(Trait, myT1, myT2),
          Trait = paste0("Su17_", Trait, ".d", DAP)) %>%
   select(-DAP) %>%
-  spread(Trait, Value_f)
+  spread(Trait, Value_f) %>%
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
+         Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 xx[is.na(xx)] <- NA
 yy <- xx %>% gather(Trait, Value, 2:ncol(.)) %>% filter(!is.na(Value)) %>% 
   group_by(Trait) %>% summarise(n = n())
@@ -2372,7 +2328,10 @@ xx <- su18_d %>%
   mutate(Trait = plyr::mapvalues(Trait, myT1, myT2),
          Trait = paste0("Su18_",Trait, ".d", DAP)) %>%
   select(-DAP) %>%
-  spread(Trait, Value_f)
+  spread(Trait, Value_f) %>%
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
+         Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 xx[is.na(xx)] <- NA
 sum(is.na(xx))
 yy <- xx %>% gather(Trait, Value, 2:ncol(.)) %>% filter(!is.na(Value)) %>% 
