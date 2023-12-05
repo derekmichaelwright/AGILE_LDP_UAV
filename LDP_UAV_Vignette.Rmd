@@ -2786,13 +2786,13 @@ yy <- table_Results_Summary(folder = "GWAS_Results/", isOrdered = T)
 ```{r eval = F}
 order_GWAS_Results(folder = "GWAS_Results/", files = myResults)
 xx <- table_GWAS_Results("GWAS_Results/", myResults, threshold = 6.7, sug.threshold = 5.3)
-write.csv(xx, "GWAS_Results_Table.csv", row.names = F)
+write.csv(xx, "Supplemental_Table_01.csv", row.names = F)
 ```
 
 ```{r}
 #
 myMarkersd <- c("Lcu.2RBY.Chr2p42556949", "Lcu.2RBY.Chr5p1069654", "Lcu.2RBY.Chr6p2528817") 
-myMarkers <- c(myMarkersd, "Lcu.2RBY.Chr1p2011396", "Lcu.2RBY.Chr7p528136791") 
+myMarkers <- c(myMarkersd, "Lcu.2RBY.Chr1p2011396", "Lcu.2RBY.Chr7p527137890") 
 myMColors <- c(rep("darkgreen",3), rep("darkred",4))
 ```
 
@@ -2865,8 +2865,8 @@ gg_PlotMarker <- function(myG, myY, trait, marker, marker2 = NULL,
 ```
 
 ```{r}
-xx <- read.csv("GWAS_Results_Table.csv") %>%
-  filter(Model != "MLMM")
+xx <- read.csv("Supplemental_Table_01.csv")
+myMarkers_all <- xx %>% filter(!duplicated(SNP)) %>% pull(SNP) 
 myG <- read.csv("myG_LDP.csv", header = T)
 myY <- left_join(
   read.csv("Data_GWAS/myY_it17_gc.csv") %>%
@@ -2896,7 +2896,6 @@ myY <- left_join(
       as.data.frame() %>%
       select(Name, contains("Yield")), by = "Name")
 #
-counter <- 1
 for(i in myMarkers_all) {
   mp1 <- gg_PlotMarker(myG, myY, "It17_gc.h.k", i)
   mp2 <- gg_PlotMarker(myG, myY, "It17_gc.a.k", i)
@@ -2909,7 +2908,24 @@ for(i in myMarkers_all) {
   mp9 <- gg_PlotMarker(myG, myY, "Ro17_gc.v.k", i)
   mp <- ggarrange(mp1, mp2, mp3, mp4, mp5, mp6, mp7, mp8, mp9, 
                   ncol = 3, nrow = 3, common.legend = T, legend = "bottom")
-  ggsave(paste0("additional/Markers/",
+  ggsave(paste0("additional/Markers/ALL/", i, ".png"), mp, 
+         width = 12, height = 8, dpi = 600, bg = "white")
+}
+#
+counter <- 1
+for(i in myMarkers_all[1:200]) {
+  mp1 <- gg_PlotMarker(myG, myY, "It17_gc.h.k", i)
+  mp2 <- gg_PlotMarker(myG, myY, "It17_gc.a.k", i)
+  mp3 <- gg_PlotMarker(myG, myY, "It17_gc.v.k", i)
+  mp4 <- gg_PlotMarker(myG, myY, "Su17_gc.h.k", i)
+  mp5 <- gg_PlotMarker(myG, myY, "Su17_gc.a.k", i)
+  mp6 <- gg_PlotMarker(myG, myY, "Su17_gc.v.k", i)
+  mp7 <- gg_PlotMarker(myG, myY, "Ro17_gc.h.k", i)
+  mp8 <- gg_PlotMarker(myG, myY, "Ro17_gc.a.k", i)
+  mp9 <- gg_PlotMarker(myG, myY, "Ro17_gc.v.k", i)
+  mp <- ggarrange(mp1, mp2, mp3, mp4, mp5, mp6, mp7, mp8, mp9, 
+                  ncol = 3, nrow = 3, common.legend = T, legend = "bottom")
+  ggsave(paste0("additional/Markers/Top/",
                 stringr::str_pad(counter,3,pad = "0"),"_",i,".png"), mp, 
          width = 12, height = 8, dpi = 600, bg = "white")
   counter <- counter + 1
@@ -2941,7 +2957,7 @@ for(i in myTraits) {
 
 ```{r}
 # Prep data
-xx <- read.csv("GWAS_Results_Table.csv") %>% filter(Model != "MLMM")
+xx <- read.csv("Supplemental_Table_01.csv")
 myG <- read.csv("myG_LDP.csv", header = T) %>% 
   select(SNP=1, Chr=3, Pos=4)
 # Create plotting function
@@ -3155,7 +3171,7 @@ saveWidget(ggplotly(mp7), file="Additional/Additional_Figure_11_7.html")
 
 ```{r}
 # Prep data
-xx <- read.csv("GWAS_Results_Table.csv")
+xx <- read.csv("Supplemental_Table_01.csv")
 myExpts <- substr(myTraits, 1, regexpr("_", myTraits)-1)
 myPhenos <- unique(substr(myTraits, regexpr("_", myTraits)+1, nchar(myTraits)))
 #
@@ -3252,7 +3268,7 @@ gg_GWAS_plotly(mp9, filename = "Additional/Additional_Figure_12_9.html")
 
 ```{r}
 # Prep data
-xx <- read.csv("GWAS_Results_Table.csv")
+xx <- read.csv("Supplemental_Table_01.csv")
 myG <- read.csv("myG_LDP.csv", header = T)
 myY <- left_join(
   select(read.csv("Data_GWAS/myY_it17_gc.csv"), Name, It17_gc.v.k, It17_gc.h.k, It17_gc.a.k),
@@ -3297,8 +3313,8 @@ mp1 <- ggplot(x1 %>% filter(!is.na(Lcu.2RBY.Chr1p2011396)),
     theme_AGL +
     guides(colour = guide_legend(nrow = 1, override.aes = list(size = 1.5, alpha = 1))) +
   labs(subtitle = "A) Lcu.2RBY.Chr1p2011396", y = "Plot Height", x = NULL)
-mp2 <- ggplot(x2 %>% filter(!is.na(Lcu.2RBY.Chr7p528136791)),
-              aes(x = Lcu.2RBY.Chr7p528136791, y = Area)) + 
+mp2 <- ggplot(x2 %>% filter(!is.na(Lcu.2RBY.Chr7p527137890)),
+              aes(x = Lcu.2RBY.Chr7p527137890, y = Area)) + 
     geom_beeswarm(aes(color = Cluster), pch = 16, alpha = 0.6, size = 0.75, cex = 2) +
     geom_boxplot(fill = alpha("white",0), color = alpha("black",0.7),
                  lwd = 0.75, width = 0.1, outlier.shape = NA, coef = 0) + 
@@ -3306,7 +3322,7 @@ mp2 <- ggplot(x2 %>% filter(!is.na(Lcu.2RBY.Chr7p528136791)),
     scale_color_manual(values = myColors_Cluster) + 
     theme_AGL +
     guides(colour = guide_legend(nrow = 1, override.aes = list(size = 1.5, alpha = 1))) +
-  labs(subtitle = "B) Lcu.2RBY.Chr7p528136791", y = "Plot Area", x = NULL)
+  labs(subtitle = "B) Lcu.2RBY.Chr7p527137890", y = "Plot Area", x = NULL)
 mp <- ggarrange(mp1, mp2, ncol = 1, nrow = 2, common.legend = T, legend = "bottom")
 ggsave("Figure_08.png", mp, width = 6, height = 5, dpi = 600, bg = "white")
 ```
@@ -3364,7 +3380,7 @@ ggsave("Supplemental_Figure_06.png", mp, width = 5, height = 3, dpi = 600)
 
 ```{r}
 # Prep data
-xx <- read.csv("GWAS_Results_Table.csv") %>%
+xx <- read.csv("Supplemental_Table_01.csv") %>%
   filter(Model != "MLMM")
 myY <- left_join(
   read.csv("Data_GWAS/myY_it17_gc.csv") %>%
