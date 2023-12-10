@@ -2433,9 +2433,9 @@ ggsave("Figure_06.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
 
 ```{r}
 fixNames <- function(xx) {
-  xx %>% mutate(Name = gsub(" ","_",Name),
-         Name = gsub("-","\\.",Name),
-         Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
+  xx %>% mutate(Name = gsub(" ", "_", Name),
+                Name = gsub("-", "\\.", Name),
+                Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 }
 ```
 
@@ -2800,6 +2800,16 @@ myMColors <- c(rep("darkgreen",3), rep("darkred",4))
 
 # Significant Markers
 
+> - `r shiny::icon("globe")` [Additional/Markers/Top](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Top/)
+
+> - `r shiny::icon("globe")` [Additional/Markers/Chr1](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr1/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr2](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr2/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr3](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr3/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr4](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr4/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr5](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr5/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr6](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr6/)
+> - `r shiny::icon("globe")` [Additional/Markers/Chr7](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr7/)
+
 ```{r}
 # Create function
 gg_PlotMarker <- function(myG, myY, trait, marker, marker2 = NULL,
@@ -2810,8 +2820,8 @@ gg_PlotMarker <- function(myG, myY, trait, marker, marker2 = NULL,
     Value = c("AA","CC","GG","TT","UU","AG","CT","GC","AT","GT","AC","NN"))
   x1 <- myG %>% filter(rs == marker)
   myPCA <- read.csv("myPCA.csv") %>%
-    mutate(Name = gsub(" ","_",Name),
-           Name = gsub("-","\\.",Name),
+    mutate(Name = gsub(" ", "_", Name),
+           Name = gsub("-", "\\.", Name),
            Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
     mutate(Cluster = factor(Cluster))
   if(!is.null(marker2)) {
@@ -2834,11 +2844,11 @@ gg_PlotMarker <- function(myG, myY, trait, marker, marker2 = NULL,
     mutate(Allele = plyr::mapvalues(Allele, gwaspr_dna$Symbol, gwaspr_dna$Value))
   if(is.null(marker2)) {
     mp <- ggplot(xx, aes(x = Allele, y = get(trait))) + 
-      geom_beeswarm(aes(color = Cluster), cex = 2.5, alpha = 0.6) + 
+      geom_beeswarm(aes(color = Cluster), cex = 2.5, size = 1, pch = 16, alpha = 0.6) + 
       geom_boxplot(fill = alpha("white",0), color = alpha("black",0.8),
-                   lwd = 1, width = 0.2, outlier.shape = NA, coef = 0) + 
+                   lwd = 0.5, width = 0.2, outlier.shape = NA, coef = 0) + 
       facet_grid(. ~ as.character(trait)) +
-      scale_color_manual(name = NULL, values = myColors_Cluster) + 
+      scale_color_manual(values = myColors_Cluster) + 
       theme_AGL +
       guides(colour = guide_legend(nrow = 1)) +
       labs(y = NULL, x = NULL)
@@ -2851,11 +2861,11 @@ gg_PlotMarker <- function(myG, myY, trait, marker, marker2 = NULL,
       arrange(Value) %>% pull(Allele3)
     xx <- xx %>% mutate(Allele3 = factor(Allele3, levels = morder))
     mp <- ggplot(xx, aes(x = Allele3, y = get(trait))) + 
-      geom_beeswarm(aes(color = Cluster), cex = 2, alpha = 0.6) + 
+      geom_beeswarm(aes(color = Cluster), cex = 2.5, size = 1, pch = 16, alpha = 0.6) + 
       geom_boxplot(fill = alpha("white",0), color = alpha("black",0.8),
-                   lwd = 1, width = 0.2, outlier.shape = NA, coef = 0) + 
+                   lwd = 0.5, width = 0.2, outlier.shape = NA, coef = 0) + 
       facet_grid(. ~ as.character(trait)) +
-      scale_color_manual(name = NULL, values = myColors_Cluster) + 
+      scale_color_manual(values = myColors_Cluster) + 
       theme_AGL +
       guides(colour = guide_legend(nrow = 1)) +
       labs(y = NULL, x = NULL)
@@ -2870,33 +2880,34 @@ myMarkers_all <- xx %>% filter(!duplicated(SNP)) %>% pull(SNP)
 myG <- read.csv("myG_LDP.csv", header = T)
 myY <- left_join(
   read.csv("Data_GWAS/myY_it17_gc.csv") %>%
-    mutate(Name = gsub(" ","_",Name),
-           Name = gsub("-","\\.",Name),
+    mutate(Name = gsub(" ", "_", Name),
+           Name = gsub("-", "\\.", Name),
            Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
     as.data.frame() %>%
     select(Name, It17_gc.h.k, It17_gc.a.k, It17_gc.v.k),
   read.csv("Data_GWAS/myY_ro17_gc.csv") %>%
-    mutate(Name = gsub(" ","_",Name),
-           Name = gsub("-","\\.",Name),
+    mutate(Name = gsub(" ", "_", Name),
+           Name = gsub("-", "\\.", Name),
            Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
     as.data.frame() %>%
     select(Name, Ro17_gc.h.k, Ro17_gc.a.k, Ro17_gc.v.k), by = "Name") %>%
   left_join(
     read.csv("Data_GWAS/myY_su17_gc.csv") %>%
-      mutate(Name = gsub(" ","_",Name),
-             Name = gsub("-","\\.",Name),
+      mutate(Name = gsub(" ", "_", Name),
+             Name = gsub("-", "\\.", Name),
              Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
       as.data.frame() %>%
       select(Name, Su17_gc.h.k, Su17_gc.a.k, Su17_gc.v.k), by = "Name") %>%
   left_join(
     read.csv("Data_GWAS/myY_myF.csv") %>%
-      mutate(Name = gsub(" ","_",Name),
-             Name = gsub("-","\\.",Name),
+      mutate(Name = gsub(" ", "_", Name),
+             Name = gsub("-", "\\.", Name),
              Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
       as.data.frame() %>%
       select(Name, contains("Yield")), by = "Name")
 #
 for(i in myMarkers_all) {
+  myChr <- substr(i, 13, 13)
   mp1 <- gg_PlotMarker(myG, myY, "It17_gc.h.k", i)
   mp2 <- gg_PlotMarker(myG, myY, "It17_gc.a.k", i)
   mp3 <- gg_PlotMarker(myG, myY, "It17_gc.v.k", i)
@@ -2907,9 +2918,10 @@ for(i in myMarkers_all) {
   mp8 <- gg_PlotMarker(myG, myY, "Ro17_gc.a.k", i)
   mp9 <- gg_PlotMarker(myG, myY, "Ro17_gc.v.k", i)
   mp <- ggarrange(mp1, mp2, mp3, mp4, mp5, mp6, mp7, mp8, mp9, 
-                  ncol = 3, nrow = 3, common.legend = T, legend = "bottom")
-  ggsave(paste0("additional/Markers/ALL/", i, ".png"), mp, 
-         width = 12, height = 8, dpi = 600, bg = "white")
+                  ncol = 3, nrow = 3, common.legend = T, legend = "bottom") %>%
+    annotate_figure(top = text_grob(i, hjust = 1.75))
+  ggsave(paste0("additional/Markers/Chr", myChr, "/", i, ".png"), mp, 
+         width = 8, height = 6, bg = "white")
 }
 #
 counter <- 1
@@ -2924,10 +2936,11 @@ for(i in myMarkers_all[1:200]) {
   mp8 <- gg_PlotMarker(myG, myY, "Ro17_gc.a.k", i)
   mp9 <- gg_PlotMarker(myG, myY, "Ro17_gc.v.k", i)
   mp <- ggarrange(mp1, mp2, mp3, mp4, mp5, mp6, mp7, mp8, mp9, 
-                  ncol = 3, nrow = 3, common.legend = T, legend = "bottom")
+                  ncol = 3, nrow = 3, common.legend = T, legend = "bottom") %>%
+    annotate_figure(top = text_grob(i, hjust = 1.75))
   ggsave(paste0("additional/Markers/Top/",
                 stringr::str_pad(counter,3,pad = "0"),"_",i,".png"), mp, 
-         width = 12, height = 8, dpi = 600, bg = "white")
+         width = 12, height = 8, bg = "white")
   counter <- counter + 1
 }
 ```
@@ -3280,8 +3293,8 @@ gwaspr_dna <- data.frame(stringsAsFactors = F,
     Value = c("AA","CC","GG","TT","UU","AG","CT","GC","AT","GT","AC","NN"))
 x1 <- myG %>% filter(rs %in% myMarkers[4:5])
 myPCA <- read.csv("myPCA.csv") %>%
-  mutate(Name = gsub(" ","_",Name),
-         Name = gsub("-","\\.",Name),
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
          Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
   mutate(Cluster = factor(Cluster))
 #
@@ -3336,14 +3349,14 @@ ggsave("Figure_08.png", mp, width = 6, height = 5, dpi = 600, bg = "white")
 ```{r}
 # Prep data
 myY <- read.csv("Data_GWAS/myY_su17_gc.csv") %>%
-  mutate(Name = gsub(" ","_",Name),
-         Name = gsub("-","\\.",Name),
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
          Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
   as.data.frame() %>%
   select(Name, Su17_gc.h.k, Su17_gc.a.k, Su17_gc.v.k)
 myPCA <- read.csv("myPCA.csv") %>% select(Name, Origin) %>%
-  mutate(Name = gsub(" ","_",Name),
-         Name = gsub("-","\\.",Name),
+  mutate(Name = gsub(" ", "_", Name),
+         Name = gsub("-", "\\.", Name),
          Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL"))
 xx <- myG %>% filter(rs %in% myMarkersd[3]) %>% 
   gather(Name, Allele, 12:ncol(.)) %>%
@@ -3384,28 +3397,28 @@ xx <- read.csv("Supplemental_Table_01.csv") %>%
   filter(Model != "MLMM")
 myY <- left_join(
   read.csv("Data_GWAS/myY_it17_gc.csv") %>%
-    mutate(Name = gsub(" ","_",Name),
-           Name = gsub("-","\\.",Name),
+    mutate(Name = gsub(" ", "_", Name),
+           Name = gsub("-", "\\.", Name),
            Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
     as.data.frame() %>%
     select(Name, It17_gc.h.k, It17_gc.a.k, It17_gc.v.k),
   read.csv("Data_GWAS/myY_ro17_gc.csv") %>%
-    mutate(Name = gsub(" ","_",Name),
-           Name = gsub("-","\\.",Name),
+    mutate(Name = gsub(" ", "_", Name),
+           Name = gsub("-", "\\.", Name),
            Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
     as.data.frame() %>%
     select(Name, Ro17_gc.h.k, Ro17_gc.a.k, Ro17_gc.v.k), by = "Name") %>%
   left_join(
     read.csv("Data_GWAS/myY_su17_gc.csv") %>%
-      mutate(Name = gsub(" ","_",Name),
-             Name = gsub("-","\\.",Name),
+      mutate(Name = gsub(" ", "_", Name),
+             Name = gsub("-", "\\.", Name),
              Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
       as.data.frame() %>%
       select(Name, Su17_gc.h.k, Su17_gc.a.k, Su17_gc.v.k), by = "Name") %>%
   left_join(
     read.csv("Data_GWAS/myY_myF.csv") %>%
-      mutate(Name = gsub(" ","_",Name),
-             Name = gsub("-","\\.",Name),
+      mutate(Name = gsub(" ", "_", Name),
+             Name = gsub("-", "\\.", Name),
              Name = plyr::mapvalues(Name, "3156.11_AGL", "X3156.11_AGL")) %>%
       as.data.frame() %>%
       select(Name, contains("Yield")), by = "Name")
