@@ -120,7 +120,7 @@ which is follow-up to:
 
 ## Supplemental Table 1
 
-> [Supplemental_Table_01.csv](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv)
+> - [Supplemental_Table_01.csv](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv)
 
 ------------------------------------------------------------------------
 
@@ -254,31 +254,31 @@ which is follow-up to:
 
 ## Additional Figures 11
 
-[Additional/Additional_Figure_11_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_1.html)
+> - [Additional/Additional_Figure_11_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_1.html)
 
 ![](Additional/Additional_Figure_11_1.png)
 
-[Additional/Additional_Figure_11_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_2.html)
+> - [Additional/Additional_Figure_11_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_2.html)
 
 ![](Additional/Additional_Figure_11_2.png)
 
-[Additional/Additional_Figure_11_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_3.html)
+> - [Additional/Additional_Figure_11_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_3.html)
 
 ![](Additional/Additional_Figure_11_3.png)
 
-[Additional/Additional_Figure_11_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_4.html)
+> - [Additional/Additional_Figure_11_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_4.html)
 
 ![](Additional/Additional_Figure_11_4.png)
 
-[Additional/Additional_Figure_11_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_5.html)
+> - [Additional/Additional_Figure_11_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_5.html)
 
 ![](Additional/Additional_Figure_11_5.png)
 
-[Additional/Additional_Figure_11_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_6.html)
+> - [Additional/Additional_Figure_11_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_6.html)
 
 ![](Additional/Additional_Figure_11_6.png)
 
-[Additional/Additional_Figure_11_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_7.html)
+> - [Additional/Additional_Figure_11_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_7.html)
 
 ![](Additional/Additional_Figure_11_7.png)
 
@@ -286,39 +286,39 @@ which is follow-up to:
 
 ## Additional Figures 12
 
-[Additional/Additional_Figure_12_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_1.html)
+> - [Additional/Additional_Figure_12_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_1.html)
 
 ![](Additional/Additional_Figure_12_1.png)
 
-[Additional/Additional_Figure_12_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_2.html)
+> - [Additional/Additional_Figure_12_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_2.html)
 
 ![](Additional/Additional_Figure_12_2.png)
 
-[Additional/Additional_Figure_12_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_3.html)
+> - [Additional/Additional_Figure_12_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_3.html)
 
 ![](Additional/Additional_Figure_12_3.png)
 
-[Additional/Additional_Figure_12_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_4.html)
+> - [Additional/Additional_Figure_12_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_4.html)
 
 ![](Additional/Additional_Figure_12_4.png)
 
-[Additional/Additional_Figure_12_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_5.html)
+> - [Additional/Additional_Figure_12_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_5.html)
 
 ![](Additional/Additional_Figure_12_5.png)
 
-[Additional/Additional_Figure_12_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_6.html)
+> - [Additional/Additional_Figure_12_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_6.html)
 
 ![](Additional/Additional_Figure_12_6.png)
 
-[Additional/Additional_Figure_12_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_7.html)
+> - [Additional/Additional_Figure_12_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_7.html)
 
 ![](Additional/Additional_Figure_12_7.png)
 
-[Additional/Additional_Figure_12_8.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_8.html)
+> - [Additional/Additional_Figure_12_8.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_8.html)
 
 ![](Additional/Additional_Figure_12_8.png)
 
-[Additional/Additional_Figure_12_9.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_9.html)
+> - [Additional/Additional_Figure_12_9.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_9.html)
 
 ![](Additional/Additional_Figure_12_9.png)
 
@@ -326,13 +326,21 @@ which is follow-up to:
 
 ## Manhattan Plots
 
-> [Additional/ManH/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ManH/)
+> - [Additional/ManH/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ManH/)
 
 ------------------------------------------------------------------------
 
 ## Markers
 
-> [Additional/Markers/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/Markers/)
+> - [Additional/Markers/Top](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Top/)
+
+> - [Additional/Markers/Chr1](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr1/)
+> - [Additional/Markers/Chr2](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr2/)
+> - [Additional/Markers/Chr3](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr3/)
+> - [Additional/Markers/Chr4](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr4/)
+> - [Additional/Markers/Chr5](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr5/)
+> - [Additional/Markers/Chr6](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr6/)
+> - [Additional/Markers/Chr7](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr7/)
 
 ------------------------------------------------------------------------
 

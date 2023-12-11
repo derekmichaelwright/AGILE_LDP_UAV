@@ -1387,7 +1387,7 @@ mp4 <- ggGrowthCurve(xpm = su17_gc.v[[4]], xF = su17_f, xlab = "",
                      ylab = "", myTitle = "Sutherland, Canada 2017")
 mp5 <- ggGrowthCurve(xpm = su17_gc.h[[4]], xF = su17_f, xlab = "",
                      ylab = "", myTitle = "Sutherland, Canada 2017")
-mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f, xlab = "",
+mp6 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f, xlab = "Days After Planting",
                      ylab = "", myTitle = "Sutherland, Canada 2017")
 # Rosthern 2017
 mp7 <- ggGrowthCurve(xpm = ro17_gc.v[[4]], xF = ro17_f, xlab = "",
@@ -1409,7 +1409,20 @@ ggsave("Figure_03.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ![](Additional/Additional_Figure_03_1.png)
 
 ```{r}
-mp <- ggarrange(mp2, mp5, mp3, mp6, ncol = 2, nrow = 2, common.legend = T)
+# Plot
+mp1 <- ggGrowthCurve(xpm = it17_gc.h[[4]], xF = it17_f, 
+                     xlab = "Days After Planting", ylab = "Plot Height", 
+                     myTitle = "Metaponto, Italy 2017")
+mp2 <- ggGrowthCurve(xpm = su17_gc.h[[4]], xF = su17_f, 
+                     xlab = "Days After Planting", ylab = "", 
+                     myTitle = "Sutherland, Canada 2017")
+mp3 <- ggGrowthCurve(xpm = it17_gc.a[[4]], xF = it17_f, 
+                     xlab = "Days After Planting", ylab = "Plot Area",  
+                     myTitle = "Metaponto, Italy 2017")
+mp4 <- ggGrowthCurve(xpm = su17_gc.a[[4]], xF = su17_f, 
+                     xlab = "Days After Planting", ylab = "", 
+                     myTitle = "Sutherland, Canada 2017")
+mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 2, nrow = 2, common.legend = T)
 ggsave("Additional/Additional_Figure_03_1.png", mp, 
        width = 8, height = 6, dpi = 600, bg = "white")
 ```
