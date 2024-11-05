@@ -1,14 +1,16 @@
-Disecting lentil crop growth across multi-environment trials using
-unoccupied aerial vehicles
+Disecting lentil crop growth in contrasting environments using digital
+imaging and and genome-wide association studies
 ================
 Derek Michael Wright <derek.wright@usask.ca>
-01-11-2023
+01-08-2024
 
 ------------------------------------------------------------------------
 
-> Derek Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia & Kirstin
-> E Bett. **Disecting lentil crop growth across multi-environment trials
-> using unoccupied aerial vehicles**. unpublished. (**2023**) 00: 1-10
+> [Derek Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia & Kirstin
+> E Bett. **Disecting lentil crop growth in contrasting environments
+> using digital imaging and and genome-wide association studies**.
+> *unpublished*. (**2024**) 00:
+> 1-10](https://github.com/derekmichaelwright/AGILE_LDP_UAV)
 
 which is follow-up to:
 
@@ -16,7 +18,8 @@ which is follow-up to:
 >   Weller, Kirstin Bett.**Focusing the GWAS *Lens* on days to flower
 >   using latent variable phenotypes derived from global
 >   multi-environment trials**. *The Plant Genome*. (**2022**) 16(1):
->   e20269.](https://doi.org/10.1002/tpg2.20269)
+>   e20269.
+>   doi.org/10.1002/tpg2.20269](https://doi.org/10.1002/tpg2.20269)
 > - <https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology>
 
 > - [Derek M Wright, Sandesh Neupane, Taryn Heidecker, Teketel A Haile,
@@ -42,6 +45,7 @@ which is follow-up to:
 
 # Contents
 
+- [Raw Data & Growth Curve Modeling](#raw-data-&-growth-curve-modeling)
 - [Figures](#figures)
 - [Supplemental Tables](#supplemental-tables)
 - [Supplemental Figures](#supplemental-figures)
@@ -51,7 +55,7 @@ which is follow-up to:
 
 <img src="Additional/img_Agile.png" style="width:50.0%" />
 
-![](Additional/img_P2IRC.png)
+<img src="Additional/img_P2IRC.png" style="width:50.0%" />
 
 ## Collaborators
 
@@ -59,6 +63,67 @@ which is follow-up to:
   of Saskatchewan, Saskatoon, Saskatchewan, Canada
 - School of Agriculture, Forestry, Food and Environmental Sciences,
   University of Basilicata, Potenza, Italy
+
+------------------------------------------------------------------------
+
+# Raw Data & Growth Curve Modeling
+
+> - [Additional/ggDroneCheck_It17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf)
+> - [Additional/ggDroneCheck_Ro17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf)
+> - [Additional/ggDroneCheck_Su17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf)
+> - [Additional/ggDroneCheck_Su18.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf)
+
+------------------------------------------------------------------------
+
+## Metaponto, Italy 2017
+
+> - [Additional/ggpGrowthCurves_It17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_volume.html)
+
+![](Additional/ggGrowthCurves_It17_volume.png)
+
+> - [Additional/ggpGrowthCurves_It17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_area.html)
+
+![](Additional/ggGrowthCurves_It17_area.png)
+
+> - [Additional/ggpGrowthCurves_It17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_height.html)
+
+![](Additional/ggGrowthCurves_It17_height.png)
+
+------------------------------------------------------------------------
+
+## Rosthern, Canada 2017
+
+> - [Additional/ggpGrowthCurves_Ro17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_volume.html)
+
+![](Additional/ggGrowthCurves_Ro17_volume.png)
+
+> - [Additional/ggpGrowthCurves_Ro17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_area.html)
+
+![](Additional/ggGrowthCurves_Ro17_area.png)
+
+> - [Additional/ggpGrowthCurves_Ro17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_height.html)
+
+![](Additional/ggGrowthCurves_Ro17_height.png)
+
+------------------------------------------------------------------------
+
+## Sutherland, Canada 2017
+
+[Additional/ggpGrowthCurves_Su17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_volume.html)
+
+![](Additional/ggGrowthCurves_Su17_volume.png)
+
+[Additional/ggpGrowthCurves_Su17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_area.html)
+
+![](Additional/ggGrowthCurves_Su17_area.png)
+
+[Additional/ggpGrowthCurves_Su17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_height.html)
+
+![](Additional/ggGrowthCurves_Su17_height.png)
+
+------------------------------------------------------------------------
+
+## Sutherland, Canada 2018
 
 ------------------------------------------------------------------------
 
@@ -160,11 +225,7 @@ which is follow-up to:
 
 ![](Supplemental_Figure_06.png)
 
-------------------------------------------------------------------------
-
-## Supplemental Figure 7
-
-![](Supplemental_Figure_07.png)
+![](Additional/Supplemental_Figure_06_It17.png)
 
 ------------------------------------------------------------------------
 
@@ -192,6 +253,8 @@ which is follow-up to:
 
 ## Additional Figures 3
 
+> - [Additional/Additional_Figure_03.pdf](Additional/Additional_Figure_03.pdf)
+
 ![](Additional/Additional_Figure_03_1.png)
 
 ![](Additional/Additional_Figure_03_2.png)
@@ -204,13 +267,13 @@ which is follow-up to:
 
 ------------------------------------------------------------------------
 
-## Additional Figure 4
+## Additional Figures 4
 
 ![](Additional/Additional_Figure_04.png)
 
 ------------------------------------------------------------------------
 
-## Additional Figure 5
+## Additional Figures 5
 
 ![](Additional/Additional_Figure_05.png)
 
@@ -222,15 +285,11 @@ which is follow-up to:
 
 ------------------------------------------------------------------------
 
-## Additional Figure 7
+## Additional Figures 7
 
 ![](Additional/Additional_Figure_07.png)
 
 ![](Additional/Additional_Figure_07_1.png)
-
-![](Additional/Additional_Figure_07_2.png)
-
-![](Additional/Additional_Figure_07_3.png)
 
 ------------------------------------------------------------------------
 
@@ -240,13 +299,13 @@ which is follow-up to:
 
 ------------------------------------------------------------------------
 
-## Additional Figure 9
+## Additional Figures 9
 
 ![](Additional/Additional_Figure_09.png)
 
 ------------------------------------------------------------------------
 
-## Additional Figure 10
+## Additional Figures 10
 
 ![](Additional/Additional_Figure_10.png)
 
@@ -254,33 +313,7 @@ which is follow-up to:
 
 ## Additional Figures 11
 
-> - [Additional/Additional_Figure_11_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_1.html)
-
-![](Additional/Additional_Figure_11_1.png)
-
-> - [Additional/Additional_Figure_11_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_2.html)
-
-![](Additional/Additional_Figure_11_2.png)
-
-> - [Additional/Additional_Figure_11_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_3.html)
-
-![](Additional/Additional_Figure_11_3.png)
-
-> - [Additional/Additional_Figure_11_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_4.html)
-
-![](Additional/Additional_Figure_11_4.png)
-
-> - [Additional/Additional_Figure_11_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_5.html)
-
-![](Additional/Additional_Figure_11_5.png)
-
-> - [Additional/Additional_Figure_11_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_6.html)
-
-![](Additional/Additional_Figure_11_6.png)
-
-> - [Additional/Additional_Figure_11_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_11_7.html)
-
-![](Additional/Additional_Figure_11_7.png)
+![](Additional/Additional_Figure_11.png)
 
 ------------------------------------------------------------------------
 
@@ -314,13 +347,126 @@ which is follow-up to:
 
 ![](Additional/Additional_Figure_12_7.png)
 
-> - [Additional/Additional_Figure_12_8.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_8.html)
+------------------------------------------------------------------------
 
-![](Additional/Additional_Figure_12_8.png)
+## Additional Figures 13
 
-> - [Additional/Additional_Figure_12_9.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_9.html)
+> - [Additional/Additional_Figure_13_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_1.html)
 
-![](Additional/Additional_Figure_12_9.png)
+![](Additional/Additional_Figure_13_1.png)
+
+> - [Additional/Additional_Figure_13_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_2.html)
+
+![](Additional/Additional_Figure_13_2.png)
+
+> - [Additional/Additional_Figure_13_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_3.html)
+
+![](Additional/Additional_Figure_13_3.png)
+
+> - [Additional/Additional_Figure_13_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_4.html)
+
+![](Additional/Additional_Figure_13_4.png)
+
+> - [Additional/Additional_Figure_13_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_5.html)
+
+![](Additional/Additional_Figure_13_5.png)
+
+> - [Additional/Additional_Figure_13_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_6.html)
+
+![](Additional/Additional_Figure_13_6.png)
+
+> - [Additional/Additional_Figure_13_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_7.html)
+
+![](Additional/Additional_Figure_13_7.png)
+
+> - [Additional/Additional_Figure_13_8.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_8.html)
+
+![](Additional/Additional_Figure_13_8.png)
+
+> - [Additional/Additional_Figure_13_9.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_9.html)
+
+![](Additional/Additional_Figure_13_9.png)
+
+------------------------------------------------------------------------
+
+## ggDroneCheck
+
+> - [Additional/ggDroneCheck_It17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf)
+> - [Additional/ggDroneCheck_Ro17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf)
+> - [Additional/ggDroneCheck_Su17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf)
+> - [Additional/ggDroneCheck_Su18.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf)
+
+------------------------------------------------------------------------
+
+## ggDroneTrait
+
+![](Additional/ggDroneTrait_It17.png)
+
+![](Additional/ggDroneTrait_Ro17.png)
+
+![](Additional/ggDroneTrait_Su17.png)
+
+![](Additional/ggDroneTrait_Su18.png)
+
+------------------------------------------------------------------------
+
+## ggGrowthCurves
+
+### Italy 2017
+
+> - [Additional/ggpGrowthCurves_It17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_volume.html)
+
+![](Additional/ggGrowthCurves_It17_volume.png)
+
+> - [Additional/ggpGrowthCurves_It17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_area.html)
+
+![](Additional/ggGrowthCurves_It17_area.png)
+
+> - [Additional/ggpGrowthCurves_It17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_height.html)
+
+![](Additional/ggGrowthCurves_It17_height.png)
+
+### Rosthern 2017
+
+> - [Additional/ggpGrowthCurves_Ro17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_volume.html)
+
+![](Additional/ggGrowthCurves_Ro17_volume.png)
+
+> - [Additional/ggpGrowthCurves_Ro17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_area.html)
+
+![](Additional/ggGrowthCurves_Ro17_area.png)
+
+> - [Additional/ggpGrowthCurves_Ro17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_height.html)
+
+![](Additional/ggGrowthCurves_Ro17_height.png)
+
+### Sutherland 2017
+
+> - [Additional/ggpGrowthCurves_Su17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_volume.html)
+
+![](Additional/ggGrowthCurves_Su17_volume.png)
+
+> - [Additional/ggpGrowthCurves_Su17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_area.html)
+
+![](Additional/ggGrowthCurves_Su17_area.png)
+
+> - [Additional/ggpGrowthCurves_Su17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_height.html)
+
+![](Additional/ggGrowthCurves_Su17_height.png)
+
+### Sutherland 2018
+
+> - [Additional/ggpGrowthCurves_Su18_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_volume.html)
+
+![](Additional/ggGrowthCurves_Su18_volume.png)
+
+> - [Additional/ggpGrowthCurves_Su18_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_area.html)
+
+![](Additional/ggGrowthCurves_Su18_area.png)
+
+> - [Additional/ggpGrowthCurves_Su18_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_height.html)
+
+![](Additional/ggGrowthCurves_Su18_height.png)
 
 ------------------------------------------------------------------------
 
@@ -332,15 +478,8 @@ which is follow-up to:
 
 ## Markers
 
-> - [Additional/Markers/Top](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Top/)
-
-> - [Additional/Markers/Chr1](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr1/)
-> - [Additional/Markers/Chr2](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr2/)
-> - [Additional/Markers/Chr3](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr3/)
-> - [Additional/Markers/Chr4](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr4/)
-> - [Additional/Markers/Chr5](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr5/)
-> - [Additional/Markers/Chr6](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr6/)
-> - [Additional/Markers/Chr7](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr7/)
+> - [Additional/Markers/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/)
+>   ers/Chr7/)
 
 ------------------------------------------------------------------------
 

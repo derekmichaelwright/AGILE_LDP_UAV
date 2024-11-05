@@ -5,13 +5,12 @@
 
 GWAS_Results/
 
-Data_Drone/final_it17_d.csv
-Data_Drone/final_ro17_d.csv
-Data_Drone/final_su17_d.csv
-Data_Drone/final_su18_d.csv
-
-myG_LDP.csv
+Data_GWAS/myG_LDP_GRN_RD3_MAF5_MISS25.txt
 
 Literature/
 
-Additiona/Additional_Figure_03.pdf
+Additional/Additional_Figure_03.pdf
+
+Additional/ManH/
+
+Additional/Markers/
