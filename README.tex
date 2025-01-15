@@ -1,0 +1,889 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Disecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies},
+  pdfauthor={Derek Michael Wright derek.wright@usask.ca},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Disecting lentil crop growth in contrasting environments using
+digital imaging and and genome-wide association studies}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{unpublished}
+\author{Derek Michael Wright
+\href{mailto:derek.wright@usask.ca}{\nolinkurl{derek.wright@usask.ca}}}
+\date{01-08-2024}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{quote}
+\href{https://github.com/derekmichaelwright/AGILE_LDP_UAV}{Derek Wright,
+Sandesh Neupane, Karsten Neilson, Tania Gioia \& Kirstin E Bett.
+\textbf{Disecting lentil crop growth in contrasting environments using
+digital imaging and and genome-wide association studies}.
+\emph{unpublished}. (\textbf{2024}) 00: 1-10}
+\end{quote}
+
+which is follow-up to:
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://doi.org/10.1002/tpg2.20269}{Sandesh Neupane, Derek
+  Wright, Raul Martinez, Jakob Butler, Jim Weller, Kirstin
+  Bett.\textbf{Focusing the GWAS \emph{Lens} on days to flower using
+  latent variable phenotypes derived from global multi-environment
+  trials}. \emph{The Plant Genome}. (\textbf{2022}) 16(1): e20269.
+  doi.org/10.1002/tpg2.20269}
+\item
+  \url{https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology}
+\end{itemize}
+\end{quote}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://doi.org/10.1002/ppp3.10158}{Derek M Wright, Sandesh
+  Neupane, Taryn Heidecker, Teketel A Haile, Clarice J Coyne, Rebecca J
+  McGee, Sripada Udupa, Fatima Henkrar, Eleonora Barilli, Diego
+  Rubiales, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Reena
+  Mehra, Ashutosh Sarker, Rajeev Dhakal, Babul Anwar, Debashish Sarker,
+  Albert Vandenberg, and Kirstin E. Bett. \textbf{Understanding
+  photothermal interactions can help expand production range and
+  increase genetic diversity of lentil (\emph{Lens culinaris} Medik.)}.
+  \emph{Plants, People, Planet}. (\textbf{2021}) 3(2): 171-181.}
+\item
+  \url{https://github.com/derekmichaelwright/AGILE_LDP_Phenology}
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \url{https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/raw/master/README.pdf}{View
+  as pdf}
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/README.html}{View
+  as HTML}
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Growth_Rates_Vignette.html}{Source
+  Code Vignette (Growth\_Rates\_Vignette.html)}
+\end{itemize}
+\end{quote}
+
+\section{Contents}\label{contents}
+
+\begin{itemize}
+\tightlist
+\item
+  \hyperref[raw-data-ux26-growth-curve-modeling]{Raw Data \& Growth
+  Curve Modeling}
+\item
+  \hyperref[figures]{Figures}
+\item
+  \hyperref[supplemental-tables]{Supplemental Tables}
+\item
+  \hyperref[supplemental-figures]{Supplemental Figures}
+\item
+  \hyperref[additional-figures]{Additional Figures}
+\end{itemize}
+
+\section{\texorpdfstring{AGILE \& P\textsuperscript{2}IRC
+Projects}{AGILE \& P2IRC Projects}}\label{agile-p2irc-projects}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{Additional/img_Agile.png}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{Additional/img_P2IRC.png}
+
+\subsection{Collaborators}\label{collaborators}
+
+\begin{itemize}
+\tightlist
+\item
+  Department of Plant Sciences and Crop Development Centre, University
+  of Saskatchewan, Saskatoon, Saskatchewan, Canada
+\item
+  School of Agriculture, Forestry, Food and Environmental Sciences,
+  University of Basilicata, Potenza, Italy
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Raw Data \& Growth Curve
+Modeling}\label{raw-data-growth-curve-modeling}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf}{Additional/ggDroneCheck\_It17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf}{Additional/ggDroneCheck\_Ro17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf}{Additional/ggDroneCheck\_Su17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf}{Additional/ggDroneCheck\_Su18.pdf}
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Metaponto, Italy 2017}\label{metaponto-italy-2017}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_volume.html}{Additional/ggpGrowthCurves\_It17\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_area.html}{Additional/ggpGrowthCurves\_It17\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_height.html}{Additional/ggpGrowthCurves\_It17\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_height.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Rosthern, Canada 2017}\label{rosthern-canada-2017}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_volume.html}{Additional/ggpGrowthCurves\_Ro17\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_area.html}{Additional/ggpGrowthCurves\_Ro17\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_height.html}{Additional/ggpGrowthCurves\_Ro17\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_height.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Sutherland, Canada 2017}\label{sutherland-canada-2017}
+
+\href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_volume.html}{Additional/ggpGrowthCurves\_Su17\_volume.html}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_volume.png}
+
+\href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_area.html}{Additional/ggpGrowthCurves\_Su17\_area.html}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_area.png}
+
+\href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_height.html}{Additional/ggpGrowthCurves\_Su17\_height.html}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_height.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Sutherland, Canada 2018}\label{sutherland-canada-2018}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Figures}\label{figures}
+
+\subsection{Figure 1}\label{figure-1}
+
+\includegraphics{Figure_01.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 2}\label{figure-2}
+
+\includegraphics{Figure_02.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 3}\label{figure-3}
+
+\includegraphics{Figure_03.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\pagebreak
+
+\subsection{Figure 4}\label{figure-4}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_A.html}{Additional/Figure\_04\_A.html}
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_B.html}{Additional/Figure\_04\_B.html}
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_C.html}{Additional/Figure\_04\_C.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Figure_04.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 5}\label{figure-5}
+
+\includegraphics{Figure_05.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 6}\label{figure-6}
+
+\includegraphics{Figure_06.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 7}\label{figure-7}
+
+\includegraphics{Figure_07.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figure 8}\label{figure-8}
+
+\includegraphics{Figure_08.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Supplemental Tables}\label{supplemental-tables}
+
+\subsection{Supplemental Table 1}\label{supplemental-table-1}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv}{Supplemental\_Table\_01.csv}
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Supplemental Figures}\label{supplemental-figures}
+
+\subsection{Supplemental Figure 1}\label{supplemental-figure-1}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{Supplemental_Figure_01.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplemental Figure 2}\label{supplemental-figure-2}
+
+\includegraphics{Supplemental_Figure_02.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplemental Figure 3}\label{supplemental-figure-3}
+
+\includegraphics{Supplemental_Figure_03.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplemental Figure 4}\label{supplemental-figure-4}
+
+\includegraphics{Supplemental_Figure_04.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplemental Figure 5}\label{supplemental-figure-5}
+
+\includegraphics{Supplemental_Figure_05.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplemental Figure 6}\label{supplemental-figure-6}
+
+\includegraphics{Supplemental_Figure_06.png}
+
+\includegraphics{Additional/Supplemental_Figure_06_It17.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Additional Figures}\label{additional-figures}
+
+\subsection{Additional Figures 1}\label{additional-figures-1}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{Additional/Additional_Figure_01_1.png}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{Additional/Additional_Figure_01_2.png}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{Additional/Additional_Figure_01_3.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\pagebreak
+
+\subsection{Additional Figures 2}\label{additional-figures-2}
+
+\includegraphics{Additional/Additional_Figure_02_1.png}
+
+\includegraphics{Additional/Additional_Figure_02_2.png}
+
+\includegraphics{Additional/Additional_Figure_02_3.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 3}\label{additional-figures-3}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \url{Additional/Additional_Figure_03.pdf}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_03_1.png}
+
+\includegraphics{Additional/Additional_Figure_03_2.png}
+
+\includegraphics{Additional/Additional_Figure_03_3.png}
+
+\includegraphics{Additional/Additional_Figure_03_4.png}
+
+\includegraphics{Additional/Additional_Figure_03_5.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 4}\label{additional-figures-4}
+
+\includegraphics{Additional/Additional_Figure_04.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 5}\label{additional-figures-5}
+
+\includegraphics{Additional/Additional_Figure_05.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 6}\label{additional-figures-6}
+
+\includegraphics{Additional/Additional_Figure_06.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 7}\label{additional-figures-7}
+
+\includegraphics{Additional/Additional_Figure_07.png}
+
+\pagebreak
+
+\includegraphics{Additional/Additional_Figure_07_1.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 8}\label{additional-figures-8}
+
+\includegraphics{Additional/Additional_Figure_08.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 9}\label{additional-figures-9}
+
+\includegraphics{Additional/Additional_Figure_09.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 10}\label{additional-figures-10}
+
+\includegraphics{Additional/Additional_Figure_10.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Additional Figures 11}\label{additional-figures-11}
+
+\includegraphics{Additional/Additional_Figure_11.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\pagebreak
+
+\subsection{Additional Figures 12}\label{additional-figures-12}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_1.html}{Additional/Additional\_Figure\_12\_1.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_1.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_2.html}{Additional/Additional\_Figure\_12\_2.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_2.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_3.html}{Additional/Additional\_Figure\_12\_3.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_3.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_4.html}{Additional/Additional\_Figure\_12\_4.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_4.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_5.html}{Additional/Additional\_Figure\_12\_5.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_5.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_6.html}{Additional/Additional\_Figure\_12\_6.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_6.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_7.html}{Additional/Additional\_Figure\_12\_7.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_12_7.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\pagebreak
+
+\subsection{Additional Figures 13}\label{additional-figures-13}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_1.html}{Additional/Additional\_Figure\_13\_1.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_1.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_2.html}{Additional/Additional\_Figure\_13\_2.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_2.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_3.html}{Additional/Additional\_Figure\_13\_3.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_3.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_4.html}{Additional/Additional\_Figure\_13\_4.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_4.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_5.html}{Additional/Additional\_Figure\_13\_5.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_5.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_6.html}{Additional/Additional\_Figure\_13\_6.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_6.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_7.html}{Additional/Additional\_Figure\_13\_7.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_7.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_8.html}{Additional/Additional\_Figure\_13\_8.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_8.png}
+
+\pagebreak
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_9.html}{Additional/Additional\_Figure\_13\_9.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/Additional_Figure_13_9.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{ggDroneCheck}\label{ggdronecheck}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf}{Additional/ggDroneCheck\_It17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf}{Additional/ggDroneCheck\_Ro17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf}{Additional/ggDroneCheck\_Su17.pdf}
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf}{Additional/ggDroneCheck\_Su18.pdf}
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{ggDroneTrait}\label{ggdronetrait}
+
+\includegraphics{Additional/ggDroneTrait_It17.png}
+
+\includegraphics{Additional/ggDroneTrait_Ro17.png}
+
+\includegraphics{Additional/ggDroneTrait_Su17.png}
+
+\includegraphics{Additional/ggDroneTrait_Su18.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{ggGrowthCurves}\label{gggrowthcurves}
+
+\subsubsection{Italy 2017}\label{italy-2017}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_volume.html}{Additional/ggpGrowthCurves\_It17\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_area.html}{Additional/ggpGrowthCurves\_It17\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_height.html}{Additional/ggpGrowthCurves\_It17\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_It17_height.png}
+
+\subsubsection{Rosthern 2017}\label{rosthern-2017}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_volume.html}{Additional/ggpGrowthCurves\_Ro17\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_area.html}{Additional/ggpGrowthCurves\_Ro17\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_height.html}{Additional/ggpGrowthCurves\_Ro17\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Ro17_height.png}
+
+\subsubsection{Sutherland 2017}\label{sutherland-2017}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_volume.html}{Additional/ggpGrowthCurves\_Su17\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_area.html}{Additional/ggpGrowthCurves\_Su17\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_height.html}{Additional/ggpGrowthCurves\_Su17\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su17_height.png}
+
+\subsubsection{Sutherland 2018}\label{sutherland-2018}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_volume.html}{Additional/ggpGrowthCurves\_Su18\_volume.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su18_volume.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_area.html}{Additional/ggpGrowthCurves\_Su18\_area.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su18_area.png}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_height.html}{Additional/ggpGrowthCurves\_Su18\_height.html}
+\end{itemize}
+\end{quote}
+
+\includegraphics{Additional/ggGrowthCurves_Su18_height.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Manhattan Plots}\label{manhattan-plots}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ManH/}{Additional/ManH/}
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Markers}\label{markers}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/}{Additional/Markers/}
+  ers/Chr7/)
+\end{itemize}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+© Derek Michael Wright
+
+\end{document}
