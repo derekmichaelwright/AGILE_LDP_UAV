@@ -1,4 +1,4 @@
-Disecting lentil crop growth in contrasting environments using digital
+Dissecting lentil crop growth in contrasting environments using digital
 imaging and and genome-wide association studies
 ================
 Derek Michael Wright <derek.wright@usask.ca>
@@ -7,7 +7,7 @@ Derek Michael Wright <derek.wright@usask.ca>
 ------------------------------------------------------------------------
 
 > [Derek Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia & Kirstin
-> E Bett. **Disecting lentil crop growth in contrasting environments
+> E Bett. **Dissecting lentil crop growth in contrasting environments
 > using digital imaging and and genome-wide association studies**.
 > *unpublished*. (**2024**) 00:
 > 1-10](https://github.com/derekmichaelwright/AGILE_LDP_UAV)

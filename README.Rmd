@@ -1,5 +1,5 @@
 ---
-title: "Disecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies"
+title: "Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies"
 subtitle: "unpublished"
 author: "Derek Michael Wright <derek.wright@usask.ca>"
 date: "01-08-2024"
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, message = F, warning = F, comment = NA, out.w
 
 ---
 
-> [Derek Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia & Kirstin E Bett. **Disecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*. (**2024**) 00: 1-10](https://github.com/derekmichaelwright/AGILE_LDP_UAV)
+> [Derek Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia & Kirstin E Bett. **Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*. (**2024**) 00: 1-10](https://github.com/derekmichaelwright/AGILE_LDP_UAV)
 
 which is follow-up to:
 
@@ -182,7 +182,7 @@ which is follow-up to:
 
 > - [Supplemental_Table_01.csv](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv)
 
-```{r echo = F, eval = T}
+```{r echo = F, eval = F}
 DT::datatable(read.csv("Supplemental_Table_01.csv"))
 ```
 

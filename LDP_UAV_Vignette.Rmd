@@ -1,5 +1,5 @@
 ---
-title: "Disecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies"
+title: "Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies"
 subtitle: "Unpublished"
 author: "Derek Michael Wright <derek.wright@usask.ca>"
 date: "01-10-2024"
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(eval = F, echo = T, message = F, warning = F,
 
 This vignette contains the `R` code and analysis done for the paper:
 
-> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Steve Shirtliffe, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Karsten M.E. Neilson & Kirstin E. Bett. **Disecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*.](https://github.com/derekmichaelwright/AGILE_LDP_UAV) 
+> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Steve Shirtliffe, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Karsten M.E. Neilson & Kirstin E. Bett. **Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*.](https://github.com/derekmichaelwright/AGILE_LDP_UAV) 
 > - `r shiny::icon("github")` https://github.com/derekmichaelwright/AGILE_LDP_UAV
 
 which is follow-up to:
