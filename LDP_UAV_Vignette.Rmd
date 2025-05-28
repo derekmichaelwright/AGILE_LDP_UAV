@@ -24,16 +24,16 @@ knitr::opts_chunk$set(eval = F, echo = T, message = F, warning = F,
 
 This vignette contains the `R` code and analysis done for the paper:
 
-> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Steve Shirtliffe, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Karsten M.E. Neilson & Kirstin E. Bett. **Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*.](https://github.com/derekmichaelwright/AGILE_LDP_UAV) 
-> - `r shiny::icon("github")` https://github.com/derekmichaelwright/AGILE_LDP_UAV
+> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Steve Shirtliffe, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Karsten M.E. Neilson & Kirstin E. Bett. **Dissecting lentil crop growth in contrasting environments using digital imaging and and genome-wide association studies**. *unpublished*.](https://github.com/derekmichaelwright/AGILE_LDP_UAV){target="_blank"} 
+> - `r shiny::icon("github")` [https://github.com/derekmichaelwright/AGILE_LDP_UAV](https://github.com/derekmichaelwright/AGILE_LDP_UAV){target="_blank"}
 
 which is follow-up to:
 
-> - `r shiny::icon("newspaper")` [Sandesh Neupane, Derek Wright, Raul Martinez, Jakob Butler, Jim Weller, Kirstin Bett. **Focusing the GWAS *Lens* on days to flower using latent variable phenotypes derived from global multi-environment trials**. *The Plant Genome*. (**2022**) 16(1): e20269. doi.org/10.1002/tpg2.20269](https://doi.org/10.1002/tpg2.20269) 
-> - `r shiny::icon("github")` https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology
+> - `r shiny::icon("newspaper")` [Sandesh Neupane, Derek Wright, Raul Martinez, Jakob Butler, Jim Weller, Kirstin Bett. **Focusing the GWAS *Lens* on days to flower using latent variable phenotypes derived from global multi-environment trials**. *The Plant Genome*. (**2022**) 16(1): e20269. doi.org/10.1002/tpg2.20269](https://doi.org/10.1002/tpg2.20269){target="_blank"} 
+> - `r shiny::icon("github")` [https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology](https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology){target="_blank"}
 
-> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Taryn Heidecker, Teketel A. Haile, Crystal Chan, Clarice J. Coyne, Rebecca J. McGee, Sripada Udupa, Fatima Henkrar, Eleonora Barilli, Diego Rubiales, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Reena Mehra, Ashutosh Sarker, Rajeev Dhakal, Babul Anwar, Debashish Sarker, Albert Vandenberg & Kirstin E. Bett. **Understanding photothermal interactions can help expand production range and increase genetic diversity of lentil (*Lens culinaris* Medik.)**. *Plants, People, Planet*. (**2021**) 3(2): 171-181. doi.org/10.1002/ppp3.10158](https://doi.org/10.1002/ppp3.10158)
-> - `r shiny::icon("github")` https://github.com/derekmichaelwright/AGILE_LDP_Phenology
+> - `r shiny::icon("newspaper")` [Derek M. Wright, Sandesh Neupane, Taryn Heidecker, Teketel A. Haile, Crystal Chan, Clarice J. Coyne, Rebecca J. McGee, Sripada Udupa, Fatima Henkrar, Eleonora Barilli, Diego Rubiales, Tania Gioia, Giuseppina Logozzo, Stefania Marzario, Reena Mehra, Ashutosh Sarker, Rajeev Dhakal, Babul Anwar, Debashish Sarker, Albert Vandenberg & Kirstin E. Bett. **Understanding photothermal interactions can help expand production range and increase genetic diversity of lentil (*Lens culinaris* Medik.)**. *Plants, People, Planet*. (**2021**) 3(2): 171-181. doi.org/10.1002/ppp3.10158](https://doi.org/10.1002/ppp3.10158){target="_blank"}
+> - `r shiny::icon("github")` [https://github.com/derekmichaelwright/AGILE_LDP_Phenology](https://github.com/derekmichaelwright/AGILE_LDP_Phenology){target="_blank"}
 
 ---
 
@@ -61,6 +61,7 @@ library(htmlwidgets)
 library(growthcurver)
 library(FactoMineR)
 library(ggrepel)
+library(lme4)
 #
 theme_AGL <- theme_bw() + 
   theme(strip.background   = element_rect(colour = "black", fill = NA, size = 0.5),
@@ -959,6 +960,18 @@ htmlwidgets::saveWidget(mp, file="Additional/ggpGrowthCurves_Su18_height.html")
 load("growthRenv.RData")
 ```
 
+```{r echo = F, eval = F}
+# Prep data for Knowpulse
+x1 <- select(it17_d, -Value_f) %>% spread(Trait, Value) %>% filter(Sensor != "NA") %>% 
+  mutate(Location = "Metaponto, Italy")
+x2 <- select(ro17_d, -Value_f) %>% spread(Trait, Value) %>% filter(Sensor != "NA") %>% 
+  mutate(Location = "Rosthern, Canada")
+x3 <- select(su17_d, -Value_f) %>% spread(Trait, Value) %>% filter(Sensor != "NA") %>% 
+  mutate(Location = "Sutherland, Canada")
+x4 <- select(su18_d, -Value_f) %>% spread(Trait, Value) %>% filter(Sensor != "NA") %>% 
+  mutate(Location = "Sutherland, Canada")
+```
+
 # Figure 1 - EnvData
 
 ![](Figure_01.png)
@@ -1234,7 +1247,9 @@ ggDroneCorr <- function(xd, xf, myTitle, myTrait, xLab, yLab, myColor = "darkgre
     theme_AGL + 
     labs(x = xLab, y = yLab)
 }
+#
 # Height x Height
+#
 mp1 <- ggDroneCorr(xd = it17_gc.h, xf = it17_f, myColor = myColors_Expt[1],
                    myTitle = "Metaponto, Italy 2017", yLab = "Plot Height (UAV)",
                    myTrait = "Canopy.Height", xLab = "Canopy Height (Manual)")
@@ -1252,7 +1267,9 @@ mp_a <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
   annotate_figure(fig.lab = "A) Plot Height (UAV) x Canopy Height (Manual)",
                   fig.lab.pos = "top.left", fig.lab.size = 13, top = "") + 
   theme(plot.margin=unit(c(0.1,0,0,0), 'cm')) 
+#
 # Volume x Biomass
+#
 mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1],
                    myTitle = "Metaponto, Italy 2017", yLab = "Plot Volume (UAV)", 
                    myTrait = "Plot.Biomass", xLab = "Total Biomass (Manual)")
@@ -1267,22 +1284,12 @@ mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4],
                    myTrait = "Plot.Biomass", xLab = "Total Biomass (Manual)")
 # Append
 mp_b <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
-  annotate_figure(fig.lab = "B) Plot Volume (UAV) x Biomass (Manual)",
+  annotate_figure(fig.lab = "B) Plot Volume (UAV) x Total Biomass (Manual)",
                   fig.lab.pos = "top.left", fig.lab.size = 13, top = "") + 
   theme(plot.margin=unit(c(0.1,0,0,0), 'cm'))
-# Append
-mp <- ggarrange(mp_a, mp_b, nrow = 2)
-ggsave("Supplemental_Figure_02.png", mp, width = 10, height = 6, dpi = 600, bg = "white")
-```
-
----
-
-## Additional Figures 2 - Volume x Biomass x Yield
-
-![](Additional/Additional_Figure_02_1.png)
-
-```{r}
+#
 # Volume x Biomass
+#
 mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1],
                    myTitle = "Metaponto, Italy 2017",    yLab = "Plot Volume (UAV)",
                    myTrait = "Straw.Biomass", xLab = "Straw Biomass (Manual)")
@@ -1296,13 +1303,20 @@ mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4],
                    myTitle = "Sutherland, Canada 2018", yLab = "Plot Volume (UAV)",
                    myTrait = "Straw.Biomass",  xLab = "Straw Biomass (Manual)")
 # Append
-mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
-  annotate_figure(top = "Plot Volume (UAV) x Straw Biomass (Manual)")
-ggsave("Additional/Additional_Figure_02_1.png", mp, 
-       width = 10, height = 3, dpi = 600, bg = "white")
+mp_c <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1)  %>%
+  annotate_figure(fig.lab = "C) Plot Volume (UAV) x Straw Biomass (Manual)",
+                  fig.lab.pos = "top.left", fig.lab.size = 13, top = "") + 
+  theme(plot.margin=unit(c(0.1,0,0,0), 'cm'))
+# Append All
+mp <- ggarrange(mp_a, mp_b, mp_c, nrow = 3)
+ggsave("Supplemental_Figure_02.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
-![](Additional/Additional_Figure_02_2.png)
+---
+
+## Additional Figures 2 - Volume x Yield x Arch
+
+![](Additional/Additional_Figure_02.png)
 
 ```{r}
 # Volume x Yield
@@ -1319,16 +1333,13 @@ mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4],
                   myTitle = "Sutherland 2018", yLab = "Plot Volume (UAV)",
                   myTrait = "Seed.Mass",        xLab = "Plot Yield (Manual)")
 # Append
-mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
-  annotate_figure(top = "Plot Volume (UAV) x Plot Yield (Manual)")
-ggsave("Additional/Additional_Figure_02_2.png", mp, 
-       width = 10, height = 3, dpi = 600, bg = "white")
-```
-
-![](Additional/Additional_Figure_02_3.png)
-
-```{r}
+mp_a <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1)  %>%
+  annotate_figure(fig.lab = "A) Plot Volume (UAV) x Plot Yield (Manual)",
+                  fig.lab.pos = "top.left", fig.lab.size = 13, top = "") + 
+  theme(plot.margin=unit(c(0.1,0,0,0), 'cm'))
+#
 # Volume x Growth Habit
+#
 mp1 <- ggDroneCorr(xd = it17_gc.v, xf = it17_f, myColor = myColors_Expt[1],
                    myTitle = "Italy 2017", yLab = "Plot Volume (Drone)",
                    myTrait = "Nodes.At.Flower", xLab = "Nodes at Flowering (Manual)")
@@ -1342,10 +1353,13 @@ mp4 <- ggDroneCorr(xd = su18_gc.v, xf = su18_f, myColor = myColors_Expt[4],
                   myTitle = "Sutherland 2018", yLab = "Plot Volume (Drone)",
                   myTrait = "Growth.Habit", xLab = "Growth Habit (Manual)")
 # Append
-mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1) %>%
-  annotate_figure(top = "Plot Volume x Growth Habit")
-ggsave("Additional/Additional_Figure_02_3.png", mp, 
-       width = 10, height = 3, dpi = 600, bg = "white")
+mp_b <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1)  %>%
+  annotate_figure(fig.lab = "A) Plot Volume (UAV) x Growth Habit (Manual)",
+                  fig.lab.pos = "top.left", fig.lab.size = 13, top = "") + 
+  theme(plot.margin=unit(c(0.1,0,0,0), 'cm'))
+# Append All
+mp <- ggarrange(mp_a, mp_b, nrow = 2)
+ggsave("Additional/Additional_Figure_02.png", mp, width = 10, height = 6, dpi = 600, bg = "white")
 ```
 
 ---
@@ -1620,6 +1634,71 @@ dev.off() #dev.set(dev.next())
 
 ---
 
+# Supplemental Figure 3 
+
+![](Supplemental_Figure_03.png)
+
+```{r}
+#
+gg_GxE <- function(x1, x2, x3, traitName, myTitle, myYlab = "Proportion of Total Variance (%)") {
+  # Prep data
+  x1 <- x1[[2]] %>% select(Plot, Rep, Entry, Name, Expt, k, x.mid, x.d, g.r, auc.l)
+  x2 <- x2[[2]] %>% select(Plot, Rep, Entry, Name, Expt, k, x.mid, x.d, g.r, auc.l)
+  x3 <- x3[[2]] %>% select(Plot, Rep, Entry, Name, Expt, k, x.mid, x.d, g.r, auc.l)
+  xx <- bind_rows(x1, x2, x3)
+  # Define your traits (replace with your actual trait names)
+  traits <- c("k", "auc.l", "g.r", "x.mid", "x.d")
+  # Initialize an empty list to store variance component data
+  vc_list <- list()
+  blup_list <- list() #store blups values
+  # Loop over each trait
+  for (trait in traits) {
+    # Define the model formula with ENV as a fixed factor
+    formula <- as.formula(paste(trait, "~ Expt + (1 | Name) + (1 | Name:Expt) + (1 | Expt:Rep)"))
+    # Fit the mixed-effects model
+    model <- lmer(formula, data = xx)  # Replace with your actual data
+    # Extract variance components for random effects
+    vc <- VarCorr(model)
+    vc_df <- as.data.frame(vc)
+    # Calculate total phenotypic variance 
+    total_variance <- sum(vc_df$vcov) 
+    # Calculate proportions as percentages
+    vc_df$proportion <- (vc_df$vcov / total_variance) * 100
+    vc_df$trait <- trait
+    # Store results in the list
+    vc_list[[trait]] <- vc_df
+  }
+  # Combine all trait data into one data frame
+  vc_all <- do.call(rbind, vc_list)
+  write.csv(vc_all, paste0("Additional/vc_all",traitName,".csv"))
+  # Define and order variance component labels for the plot
+  vc_all$grp <- factor(vc_all$grp, 
+                       levels = c("Name", "Name:Expt", "Expt:Rep", "Residual"),
+                       labels = c("Genetic", "G x E", "Rep:Env", "Residual + Env"))
+  vc_all$trait <- factor(vc_all$trait, levels = traits)
+  #
+  # Create the stacked bar plot
+  ggplot(vc_all, aes(x = trait, y = proportion, fill = grp)) +
+    geom_col(color = "black") + 
+    scale_fill_brewer(palette = "Set3") +
+    theme_AGL +
+    labs(title = myTitle, x = NULL, y = myYlab, fill = "Component")
+}
+mp1 <- gg_GxE(it17_gc.a, ro17_gc.a, su17_gc.a, traitName = "Area", myYlab = NULL,
+              myTitle = "A) Plot Area Growth Curve Coefficients")
+mp2 <- gg_GxE(it17_gc.h, ro17_gc.h, su17_gc.h, traitName = "Height", 
+              myTitle = "B) Plot Height Growth Curve Coefficients")
+mp3 <- gg_GxE(it17_gc.v, ro17_gc.v, su17_gc.v, traitName = "Volume", myYlab = NULL,
+              myTitle = "C) Plot Volume Growth Curve Coefficients")
+#
+mp <- ggarrange(mp1, mp2, mp3, nrow = 3, align = "v",
+                common.legend = T, legend = "bottom")
+#mp
+ggsave("Supplemental_Figure_03.png", mp, width = 6, height = 8, dpi = 600, bg = "white")
+```
+
+---
+
 # Figure 4 - Canada vs Iran vs India
 
 > - `r shiny::icon("chart-line")` [Additional/Figure_04_A.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_A.html)
@@ -1881,9 +1960,9 @@ ggsave("Additional/PCA_test/Cluster10.png", ggHC_test(10), width = 10, height = 
 
 ---
 
-# Supplemental Figure 3 - PCA
+# Supplemental Figure 4 - PCA
 
-![](Supplemental_Figure_03.png)
+![](Supplemental_Figure_04.png)
 
 ```{r}
 # Prep data
@@ -1940,7 +2019,7 @@ mp2 <- ggplot(xx, aes(x = x, y = y)) +
   labs(title = "B)", y = "Percent of Variation", x = NULL)
 # Append
 mp <- ggarrange(mp1, mp2, ncol = 1, nrow = 2, heights = c(0.75,1))
-ggsave("Supplemental_Figure_03.png", mp, width = 6, height = 4.5, dpi = 600)
+ggsave("Supplemental_Figure_04.png", mp, width = 6, height = 4.5, dpi = 600)
 ```
 
 ---
@@ -1991,9 +2070,9 @@ ggsave("Figure_05.png", mp, width = 12, height = 4, dpi = 600)
 
 ---
 
-# Supplemental Figure 4 - PCA Inputs 
+# Supplemental Figure 5 - PCA Inputs 
 
-![](Supplemental_Figure_04.png)
+![](Supplemental_Figure_05.png)
 
 ```{r}
 # Prep data
@@ -2027,7 +2106,7 @@ mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
         axis.ticks.x = element_blank()) +
   guides(colour = guide_legend(nrow = 1, override.aes = list(size = 3))) +
   labs(x = NULL, y = NULL)
-ggsave("Supplemental_Figure_04.png", mp, width = 15, height = 14, dpi = 600)
+ggsave("Supplemental_Figure_05.png", mp, width = 15, height = 14, dpi = 600)
 ```
 
 ---
@@ -2849,8 +2928,8 @@ myResults <- list_Result_Files("GWAS_Results/")
 ```
 
 ```{r eval = F, echo = F}
-yy <- table_Results_Summary(folder = "GWAS_Results/", isOrdered = F)
-yy <- table_Results_Summary(folder = "GWAS_Results/", isOrdered = T)
+yy <- is_ran(folder = "GWAS_Results/")
+yy <- is_ordered(folder = "GWAS_Results/")
 ```
 
 ```{r eval = F}
@@ -2861,7 +2940,8 @@ write.csv(xx, "Supplemental_Table_01.csv", row.names = F)
 
 ```{r}
 xx <- read.csv("Supplemental_Table_01.csv")
-xx %>% filter(Threshold == "Significant") %>% pull(SNP) %>% unique() %>% length()
+xx %>% filter(Threshold == "Significant") %>% 
+  pull(SNP) %>% unique() %>% length()
 ```
 
 ```{r}
@@ -3264,7 +3344,7 @@ ggsave("Additional/Area_It17.png", mp, width = 80, height = 4,
 
 ## Manhattan Plots
 
-> - `r shiny::icon("globe")` [Additional/ManH/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/ManH)
+> - `r shiny::icon("globe")` [Additional/Manhattan/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Manhattan)
 
 ```{r}
 for(i in myTraits) {
@@ -3272,8 +3352,15 @@ for(i in myTraits) {
                      models = c("MLM", "FarmCPU", "BLINK"),
                      threshold = 6.8, sug.threshold = 6, legend.rows = 2,
                      vlines = myMarkers, vline.colors = myMColors)
-  ggsave(paste0("Additional/ManH/Multi_",i,".png"), 
-         mp, width = 12, height = 4, bg = "white")
+  ggsave(paste0("Additional/Manhattan/01_",i,".png"), mp, 
+         width = 12, height = 4, bg = "white")
+  #
+  mp <- gg_Manhattan(folder = "GWAS_Results/", trait = i, facet = T,
+                     models = c("MLM", "FarmCPU", "BLINK"),
+                     threshold = 6.8, sug.threshold = 6, legend.rows = 2,
+                     vlines = myMarkers, vline.colors = myMColors)
+  ggsave(paste0("Additional/Manhattan/02_",i,".png"), mp, 
+         width = 12, height = 6, bg = "white")
 }
 ```
 
@@ -3362,9 +3449,33 @@ ggsave("Figure_07.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
 
 ---
 
-# Supplemental Figure 5
+# Supplemental Figure 6
 
-![](Supplemental_Figure_05.png)
+![](Supplemental_Figure_06.png)
+
+```{r}
+# Plot
+mp1 <- gg_GWAS_Hits(xx, myG, myTitle = "It17", myYlab = "", 
+                    myTs = myTraits[grepl("It17", myTraits)], 
+                    vlines = myMarkers, vlines.types = myVltys, vline.colors = myMColors)
+mp2 <- gg_GWAS_Hits(xx, myG, myTitle = "Ro17", myYlab = "Number of Significant Associations",
+                    myTs = myTraits[grepl("Ro17", myTraits)],
+                    vlines = myMarkers, vlines.types = myVltys, vline.colors = myMColors)
+mp3 <- gg_GWAS_Hits(xx, myG, myTitle = "Su17+Su18", myYlab = "", 
+                    myTs = myTraits[grepl("Su17|Su18", myTraits)], 
+                    vlines = myMarkers, vlines.types = myVltys, vline.colors = myMColors)
+# Append
+mp <- ggarrange(mp1, mp2, mp3, ncol = 1, nrow = 3,
+                common.legend = T, legend = "bottom")
+ggsave("Supplemental_Figure_06.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+```
+
+---
+
+# Supplemental Figure 7
+
+![](Supplemental_Figure_07.png)
+
 
 ```{r}
 # Plot
@@ -3380,7 +3491,7 @@ mp3 <- gg_GWAS_Hits(xx, myG, myTitle = "Volume", myYlab = "",
 # Append
 mp <- ggarrange(mp1, mp2, mp3, ncol = 1, nrow = 3,
                 common.legend = T, legend = "bottom")
-ggsave("Supplemental_Figure_05.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_07.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
@@ -3523,15 +3634,13 @@ ggsave("Additional/Additional_Figure_11.png", mp, width = 6, height = 4, dpi = 6
 
 ---
 
-# Supplemental Figure 6 - DTF Markers
+# Supplemental Figure 8 - DTF Markers
 
-> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_06_Su17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_06_Su17.html)
+> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_Su17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_Su17.html)
 
-> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_06_It17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_06_It17.html)
+> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_It17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_It17.html)
 
-![](Supplemental_Figure_06.png)
-
-![](Additional/Supplemental_Figure_06_It17.png)
+![](Supplemental_Figure_08.png)
 
 ```{r}
 # Create plotting function
@@ -3619,17 +3728,18 @@ gg_HAMarker <- function(xh, xa, xf, xm, myTitle = "",
   mp
 }
 #
-mp <- gg_HAMarker(xh = su17_gc.h, xa = su17_gc.a, xf = su17_f, 
-                   myTitle = "Sutherland, Canada 2017",
+mp_a <- gg_HAMarker(xh = su17_gc.h, xa = su17_gc.a, xf = su17_f, 
+                   myTitle = "A) Sutherland, Canada 2017",
                    dtf_range = c(47, 62), yield_limit = 300,
-                   plotlyfilename = "Additional/Supplemental_Figure_06_Su17.html")
-ggsave("Supplemental_Figure_06.png", mp, width = 10, height = 3.5, dpi = 600, bg = "white")
+                   plotlyfilename = "Additional/Supplemental_Figure_08_Su17.html")
 #
-mp <- gg_HAMarker(xh = it17_gc.h, xa = it17_gc.a, xf = it17_f, 
-                   myTitle = "Metaponto, Italy 2017",
+mp_b <- gg_HAMarker(xh = it17_gc.h, xa = it17_gc.a, xf = it17_f, 
+                   myTitle = "B) Metaponto, Italy 2017",
                    dtf_range = c(95, 145), yield_limit = 100,
-                   plotlyfilename = "Additional/Supplemental_Figure_06_It17.html")
-ggsave("Additional/Supplemental_Figure_06_It17.png", mp, width = 10, height = 3.5, dpi = 600, bg = "white")
+                   plotlyfilename = "Additional/Supplemental_Figure_08_It17.html")
+#
+mp <- ggarrange(mp_a, mp_b, nrow = 2, common.legend = T)
+ggsave("Supplemental_Figure_08.png", mp, width = 10, height = 7, dpi = 600, bg = "white")
 ```
 
 ---
@@ -3752,43 +3862,39 @@ saveWidget(ggplotly(mp7), file="Additional/Additional_Figure_12_7.html")
 ![](Additional/Additional_Figure_13_9.png)
 
 ```{r}
-# Prep data
-xx <- read.csv("Supplemental_Table_01.csv")
-myExpts <- substr(myTraits, 1, regexpr("_", myTraits)-1)
-myPhenos <- unique(substr(myTraits, regexpr("_", myTraits)+1, nchar(myTraits)))
 #
 # Drone Data
 #
 myTi <- myTraits[grepl("Plot.Height", myTraits)]
 mp1 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(7.5, 18.5, 28.5), vline.legend = F,
-                       vlines = myMarkers, vline.colors = myMColors) + theme_AGL
+                       hlines = c(7.5, 18.5, 28.5), vline.legend = F, shapes = c(21,24,25),
+                       vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- myTraits[grepl("Plot.Area", myTraits)]
 mp2 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(7.5, 17.5, 25.5), vline.legend = F,
+                       hlines = c(7.5, 17.5, 25.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- myTraits[grepl("Plot.Volume", myTraits)]
 mp3 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(7.5, 17.5, 25.5), vline.legend = F,
+                       hlines = c(7.5, 17.5, 25.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 # Growth Curves
 #
 myTi <- myTraits[grepl("gc.h", myTraits)]
 mp4 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(12.5, 24.5), vline.legend = F,
+                       hlines = c(12.5, 24.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- myTraits[grepl("gc.a", myTraits)]
 mp5 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(12.5, 24.5), vline.legend = F,
+                       hlines = c(12.5, 24.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- myTraits[grepl("gc.v", myTraits)]
 mp6 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(12.5, 24.5), vline.legend = F,
+                       hlines = c(12.5, 24.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 # Manual Measurements
@@ -3796,14 +3902,14 @@ mp6 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8,
 myTi <- c(myTraits[grepl("Canopy.Height", myTraits)], 
           myTraits[grepl("Plant.Length", myTraits)])
 mp7 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(9.5), vline.legend = F,
+                       hlines = c(9.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- c(myTraits[grepl("Plot.Biomass", myTraits)], 
           myTraits[grepl("Straw.Biomass", myTraits)],
           myTraits[grepl("Plant.Mass", myTraits)] )
 mp8 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(4.5, 19.5), vline.legend = F,
+                       hlines = c(4.5, 19.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
 #
 myTi <- c(myTraits[grepl("Flower.Branch", myTraits)],
@@ -3812,14 +3918,8 @@ myTi <- c(myTraits[grepl("Flower.Branch", myTraits)],
           myTraits[grepl("Lowest.Pod.H", myTraits)], 
           myTraits[grepl("Canopy.Width", myTraits)] )
 mp9 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(4.5, 12.5, 16.5, 27.5), vline.legend = F,
+                       hlines = c(4.5, 12.5, 16.5, 27.5), vline.legend = F, shapes = c(21,24,25),
                        vlines = myMarkers, vline.colors = myMColors)
-#
-myTi <- myTraits[grepl("gc.a.x.mid|gc.a.x.min|gc.a.x.d", myTraits)]
-mp10 <- gg_GWAS_Summary(folder = "GWAS_Results/", traits = myTi, threshold = 6.8, sug.threshold = 6,
-                       hlines = c(12.5, 24.5), vline.legend = F,
-                       vlines = myMarkers, vline.colors = myMColors)
-
 #
 ggsave("Additional/Additional_Figure_13_1.png", mp1, width = 15, height = 8, dpi = 600)
 ggsave("Additional/Additional_Figure_13_2.png", mp2, width = 15, height = 8, dpi = 600)
@@ -3840,7 +3940,6 @@ gg_GWAS_plotly(mp6, filename = "Additional/Additional_Figure_13_6.html")
 gg_GWAS_plotly(mp7, filename = "Additional/Additional_Figure_13_7.html")
 gg_GWAS_plotly(mp8, filename = "Additional/Additional_Figure_13_8.html")
 gg_GWAS_plotly(mp9, filename = "Additional/Additional_Figure_13_9.html")
-#
 ```
 
 ---

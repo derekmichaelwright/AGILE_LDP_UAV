@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.9)  30 JAN 2025 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.9)  28 MAY 2025 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,31 +420,31 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 10
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[2{c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+[2]
 
 LaTeX Warning: Hyper reference `raw-data-ux26-growth-curve-modeling' on page 3 undefined on input line 159.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 171.
-<Additional/img_Agile.png, id=132, 466.8642pt x 228.855pt>
+<Additional/img_Agile.png, id=131, 466.8642pt x 228.855pt>
 File: Additional/img_Agile.png Graphic file (type png)
 <use Additional/img_Agile.png>
 Package pdftex.def Info: Additional/img_Agile.png  used on input line 173.
 (pdftex.def)             Requested size: 234.87764pt x 115.1361pt.
-<Additional/img_P2IRC.png, id=134, 258.7266pt x 78.07271pt>
+<Additional/img_P2IRC.png, id=133, 258.7266pt x 78.07271pt>
 File: Additional/img_P2IRC.png Graphic file (type png)
 <use Additional/img_P2IRC.png>
 Package pdftex.def Info: Additional/img_P2IRC.png  used on input line 175.
 (pdftex.def)             Requested size: 234.88095pt x 70.8771pt.
 
 
-[3 <./Additional/img_Agile.png> <./Additional/img_P2IRC.png>]
-<Additional/ggGrowthCurves_It17_volume.png, id=152, 578.16pt x 289.08pt>
+[3{c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Additional/img_Agile.png> <./Additional/img_P2IRC.png>]
+<Additional/ggGrowthCurves_It17_volume.png, id=156, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_It17_volume.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_volume.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_It17_volume.png  used on input line 220.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_It17_area.png, id=154, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_It17_area.png, id=158, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_It17_area.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_area.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_It17_area.png  used on input line 230.
@@ -452,12 +452,12 @@ Package pdftex.def Info: Additional/ggGrowthCurves_It17_area.png  used on input 
 
 
 [4 <./Additional/ggGrowthCurves_It17_volume.png>]
-<Additional/ggGrowthCurves_It17_height.png, id=160, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_It17_height.png, id=164, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_It17_height.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_height.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_It17_height.png  used on input line 240.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_Ro17_volume.png, id=162, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Ro17_volume.png, id=166, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Ro17_volume.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Ro17_volume.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_volume.png  used on input line 254.
@@ -465,12 +465,12 @@ Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_volume.png  used on inpu
 
 
 [5 <./Additional/ggGrowthCurves_It17_area.png> <./Additional/ggGrowthCurves_It17_height.png>]
-<Additional/ggGrowthCurves_Ro17_area.png, id=169, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Ro17_area.png, id=173, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Ro17_area.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Ro17_area.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_area.png  used on input line 264.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_Ro17_height.png, id=171, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Ro17_height.png, id=175, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Ro17_height.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Ro17_height.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_height.png  used on input line 274.
@@ -478,12 +478,12 @@ Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_height.png  used on inpu
 
 
 [6 <./Additional/ggGrowthCurves_Ro17_volume.png> <./Additional/ggGrowthCurves_Ro17_area.png>]
-<Additional/ggGrowthCurves_Su17_volume.png, id=177, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Su17_volume.png, id=181, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Su17_volume.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Su17_volume.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Su17_volume.png  used on input line 282.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_Su17_area.png, id=179, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Su17_area.png, id=183, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Su17_area.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Su17_area.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Su17_area.png  used on input line 286.
@@ -491,12 +491,12 @@ Package pdftex.def Info: Additional/ggGrowthCurves_Su17_area.png  used on input 
 
 
 [7 <./Additional/ggGrowthCurves_Ro17_height.png> <./Additional/ggGrowthCurves_Su17_volume.png>]
-<Additional/ggGrowthCurves_Su17_height.png, id=186, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Su17_height.png, id=190, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Su17_height.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Su17_height.png>
 Package pdftex.def Info: Additional/ggGrowthCurves_Su17_height.png  used on input line 290.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Figure_01.png, id=187, 578.16pt x 433.62pt>
+<Figure_01.png, id=191, 578.16pt x 433.62pt>
 File: Figure_01.png Graphic file (type png)
 <use Figure_01.png>
 Package pdftex.def Info: Figure_01.png  used on input line 302.
@@ -504,7 +504,7 @@ Package pdftex.def Info: Figure_01.png  used on input line 302.
 
 
 [8 <./Additional/ggGrowthCurves_Su17_area.png> <./Additional/ggGrowthCurves_Su17_height.png>]
-<Figure_02.png, id=192, 433.62pt x 216.81pt>
+<Figure_02.png, id=196, 433.62pt x 216.81pt>
 File: Figure_02.png Graphic file (type png)
 <use Figure_02.png>
 Package pdftex.def Info: Figure_02.png  used on input line 308.
@@ -512,7 +512,7 @@ Package pdftex.def Info: Figure_02.png  used on input line 308.
 
 
 [9 <./Figure_01.png>]
-<Figure_03.png, id=197, 578.16pt x 433.62pt>
+<Figure_03.png, id=201, 578.16pt x 433.62pt>
 File: Figure_03.png Graphic file (type png)
 <use Figure_03.png>
 Package pdftex.def Info: Figure_03.png  used on input line 314.
@@ -522,12 +522,12 @@ Package pdftex.def Info: Figure_03.png  used on input line 314.
 [10 <./Figure_02.png>]
 
 [11 <./Figure_03.png>]
-<Figure_04.png, id=209, 433.62pt x 505.89pt>
+<Figure_04.png, id=213, 433.62pt x 505.89pt>
 File: Figure_04.png Graphic file (type png)
 <use Figure_04.png>
 Package pdftex.def Info: Figure_04.png  used on input line 334.
 (pdftex.def)             Requested size: 433.62555pt x 505.89645pt.
-<Figure_05.png, id=210, 867.24pt x 289.08pt>
+<Figure_05.png, id=214, 867.24pt x 289.08pt>
 File: Figure_05.png Graphic file (type png)
 <use Figure_05.png>
 Package pdftex.def Info: Figure_05.png  used on input line 340.
@@ -535,12 +535,12 @@ Package pdftex.def Info: Figure_05.png  used on input line 340.
 
 
 [12 <./Figure_04.png>]
-<Figure_06.png, id=215, 578.16pt x 433.62pt>
+<Figure_06.png, id=219, 578.16pt x 433.62pt>
 File: Figure_06.png Graphic file (type png)
 <use Figure_06.png>
 Package pdftex.def Info: Figure_06.png  used on input line 346.
 (pdftex.def)             Requested size: 469.75385pt x 352.31538pt.
-<Figure_07.png, id=216, 722.7pt x 578.16pt>
+<Figure_07.png, id=220, 722.7pt x 578.16pt>
 File: Figure_07.png Graphic file (type png)
 <use Figure_07.png>
 Package pdftex.def Info: Figure_07.png  used on input line 352.
@@ -548,7 +548,7 @@ Package pdftex.def Info: Figure_07.png  used on input line 352.
 
 
 [13 <./Figure_05.png> <./Figure_06.png>]
-<Figure_08.png, id=222, 578.16pt x 433.62pt>
+<Figure_08.png, id=226, 578.16pt x 433.62pt>
 File: Figure_08.png Graphic file (type png)
 <use Figure_08.png>
 Package pdftex.def Info: Figure_08.png  used on input line 358.
@@ -556,7 +556,7 @@ Package pdftex.def Info: Figure_08.png  used on input line 358.
 
 
 [14 <./Figure_07.png>]
-<Supplemental_Figure_01.png, id=228, 578.16pt x 794.97pt>
+<Supplemental_Figure_01.png, id=232, 578.16pt x 794.97pt>
 File: Supplemental_Figure_01.png Graphic file (type png)
 <use Supplemental_Figure_01.png>
 Package pdftex.def Info: Supplemental_Figure_01.png  used on input line 380.
@@ -564,400 +564,403 @@ Package pdftex.def Info: Supplemental_Figure_01.png  used on input line 380.
 
 
 [15 <./Figure_08.png>]
-<Supplemental_Figure_02.png, id=233, 722.7pt x 433.62pt>
+<Supplemental_Figure_02.png, id=237, 722.7pt x 578.16pt>
 File: Supplemental_Figure_02.png Graphic file (type png)
 <use Supplemental_Figure_02.png>
 Package pdftex.def Info: Supplemental_Figure_02.png  used on input line 386.
-(pdftex.def)             Requested size: 469.76045pt x 281.85628pt.
+(pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
 [16 <./Supplemental_Figure_01.png>]
-<Supplemental_Figure_03.png, id=238, 433.62pt x 325.215pt>
+<Supplemental_Figure_03.png, id=242, 433.62pt x 578.16pt>
 File: Supplemental_Figure_03.png Graphic file (type png)
 <use Supplemental_Figure_03.png>
 Package pdftex.def Info: Supplemental_Figure_03.png  used on input line 392.
-(pdftex.def)             Requested size: 433.63878pt x 325.22908pt.
+(pdftex.def)             Requested size: 433.63878pt x 578.18504pt.
 
 
 [17 <./Supplemental_Figure_02.png>]
-<Supplemental_Figure_04.png, id=243, 1084.05pt x 1011.78pt>
+<Supplemental_Figure_04.png, id=247, 433.62pt x 325.215pt>
 File: Supplemental_Figure_04.png Graphic file (type png)
 <use Supplemental_Figure_04.png>
 Package pdftex.def Info: Supplemental_Figure_04.png  used on input line 398.
-(pdftex.def)             Requested size: 469.75496pt x 438.43794pt.
+(pdftex.def)             Requested size: 433.63878pt x 325.22908pt.
 
 
 [18 <./Supplemental_Figure_03.png>]
-<Supplemental_Figure_05.png, id=249, 722.7pt x 578.16pt>
+<Supplemental_Figure_05.png, id=252, 1084.05pt x 1011.78pt>
 File: Supplemental_Figure_05.png Graphic file (type png)
 <use Supplemental_Figure_05.png>
 Package pdftex.def Info: Supplemental_Figure_05.png  used on input line 404.
-(pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
+(pdftex.def)             Requested size: 469.75496pt x 438.43794pt.
 
 
 [19 <./Supplemental_Figure_04.png>]
-<Supplemental_Figure_06.png, id=255, 722.7pt x 252.945pt>
+<Supplemental_Figure_06.png, id=259, 722.7pt x 578.16pt>
 File: Supplemental_Figure_06.png Graphic file (type png)
 <use Supplemental_Figure_06.png>
 Package pdftex.def Info: Supplemental_Figure_06.png  used on input line 410.
-(pdftex.def)             Requested size: 469.76045pt x 164.41615pt.
-<Additional/Supplemental_Figure_06_It17.png, id=256, 722.7pt x 252.945pt>
-File: Additional/Supplemental_Figure_06_It17.png Graphic file (type png)
-<use Additional/Supplemental_Figure_06_It17.png>
-Package pdftex.def Info: Additional/Supplemental_Figure_06_It17.png  used on input line 412.
-(pdftex.def)             Requested size: 469.76045pt x 164.41615pt.
+(pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
-[20 <./Supplemental_Figure_05.png> <./Supplemental_Figure_06.png>]
-<Additional/Additional_Figure_01_1.png, id=261, 578.16pt x 433.62pt>
+[20 <./Supplemental_Figure_05.png>]
+<Supplemental_Figure_07.png, id=264, 722.7pt x 578.16pt>
+File: Supplemental_Figure_07.png Graphic file (type png)
+<use Supplemental_Figure_07.png>
+Package pdftex.def Info: Supplemental_Figure_07.png  used on input line 416.
+(pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
+
+
+[21 <./Supplemental_Figure_06.png>]
+<Supplemental_Figure_08.png, id=269, 722.7pt x 505.89pt>
+File: Supplemental_Figure_08.png Graphic file (type png)
+<use Supplemental_Figure_08.png>
+Package pdftex.def Info: Supplemental_Figure_08.png  used on input line 422.
+(pdftex.def)             Requested size: 469.76045pt x 328.8323pt.
+
+
+[22 <./Supplemental_Figure_07.png>]
+<Additional/Additional_Figure_01_1.png, id=274, 578.16pt x 433.62pt>
 File: Additional/Additional_Figure_01_1.png Graphic file (type png)
 <use Additional/Additional_Figure_01_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_01_1.png  used on input line 420.
+Package pdftex.def Info: Additional/Additional_Figure_01_1.png  used on input line 430.
 (pdftex.def)             Requested size: 375.79955pt x 281.84966pt.
-<Additional/Additional_Figure_01_2.png, id=262, 578.16pt x 433.62pt>
+
+
+[23 <./Supplemental_Figure_08.png>]
+<Additional/Additional_Figure_01_2.png, id=279, 578.16pt x 433.62pt>
 File: Additional/Additional_Figure_01_2.png Graphic file (type png)
 <use Additional/Additional_Figure_01_2.png>
-Package pdftex.def Info: Additional/Additional_Figure_01_2.png  used on input line 422.
+Package pdftex.def Info: Additional/Additional_Figure_01_2.png  used on input line 432.
 (pdftex.def)             Requested size: 375.79955pt x 281.84966pt.
-
-
-[21 <./Additional/Supplemental_Figure_06_It17.png> <./Additional/Additional_Figure_01_1.png>]
-<Additional/Additional_Figure_01_3.png, id=268, 578.16pt x 433.62pt>
+<Additional/Additional_Figure_01_3.png, id=280, 578.16pt x 433.62pt>
 File: Additional/Additional_Figure_01_3.png Graphic file (type png)
 <use Additional/Additional_Figure_01_3.png>
-Package pdftex.def Info: Additional/Additional_Figure_01_3.png  used on input line 424.
+Package pdftex.def Info: Additional/Additional_Figure_01_3.png  used on input line 434.
 (pdftex.def)             Requested size: 375.79955pt x 281.84966pt.
 
 
-[22 <./Additional/Additional_Figure_01_2.png> <./Additional/Additional_Figure_01_3.png>]
-<Additional/Additional_Figure_02_1.png, id=275, 722.7pt x 216.81pt>
-File: Additional/Additional_Figure_02_1.png Graphic file (type png)
-<use Additional/Additional_Figure_02_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_02_1.png  used on input line 432.
-(pdftex.def)             Requested size: 469.76045pt x 140.92813pt.
-<Additional/Additional_Figure_02_2.png, id=276, 722.7pt x 216.81pt>
-File: Additional/Additional_Figure_02_2.png Graphic file (type png)
-<use Additional/Additional_Figure_02_2.png>
-Package pdftex.def Info: Additional/Additional_Figure_02_2.png  used on input line 434.
-(pdftex.def)             Requested size: 469.76045pt x 140.92813pt.
-<Additional/Additional_Figure_02_3.png, id=277, 722.7pt x 216.81pt>
-File: Additional/Additional_Figure_02_3.png Graphic file (type png)
-<use Additional/Additional_Figure_02_3.png>
-Package pdftex.def Info: Additional/Additional_Figure_02_3.png  used on input line 436.
-(pdftex.def)             Requested size: 469.76045pt x 140.92813pt.
-<Additional/Additional_Figure_03_1.png, id=279, 578.16pt x 433.62pt>
+[24 <./Additional/Additional_Figure_01_1.png> <./Additional/Additional_Figure_01_2.png>]
+
+[25 <./Additional/Additional_Figure_01_3.png>]
+<Additional/Additional_Figure_02.png, id=293, 722.7pt x 433.62pt>
+File: Additional/Additional_Figure_02.png Graphic file (type png)
+<use Additional/Additional_Figure_02.png>
+Package pdftex.def Info: Additional/Additional_Figure_02.png  used on input line 442.
+(pdftex.def)             Requested size: 469.76045pt x 281.85628pt.
+<Additional/Additional_Figure_03_1.png, id=295, 578.16pt x 433.62pt>
 File: Additional/Additional_Figure_03_1.png Graphic file (type png)
 <use Additional/Additional_Figure_03_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_03_1.png  used on input line 450.
+Package pdftex.def Info: Additional/Additional_Figure_03_1.png  used on input line 456.
 (pdftex.def)             Requested size: 469.75385pt x 352.31538pt.
 
 
-[23 <./Additional/Additional_Figure_02_1.png> <./Additional/Additional_Figure_02_2.png> <./Additional/Additional_Figure_02_3.png>]
-<Additional/Additional_Figure_03_2.png, id=284, 722.7pt x 578.16pt>
+[26 <./Additional/Additional_Figure_02.png>]
+<Additional/Additional_Figure_03_2.png, id=301, 722.7pt x 578.16pt>
 File: Additional/Additional_Figure_03_2.png Graphic file (type png)
 <use Additional/Additional_Figure_03_2.png>
-Package pdftex.def Info: Additional/Additional_Figure_03_2.png  used on input line 452.
+Package pdftex.def Info: Additional/Additional_Figure_03_2.png  used on input line 458.
 (pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
-[24 <./Additional/Additional_Figure_03_1.png>]
-<Additional/Additional_Figure_03_3.png, id=289, 722.7pt x 578.16pt>
+[27 <./Additional/Additional_Figure_03_1.png>]
+<Additional/Additional_Figure_03_3.png, id=306, 722.7pt x 578.16pt>
 File: Additional/Additional_Figure_03_3.png Graphic file (type png)
 <use Additional/Additional_Figure_03_3.png>
-Package pdftex.def Info: Additional/Additional_Figure_03_3.png  used on input line 454.
+Package pdftex.def Info: Additional/Additional_Figure_03_3.png  used on input line 460.
 (pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
-[25 <./Additional/Additional_Figure_03_2.png>]
-<Additional/Additional_Figure_03_4.png, id=295, 722.7pt x 578.16pt>
+[28 <./Additional/Additional_Figure_03_2.png>]
+<Additional/Additional_Figure_03_4.png, id=311, 722.7pt x 578.16pt>
 File: Additional/Additional_Figure_03_4.png Graphic file (type png)
 <use Additional/Additional_Figure_03_4.png>
-Package pdftex.def Info: Additional/Additional_Figure_03_4.png  used on input line 456.
+Package pdftex.def Info: Additional/Additional_Figure_03_4.png  used on input line 462.
 (pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
-[26 <./Additional/Additional_Figure_03_3.png>]
-<Additional/Additional_Figure_03_5.png, id=300, 722.7pt x 578.16pt>
+[29 <./Additional/Additional_Figure_03_3.png>]
+<Additional/Additional_Figure_03_5.png, id=316, 722.7pt x 578.16pt>
 File: Additional/Additional_Figure_03_5.png Graphic file (type png)
 <use Additional/Additional_Figure_03_5.png>
-Package pdftex.def Info: Additional/Additional_Figure_03_5.png  used on input line 458.
+Package pdftex.def Info: Additional/Additional_Figure_03_5.png  used on input line 464.
 (pdftex.def)             Requested size: 469.76045pt x 375.80836pt.
 
 
-[27 <./Additional/Additional_Figure_03_4.png>]
-<Additional/Additional_Figure_04.png, id=306, 433.62pt x 247.52475pt>
+[30 <./Additional/Additional_Figure_03_4.png>]
+<Additional/Additional_Figure_04.png, id=321, 433.62pt x 247.52475pt>
 File: Additional/Additional_Figure_04.png Graphic file (type png)
 <use Additional/Additional_Figure_04.png>
-Package pdftex.def Info: Additional/Additional_Figure_04.png  used on input line 464.
+Package pdftex.def Info: Additional/Additional_Figure_04.png  used on input line 470.
 (pdftex.def)             Requested size: 433.63217pt x 247.5317pt.
 
 
-[28 <./Additional/Additional_Figure_03_5.png>]
-<Additional/Additional_Figure_05.png, id=311, 505.89pt x 361.35pt>
+[31 <./Additional/Additional_Figure_03_5.png>]
+<Additional/Additional_Figure_05.png, id=327, 505.89pt x 361.35pt>
 File: Additional/Additional_Figure_05.png Graphic file (type png)
 <use Additional/Additional_Figure_05.png>
-Package pdftex.def Info: Additional/Additional_Figure_05.png  used on input line 470.
+Package pdftex.def Info: Additional/Additional_Figure_05.png  used on input line 476.
 (pdftex.def)             Requested size: 469.76265pt x 335.54477pt.
 
 
-[29 <./Additional/Additional_Figure_04.png>]
-<Additional/Additional_Figure_06.png, id=317, 505.89pt x 361.35pt>
+[32 <./Additional/Additional_Figure_04.png>]
+<Additional/Additional_Figure_06.png, id=333, 505.89pt x 361.35pt>
 File: Additional/Additional_Figure_06.png Graphic file (type png)
 <use Additional/Additional_Figure_06.png>
-Package pdftex.def Info: Additional/Additional_Figure_06.png  used on input line 476.
+Package pdftex.def Info: Additional/Additional_Figure_06.png  used on input line 482.
 (pdftex.def)             Requested size: 469.76265pt x 335.54477pt.
 
 
-[30 <./Additional/Additional_Figure_05.png>]
-<Additional/Additional_Figure_07.png, id=322, 578.16pt x 433.62pt>
+[33 <./Additional/Additional_Figure_05.png>]
+<Additional/Additional_Figure_07.png, id=338, 578.16pt x 433.62pt>
 File: Additional/Additional_Figure_07.png Graphic file (type png)
 <use Additional/Additional_Figure_07.png>
-Package pdftex.def Info: Additional/Additional_Figure_07.png  used on input line 482.
+Package pdftex.def Info: Additional/Additional_Figure_07.png  used on input line 488.
 (pdftex.def)             Requested size: 469.75385pt x 352.31538pt.
 
 
-[31 <./Additional/Additional_Figure_06.png>]
+[34 <./Additional/Additional_Figure_06.png>]
 
-[32 <./Additional/Additional_Figure_07.png>]
-<Additional/Additional_Figure_07_1.png, id=332, 722.7pt x 252.945pt>
+[35 <./Additional/Additional_Figure_07.png>]
+<Additional/Additional_Figure_07_1.png, id=347, 722.7pt x 252.945pt>
 File: Additional/Additional_Figure_07_1.png Graphic file (type png)
 <use Additional/Additional_Figure_07_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_07_1.png  used on input line 486.
+Package pdftex.def Info: Additional/Additional_Figure_07_1.png  used on input line 492.
 (pdftex.def)             Requested size: 469.76045pt x 164.41615pt.
-<Additional/Additional_Figure_08.png, id=333, 505.89pt x 433.62pt>
+<Additional/Additional_Figure_08.png, id=348, 505.89pt x 433.62pt>
 File: Additional/Additional_Figure_08.png Graphic file (type png)
 <use Additional/Additional_Figure_08.png>
-Package pdftex.def Info: Additional/Additional_Figure_08.png  used on input line 492.
+Package pdftex.def Info: Additional/Additional_Figure_08.png  used on input line 498.
 (pdftex.def)             Requested size: 469.76265pt x 402.65372pt.
 
 
-[33 <./Additional/Additional_Figure_07_1.png> <./Additional/Additional_Figure_08.png>]
-<Additional/Additional_Figure_09.png, id=339, 505.89pt x 650.43pt>
+[36 <./Additional/Additional_Figure_07_1.png> <./Additional/Additional_Figure_08.png>]
+<Additional/Additional_Figure_09.png, id=354, 505.89pt x 650.43pt>
 File: Additional/Additional_Figure_09.png Graphic file (type png)
 <use Additional/Additional_Figure_09.png>
-Package pdftex.def Info: Additional/Additional_Figure_09.png  used on input line 498.
+Package pdftex.def Info: Additional/Additional_Figure_09.png  used on input line 504.
 (pdftex.def)             Requested size: 469.76265pt x 603.98058pt.
 
 
-[34]
+[37]
 
-[35 <./Additional/Additional_Figure_09.png>]
-<Additional/Additional_Figure_10.png, id=348, 433.62pt x 433.62pt>
+[38 <./Additional/Additional_Figure_09.png>]
+<Additional/Additional_Figure_10.png, id=364, 433.62pt x 433.62pt>
 File: Additional/Additional_Figure_10.png Graphic file (type png)
 <use Additional/Additional_Figure_10.png>
-Package pdftex.def Info: Additional/Additional_Figure_10.png  used on input line 504.
+Package pdftex.def Info: Additional/Additional_Figure_10.png  used on input line 510.
 (pdftex.def)             Requested size: 433.63878pt x 433.63878pt.
-<Additional/Additional_Figure_11.png, id=349, 433.62pt x 289.08pt>
+<Additional/Additional_Figure_11.png, id=365, 433.62pt x 289.08pt>
 File: Additional/Additional_Figure_11.png Graphic file (type png)
 <use Additional/Additional_Figure_11.png>
-Package pdftex.def Info: Additional/Additional_Figure_11.png  used on input line 510.
+Package pdftex.def Info: Additional/Additional_Figure_11.png  used on input line 516.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
 
-[36 <./Additional/Additional_Figure_10.png>]
+[39 <./Additional/Additional_Figure_10.png>]
 
-[37 <./Additional/Additional_Figure_11.png>]
-<Additional/Additional_Figure_12_1.png, id=360, 722.7pt x 361.35pt>
+[40 <./Additional/Additional_Figure_11.png>]
+<Additional/Additional_Figure_12_1.png, id=375, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_1.png Graphic file (type png)
 <use Additional/Additional_Figure_12_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_1.png  used on input line 526.
+Package pdftex.def Info: Additional/Additional_Figure_12_1.png  used on input line 532.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<Additional/Additional_Figure_12_2.png, id=362, 722.7pt x 361.35pt>
+<Additional/Additional_Figure_12_2.png, id=377, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_2.png Graphic file (type png)
 <use Additional/Additional_Figure_12_2.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_2.png  used on input line 536.
+Package pdftex.def Info: Additional/Additional_Figure_12_2.png  used on input line 542.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
 
 
-[38 <./Additional/Additional_Figure_12_1.png> <./Additional/Additional_Figure_12_2.png>]
-<Additional/Additional_Figure_12_3.png, id=368, 722.7pt x 361.35pt>
+[41 <./Additional/Additional_Figure_12_1.png> <./Additional/Additional_Figure_12_2.png>]
+<Additional/Additional_Figure_12_3.png, id=383, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_3.png Graphic file (type png)
 <use Additional/Additional_Figure_12_3.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_3.png  used on input line 548.
+Package pdftex.def Info: Additional/Additional_Figure_12_3.png  used on input line 554.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<Additional/Additional_Figure_12_4.png, id=370, 722.7pt x 361.35pt>
+<Additional/Additional_Figure_12_4.png, id=385, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_4.png Graphic file (type png)
 <use Additional/Additional_Figure_12_4.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_4.png  used on input line 558.
+Package pdftex.def Info: Additional/Additional_Figure_12_4.png  used on input line 564.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
 
 
-[39 <./Additional/Additional_Figure_12_3.png> <./Additional/Additional_Figure_12_4.png>]
-<Additional/Additional_Figure_12_5.png, id=376, 722.7pt x 361.35pt>
+[42 <./Additional/Additional_Figure_12_3.png> <./Additional/Additional_Figure_12_4.png>]
+<Additional/Additional_Figure_12_5.png, id=391, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_5.png Graphic file (type png)
 <use Additional/Additional_Figure_12_5.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_5.png  used on input line 570.
+Package pdftex.def Info: Additional/Additional_Figure_12_5.png  used on input line 576.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<Additional/Additional_Figure_12_6.png, id=378, 722.7pt x 361.35pt>
+<Additional/Additional_Figure_12_6.png, id=393, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_6.png Graphic file (type png)
 <use Additional/Additional_Figure_12_6.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_6.png  used on input line 580.
+Package pdftex.def Info: Additional/Additional_Figure_12_6.png  used on input line 586.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
 
 
-[40 <./Additional/Additional_Figure_12_5.png> <./Additional/Additional_Figure_12_6.png>]
-<Additional/Additional_Figure_12_7.png, id=384, 722.7pt x 361.35pt>
+[43 <./Additional/Additional_Figure_12_5.png> <./Additional/Additional_Figure_12_6.png>]
+<Additional/Additional_Figure_12_7.png, id=400, 722.7pt x 361.35pt>
 File: Additional/Additional_Figure_12_7.png Graphic file (type png)
 <use Additional/Additional_Figure_12_7.png>
-Package pdftex.def Info: Additional/Additional_Figure_12_7.png  used on input line 592.
+Package pdftex.def Info: Additional/Additional_Figure_12_7.png  used on input line 598.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
 
 
-[41 <./Additional/Additional_Figure_12_7.png>]
-<Additional/Additional_Figure_13_1.png, id=390, 1084.05pt x 578.16pt>
+[44 <./Additional/Additional_Figure_12_7.png>]
+<Additional/Additional_Figure_13_1.png, id=406, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_1.png Graphic file (type png)
 <use Additional/Additional_Figure_13_1.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_1.png  used on input line 608.
+Package pdftex.def Info: Additional/Additional_Figure_13_1.png  used on input line 614.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
-<Additional/Additional_Figure_13_2.png, id=392, 1084.05pt x 578.16pt>
+<Additional/Additional_Figure_13_2.png, id=408, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_2.png Graphic file (type png)
 <use Additional/Additional_Figure_13_2.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_2.png  used on input line 618.
+Package pdftex.def Info: Additional/Additional_Figure_13_2.png  used on input line 624.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
 
 
-[42 <./Additional/Additional_Figure_13_1.png> <./Additional/Additional_Figure_13_2.png>]
-<Additional/Additional_Figure_13_3.png, id=398, 1084.05pt x 578.16pt>
+[45 <./Additional/Additional_Figure_13_1.png> <./Additional/Additional_Figure_13_2.png>]
+<Additional/Additional_Figure_13_3.png, id=414, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_3.png Graphic file (type png)
 <use Additional/Additional_Figure_13_3.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_3.png  used on input line 630.
+Package pdftex.def Info: Additional/Additional_Figure_13_3.png  used on input line 636.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
-<Additional/Additional_Figure_13_4.png, id=400, 1084.05pt x 578.16pt>
+<Additional/Additional_Figure_13_4.png, id=416, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_4.png Graphic file (type png)
 <use Additional/Additional_Figure_13_4.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_4.png  used on input line 640.
+Package pdftex.def Info: Additional/Additional_Figure_13_4.png  used on input line 646.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
 
 
-[43 <./Additional/Additional_Figure_13_3.png> <./Additional/Additional_Figure_13_4.png>]
-<Additional/Additional_Figure_13_5.png, id=407, 1084.05pt x 578.16pt>
+[46 <./Additional/Additional_Figure_13_3.png> <./Additional/Additional_Figure_13_4.png>]
+<Additional/Additional_Figure_13_5.png, id=422, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_5.png Graphic file (type png)
 <use Additional/Additional_Figure_13_5.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_5.png  used on input line 652.
+Package pdftex.def Info: Additional/Additional_Figure_13_5.png  used on input line 658.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
-<Additional/Additional_Figure_13_6.png, id=409, 1084.05pt x 578.16pt>
+<Additional/Additional_Figure_13_6.png, id=424, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_6.png Graphic file (type png)
 <use Additional/Additional_Figure_13_6.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_6.png  used on input line 662.
+Package pdftex.def Info: Additional/Additional_Figure_13_6.png  used on input line 668.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
 
 
-[44 <./Additional/Additional_Figure_13_5.png> <./Additional/Additional_Figure_13_6.png>]
-<Additional/Additional_Figure_13_7.png, id=415, 1084.05pt x 578.16pt>
+[47 <./Additional/Additional_Figure_13_5.png> <./Additional/Additional_Figure_13_6.png>]
+<Additional/Additional_Figure_13_7.png, id=430, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_7.png Graphic file (type png)
 <use Additional/Additional_Figure_13_7.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_7.png  used on input line 674.
+Package pdftex.def Info: Additional/Additional_Figure_13_7.png  used on input line 680.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
-<Additional/Additional_Figure_13_8.png, id=417, 1084.05pt x 578.16pt>
+<Additional/Additional_Figure_13_8.png, id=432, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_8.png Graphic file (type png)
 <use Additional/Additional_Figure_13_8.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_8.png  used on input line 684.
+Package pdftex.def Info: Additional/Additional_Figure_13_8.png  used on input line 690.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
 
 
-[45 <./Additional/Additional_Figure_13_7.png> <./Additional/Additional_Figure_13_8.png>]
-<Additional/Additional_Figure_13_9.png, id=423, 1084.05pt x 578.16pt>
+[48 <./Additional/Additional_Figure_13_7.png> <./Additional/Additional_Figure_13_8.png>]
+<Additional/Additional_Figure_13_9.png, id=438, 1084.05pt x 578.16pt>
 File: Additional/Additional_Figure_13_9.png Graphic file (type png)
 <use Additional/Additional_Figure_13_9.png>
-Package pdftex.def Info: Additional/Additional_Figure_13_9.png  used on input line 696.
+Package pdftex.def Info: Additional/Additional_Figure_13_9.png  used on input line 702.
 (pdftex.def)             Requested size: 469.75496pt x 250.53596pt.
-<Additional/ggDroneTrait_It17.png, id=428, 722.7pt x 325.215pt>
+<Additional/ggDroneTrait_It17.png, id=443, 722.7pt x 325.215pt>
 File: Additional/ggDroneTrait_It17.png Graphic file (type png)
 <use Additional/ggDroneTrait_It17.png>
-Package pdftex.def Info: Additional/ggDroneTrait_It17.png  used on input line 720.
+Package pdftex.def Info: Additional/ggDroneTrait_It17.png  used on input line 726.
 (pdftex.def)             Requested size: 469.76045pt x 211.3922pt.
 
 
-[46 <./Additional/Additional_Figure_13_9.png>]
-<Additional/ggDroneTrait_Ro17.png, id=433, 867.24pt x 252.945pt>
+[49 <./Additional/Additional_Figure_13_9.png>]
+<Additional/ggDroneTrait_Ro17.png, id=450, 867.24pt x 252.945pt>
 File: Additional/ggDroneTrait_Ro17.png Graphic file (type png)
 <use Additional/ggDroneTrait_Ro17.png>
-Package pdftex.def Info: Additional/ggDroneTrait_Ro17.png  used on input line 722.
+Package pdftex.def Info: Additional/ggDroneTrait_Ro17.png  used on input line 728.
 (pdftex.def)             Requested size: 469.75827pt x 137.01282pt.
-<Additional/ggDroneTrait_Su17.png, id=434, 867.24pt x 252.945pt>
+<Additional/ggDroneTrait_Su17.png, id=451, 867.24pt x 252.945pt>
 File: Additional/ggDroneTrait_Su17.png Graphic file (type png)
 <use Additional/ggDroneTrait_Su17.png>
-Package pdftex.def Info: Additional/ggDroneTrait_Su17.png  used on input line 724.
+Package pdftex.def Info: Additional/ggDroneTrait_Su17.png  used on input line 730.
 (pdftex.def)             Requested size: 469.75827pt x 137.01282pt.
-<Additional/ggDroneTrait_Su18.png, id=435, 867.24pt x 252.945pt>
+<Additional/ggDroneTrait_Su18.png, id=452, 867.24pt x 252.945pt>
 File: Additional/ggDroneTrait_Su18.png Graphic file (type png)
 <use Additional/ggDroneTrait_Su18.png>
-Package pdftex.def Info: Additional/ggDroneTrait_Su18.png  used on input line 726.
+Package pdftex.def Info: Additional/ggDroneTrait_Su18.png  used on input line 732.
 (pdftex.def)             Requested size: 469.75827pt x 137.01282pt.
 
 
-[47 <./Additional/ggDroneTrait_It17.png> <./Additional/ggDroneTrait_Ro17.png> <./Additional/ggDroneTrait_Su17.png>]
+[50 <./Additional/ggDroneTrait_It17.png> <./Additional/ggDroneTrait_Ro17.png> <./Additional/ggDroneTrait_Su17.png>]
 File: Additional/ggGrowthCurves_It17_volume.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_volume.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_It17_volume.png  used on input line 742.
+Package pdftex.def Info: Additional/ggGrowthCurves_It17_volume.png  used on input line 748.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 File: Additional/ggGrowthCurves_It17_area.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_area.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_It17_area.png  used on input line 752.
+Package pdftex.def Info: Additional/ggGrowthCurves_It17_area.png  used on input line 758.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 
 
-[48 <./Additional/ggDroneTrait_Su18.png>]
+[51 <./Additional/ggDroneTrait_Su18.png>]
 File: Additional/ggGrowthCurves_It17_height.png Graphic file (type png)
 <use Additional/ggGrowthCurves_It17_height.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_It17_height.png  used on input line 762.
+Package pdftex.def Info: Additional/ggGrowthCurves_It17_height.png  used on input line 768.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 File: Additional/ggGrowthCurves_Ro17_volume.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Ro17_volume.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_volume.png  used on input line 774.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-
-[49]
-File: Additional/ggGrowthCurves_Ro17_area.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Ro17_area.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_area.png  used on input line 784.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-File: Additional/ggGrowthCurves_Ro17_height.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Ro17_height.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_height.png  used on input line 794.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-
-[50]
-File: Additional/ggGrowthCurves_Su17_volume.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Su17_volume.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su17_volume.png  used on input line 806.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-File: Additional/ggGrowthCurves_Su17_area.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Su17_area.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su17_area.png  used on input line 816.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-
-[51]
-File: Additional/ggGrowthCurves_Su17_height.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Su17_height.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su17_height.png  used on input line 826.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_Su18_volume.png, id=471, 578.16pt x 289.08pt>
-File: Additional/ggGrowthCurves_Su18_volume.png Graphic file (type png)
-<use Additional/ggGrowthCurves_Su18_volume.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su18_volume.png  used on input line 838.
+Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_volume.png  used on input line 780.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 
 
 [52]
-<Additional/ggGrowthCurves_Su18_area.png, id=478, 578.16pt x 289.08pt>
+File: Additional/ggGrowthCurves_Ro17_area.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Ro17_area.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_area.png  used on input line 790.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+File: Additional/ggGrowthCurves_Ro17_height.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Ro17_height.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Ro17_height.png  used on input line 800.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+
+
+[53]
+File: Additional/ggGrowthCurves_Su17_volume.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Su17_volume.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Su17_volume.png  used on input line 812.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+File: Additional/ggGrowthCurves_Su17_area.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Su17_area.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Su17_area.png  used on input line 822.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+
+
+[54]
+File: Additional/ggGrowthCurves_Su17_height.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Su17_height.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Su17_height.png  used on input line 832.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+<Additional/ggGrowthCurves_Su18_volume.png, id=486, 578.16pt x 289.08pt>
+File: Additional/ggGrowthCurves_Su18_volume.png Graphic file (type png)
+<use Additional/ggGrowthCurves_Su18_volume.png>
+Package pdftex.def Info: Additional/ggGrowthCurves_Su18_volume.png  used on input line 844.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+
+
+[55]
+<Additional/ggGrowthCurves_Su18_area.png, id=494, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Su18_area.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Su18_area.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su18_area.png  used on input line 848.
+Package pdftex.def Info: Additional/ggGrowthCurves_Su18_area.png  used on input line 854.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<Additional/ggGrowthCurves_Su18_height.png, id=480, 578.16pt x 289.08pt>
+<Additional/ggGrowthCurves_Su18_height.png, id=496, 578.16pt x 289.08pt>
 File: Additional/ggGrowthCurves_Su18_height.png Graphic file (type png)
 <use Additional/ggGrowthCurves_Su18_height.png>
-Package pdftex.def Info: Additional/ggGrowthCurves_Su18_height.png  used on input line 858.
+Package pdftex.def Info: Additional/ggGrowthCurves_Su18_height.png  used on input line 864.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 
 
-[53 <./Additional/ggGrowthCurves_Su18_volume.png> <./Additional/ggGrowthCurves_Su18_area.png>]
+[56 <./Additional/ggGrowthCurves_Su18_volume.png> <./Additional/ggGrowthCurves_Su18_area.png>]
 
-[54 <./Additional/ggGrowthCurves_Su18_height.png>] (./README.aux)
+[57 <./Additional/ggGrowthCurves_Su18_height.png>] (./README.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
@@ -967,18 +970,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11719 strings out of 475289
- 192302 string characters out of 5767260
- 575329 words of memory out of 5000000
- 34327 multiletter control sequences out of 15000+600000
+ 11721 strings out of 475289
+ 191893 string characters out of 5767260
+ 575421 words of memory out of 5000000
+ 34324 multiletter control sequences out of 15000+600000
  620027 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,7n,93p,478b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/wrigh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on README.pdf (54 pages, 88708149 bytes).
+Output written on README.pdf (57 pages, 91062382 bytes).
 PDF statistics:
- 693 PDF objects out of 1000 (max. 8388607)
- 537 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
- 706 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 717 words of extra memory for PDF output out of 10000 (max. 10000000)
 

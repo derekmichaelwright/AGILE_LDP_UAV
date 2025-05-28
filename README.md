@@ -225,7 +225,17 @@ which is follow-up to:
 
 ![](Supplemental_Figure_06.png)
 
-![](Additional/Supplemental_Figure_06_It17.png)
+------------------------------------------------------------------------
+
+## Supplemental Figure 7
+
+![](Supplemental_Figure_07.png)
+
+------------------------------------------------------------------------
+
+## Supplemental Figure 8
+
+![](Supplemental_Figure_08.png)
 
 ------------------------------------------------------------------------
 
@@ -243,11 +253,7 @@ which is follow-up to:
 
 ## Additional Figures 2
 
-![](Additional/Additional_Figure_02_1.png)
-
-![](Additional/Additional_Figure_02_2.png)
-
-![](Additional/Additional_Figure_02_3.png)
+![](Additional/Additional_Figure_02.png)
 
 ------------------------------------------------------------------------
 
@@ -472,7 +478,7 @@ which is follow-up to:
 
 ## Manhattan Plots
 
-> - [Additional/ManH/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ManH/)
+> - [Additional/Manhattan/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/Manhattan/)
 
 ------------------------------------------------------------------------
 
