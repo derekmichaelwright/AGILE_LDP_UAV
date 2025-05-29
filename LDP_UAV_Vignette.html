@@ -1420,7 +1420,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCur
 </div>
 <div id="figure-1---envdata" class="section level1">
 <h1>Figure 1 - EnvData</h1>
-<p><img src="Figure_01.png" /></p>
+<p><img src="Figure_01.jpg" /></p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>xE <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/derekmichaelwright/AGILE_LDP_Phenology/master/data/data_env.csv&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Days After Planting</span><span class="st">`</span><span class="ot">=</span>DaysAfterPlanting) <span class="sc">%&gt;%</span></span>
@@ -1468,12 +1468,12 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCur
 <span id="cb21-45"><a href="#cb21-45" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, <span class="fu">ggarrange</span>(mp2, mp3, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">1</span>, </span>
 <span id="cb21-46"><a href="#cb21-46" tabindex="-1"></a>                               <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>), </span>
 <span id="cb21-47"><a href="#cb21-47" tabindex="-1"></a>                <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.75</span>,<span class="dv">1</span>) )</span>
-<span id="cb21-48"><a href="#cb21-48" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_01.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb21-48"><a href="#cb21-48" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_01.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="figure-2---growth-curve-coefficients" class="section level1">
 <h1>Figure 2 - Growth Curve Coefficients</h1>
-<p><img src="Figure_02.png" /></p>
+<p><img src="Figure_02.jpg" /></p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
 <span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>ggGrowthCoefs <span class="ot">&lt;-</span> <span class="cf">function</span>(xd, xf, myPlot, <span class="at">myYmax =</span> <span class="cn">NULL</span>, </span>
 <span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>                          <span class="at">minDAP =</span> <span class="cn">NULL</span>, <span class="at">maxDAP =</span> <span class="cn">NULL</span>, </span>
@@ -1526,7 +1526,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCur
 <span id="cb22-50"><a href="#cb22-50" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb22-51"><a href="#cb22-51" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggGrowthCoefs</span>(<span class="at">xd =</span> ro17_gc.v, <span class="at">xf =</span> ro17_f, <span class="at">myPlot =</span> <span class="dv">6322</span>, </span>
 <span id="cb22-52"><a href="#cb22-52" tabindex="-1"></a>                     <span class="at">myYmax =</span> <span class="fl">0.175</span>, <span class="at">minDAP =</span> <span class="dv">20</span>, <span class="at">maxDAP =</span> <span class="dv">65</span>)</span>
-<span id="cb22-53"><a href="#cb22-53" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_02.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">3</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+<span id="cb22-53"><a href="#cb22-53" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_02.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">3</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-1---growth-curve-coefficients"
 class="section level2">
@@ -1566,7 +1566,7 @@ class="section level2">
 </div>
 <div id="supplemental-figure-1---drone-data" class="section level1">
 <h1>Supplemental Figure 1 - Drone Data</h1>
-<p><img src="Supplemental_Figure_01.png" /></p>
+<p><img src="Supplemental_Figure_01.jpg" /></p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>ggDroneTrait <span class="ot">&lt;-</span> <span class="cf">function</span>(xx, myTitle, <span class="at">myDAPs =</span> <span class="cn">NULL</span>, myTraits, </span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>                         <span class="at">myTraitNames =</span> myTraits ) {</span>
@@ -1628,7 +1628,7 @@ class="section level2">
 <span id="cb24-59"><a href="#cb24-59" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb24-60"><a href="#cb24-60" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, mp4, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">4</span>, </span>
 <span id="cb24-61"><a href="#cb24-61" tabindex="-1"></a>                <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb24-62"><a href="#cb24-62" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_01.png&quot;</span>, mp, </span>
+<span id="cb24-62"><a href="#cb24-62" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_01.jpg&quot;</span>, mp, </span>
 <span id="cb24-63"><a href="#cb24-63" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">11</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <p><img src="Additional/Supplemental_Figure_01_A.png" /></p>
 <p><img src="Additional/Supplemental_Figure_01_B.png" /></p>
@@ -1643,7 +1643,7 @@ class="section level2">
 <div id="supplemental-figure-2---correlation-plots"
 class="section level1">
 <h1>Supplemental Figure 2 - Correlation Plots</h1>
-<p><img src="Supplemental_Figure_02.png" /></p>
+<p><img src="Supplemental_Figure_02.jpg" /></p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
 <span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>ggDroneCorr <span class="ot">&lt;-</span> <span class="cf">function</span>(xd, xf, myTitle, myTrait, xLab, yLab, <span class="at">myColor =</span> <span class="st">&quot;darkgreen&quot;</span>) {</span>
 <span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>  <span class="co"># Prep data</span></span>
@@ -1730,7 +1730,7 @@ class="section level1">
 <span id="cb26-84"><a href="#cb26-84" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.margin=</span><span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>), <span class="st">&#39;cm&#39;</span>))</span>
 <span id="cb26-85"><a href="#cb26-85" tabindex="-1"></a><span class="co"># Append All</span></span>
 <span id="cb26-86"><a href="#cb26-86" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp_a, mp_b, mp_c, <span class="at">nrow =</span> <span class="dv">3</span>)</span>
-<span id="cb26-87"><a href="#cb26-87" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_02.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb26-87"><a href="#cb26-87" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_02.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-2---volume-x-yield-x-arch"
 class="section level2">
@@ -1782,7 +1782,7 @@ class="section level2">
 </div>
 <div id="figure-3---growth-curves" class="section level1">
 <h1>Figure 3 - Growth Curves</h1>
-<p><img src="Figure_03.png" /></p>
+<p><img src="Figure_03.jpg" /></p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
 <span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>ggGrowthCurve <span class="ot">&lt;-</span> <span class="cf">function</span>(xpm, xF, <span class="at">myTitle =</span> <span class="cn">NULL</span>, </span>
 <span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>                          <span class="at">xlab =</span> <span class="st">&quot;Days After Planting&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Predicted Values&quot;</span>, </span>
@@ -1834,7 +1834,7 @@ class="section level2">
 <span id="cb29-22"><a href="#cb29-22" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb29-23"><a href="#cb29-23" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp4, mp7, mp2, mp5, mp8, mp3, mp6, mp9, </span>
 <span id="cb29-24"><a href="#cb29-24" tabindex="-1"></a>                <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">common.legend =</span> T)</span>
-<span id="cb29-25"><a href="#cb29-25" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_03.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb29-25"><a href="#cb29-25" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_03.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-3---growth-curves" class="section level2">
 <h2>Additional Figures 3 - Growth Curves</h2>
@@ -2007,7 +2007,7 @@ href="Additional/Additional_Figure_03.pdf">Additional/Additional_Figure_03.pdf</
 </div>
 <div id="supplemental-figure-3" class="section level1">
 <h1>Supplemental Figure 3</h1>
-<p><img src="Supplemental_Figure_03.png" /></p>
+<p><img src="Supplemental_Figure_03.jpg" /></p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a>gg_GxE <span class="ot">&lt;-</span> <span class="cf">function</span>(x1, x2, x3, traitName, myTitle, <span class="at">myYlab =</span> <span class="st">&quot;Proportion of Total Variance (%)&quot;</span>) {</span>
 <span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a>  <span class="co"># Prep data</span></span>
@@ -2063,7 +2063,7 @@ href="Additional/Additional_Figure_03.pdf">Additional/Additional_Figure_03.pdf</
 <span id="cb36-53"><a href="#cb36-53" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">align =</span> <span class="st">&quot;v&quot;</span>,</span>
 <span id="cb36-54"><a href="#cb36-54" tabindex="-1"></a>                <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
 <span id="cb36-55"><a href="#cb36-55" tabindex="-1"></a><span class="co">#mp</span></span>
-<span id="cb36-56"><a href="#cb36-56" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_03.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb36-56"><a href="#cb36-56" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_03.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="figure-4---canada-vs-iran-vs-india" class="section level1">
@@ -2081,7 +2081,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_B.
 href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_C.html">Additional/Figure_04_C.html</a></li>
 </ul>
 </blockquote>
-<p><img src="Figure_04.png" /></p>
+<p><img src="Figure_04.jpg" /></p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a>myColors_Origins <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;darkgreen&quot;</span>,<span class="st">&quot;darkorange&quot;</span>, <span class="st">&quot;darkred&quot;</span>, <span class="st">&quot;black&quot;</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>myOrigins <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;India&quot;</span>, <span class="st">&quot;Iran&quot;</span>, <span class="st">&quot;Canada&quot;</span>, <span class="st">&quot;Other&quot;</span>)</span>
@@ -2154,7 +2154,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_C.
 <span id="cb37-70"><a href="#cb37-70" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;C) Volume x DTF&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Days From Sowing To Flower (DTF)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Plot Volume&quot;</span>)</span>
 <span id="cb37-71"><a href="#cb37-71" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb37-72"><a href="#cb37-72" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb37-73"><a href="#cb37-73" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_04.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span>
+<span id="cb37-73"><a href="#cb37-73" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_04.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span>
 <span id="cb37-74"><a href="#cb37-74" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb37-75"><a href="#cb37-75" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Additional/Figure_04_A.png&quot;</span>, mp1, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="fl">2.5</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span>
 <span id="cb37-76"><a href="#cb37-76" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Additional/Figure_04_B.png&quot;</span>, mp2, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="fl">2.5</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span>
@@ -2330,7 +2330,7 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/PCA_tests/"
 </div>
 <div id="supplemental-figure-4---pca" class="section level1">
 <h1>Supplemental Figure 4 - PCA</h1>
-<p><img src="Supplemental_Figure_04.png" /></p>
+<p><img src="Supplemental_Figure_04.jpg" /></p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>perc <span class="ot">&lt;-</span> <span class="fu">round</span>(mypca[[<span class="dv">1</span>]][,<span class="dv">2</span>], <span class="dv">1</span>)</span>
 <span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a><span class="co"># Plot (a) PCA 1v2</span></span>
@@ -2385,12 +2385,12 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/PCA_tests/"
 <span id="cb41-52"><a href="#cb41-52" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;B)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Percent of Variation&quot;</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span>
 <span id="cb41-53"><a href="#cb41-53" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb41-54"><a href="#cb41-54" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.75</span>,<span class="dv">1</span>))</span>
-<span id="cb41-55"><a href="#cb41-55" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_04.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="fl">4.5</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+<span id="cb41-55"><a href="#cb41-55" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_04.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">6</span>, <span class="at">height =</span> <span class="fl">4.5</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="figure-5---pca-summary" class="section level1">
 <h1>Figure 5 - PCA Summary</h1>
-<p><img src="Figure_05.png" /></p>
+<p><img src="Figure_05.jpg" /></p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a>myTraits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;It17_v.k&quot;</span>, <span class="st">&quot;It17_h.k&quot;</span>, <span class="st">&quot;It17_a.k&quot;</span>, </span>
 <span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a>              <span class="st">&quot;It17_h.x.mid&quot;</span>, <span class="st">&quot;It17_a.x.mid&quot;</span>, </span>
@@ -2427,12 +2427,12 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/PCA_tests/"
 <span id="cb42-34"><a href="#cb42-34" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb42-35"><a href="#cb42-35" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb42-36"><a href="#cb42-36" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span>
-<span id="cb42-37"><a href="#cb42-37" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_05.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">height =</span> <span class="dv">4</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+<span id="cb42-37"><a href="#cb42-37" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_05.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">12</span>, <span class="at">height =</span> <span class="dv">4</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="supplemental-figure-5---pca-inputs" class="section level1">
 <h1>Supplemental Figure 5 - PCA Inputs</h1>
-<p><img src="Supplemental_Figure_05.png" /></p>
+<p><img src="Supplemental_Figure_05.jpg" /></p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>myTraits1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;It17_v.k&quot;</span>, <span class="st">&quot;It17_h.k&quot;</span>, <span class="st">&quot;It17_a.k&quot;</span>, <span class="st">&quot;It17_v.x.mid&quot;</span>, <span class="st">&quot;It17_h.x.mid&quot;</span>, <span class="st">&quot;It17_a.x.mid&quot;</span>,</span>
 <span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>               <span class="st">&quot;Su17_v.k&quot;</span>, <span class="st">&quot;Su17_h.k&quot;</span>, <span class="st">&quot;Su17_a.k&quot;</span>, <span class="st">&quot;Su17_v.x.mid&quot;</span>, <span class="st">&quot;Su17_h.x.mid&quot;</span>, <span class="st">&quot;Su17_a.x.mid&quot;</span>,</span>
@@ -2464,7 +2464,7 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/PCA_tests/"
 <span id="cb43-29"><a href="#cb43-29" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb43-30"><a href="#cb43-30" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">colour =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">3</span>))) <span class="sc">+</span></span>
 <span id="cb43-31"><a href="#cb43-31" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span>
-<span id="cb43-32"><a href="#cb43-32" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_05.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">14</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+<span id="cb43-32"><a href="#cb43-32" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_05.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">15</span>, <span class="at">height =</span> <span class="dv">14</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-4---pca-map" class="section level2">
 <h2>Additional Figures 4 - PCA Map</h2>
@@ -2805,7 +2805,7 @@ class="section level2">
 </div>
 <div id="figure-06---envchange" class="section level1">
 <h1>Figure 06 - EnvChange</h1>
-<p><img src="Figure_06.png" /></p>
+<p><img src="Figure_06.jpg" /></p>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(it17_gc.a[[<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">select</span>(Plot, Name, Expt, <span class="at">Area=</span>k),</span>
 <span id="cb51-3"><a href="#cb51-3" tabindex="-1"></a>                it17_gc.h[[<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">select</span>(Plot, <span class="at">Height=</span>k), <span class="at">by =</span> <span class="st">&quot;Plot&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -2881,7 +2881,7 @@ class="section level2">
 <span id="cb51-73"><a href="#cb51-73" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;C)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;% of Volume Growth at Flowering&quot;</span>)</span>
 <span id="cb51-74"><a href="#cb51-74" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb51-75"><a href="#cb51-75" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, <span class="fu">ggarrange</span>(mp2, mp3, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">1</span>), <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">align =</span> <span class="st">&quot;h&quot;</span>)</span>
-<span id="cb51-76"><a href="#cb51-76" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_06.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb51-76"><a href="#cb51-76" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_06.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="prepare-data-for-gwas" class="section level1">
@@ -3350,7 +3350,7 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/M
 </div>
 <div id="figure-07---gwas-summary" class="section level1">
 <h1>Figure 07 - GWAS Summary</h1>
-<p><img src="Figure_07.png" /></p>
+<p><img src="Figure_07.jpg" /></p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a>xx <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Supplemental_Table_01.csv&quot;</span>)</span>
 <span id="cb65-3"><a href="#cb65-3" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
@@ -3424,12 +3424,12 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/M
 <span id="cb65-71"><a href="#cb65-71" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb65-72"><a href="#cb65-72" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">3</span>,</span>
 <span id="cb65-73"><a href="#cb65-73" tabindex="-1"></a>                <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb65-74"><a href="#cb65-74" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_07.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb65-74"><a href="#cb65-74" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_07.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="supplemental-figure-6" class="section level1">
 <h1>Supplemental Figure 6</h1>
-<p><img src="Supplemental_Figure_06.png" /></p>
+<p><img src="Supplemental_Figure_06.jpg" /></p>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a><span class="co"># Plot</span></span>
 <span id="cb66-2"><a href="#cb66-2" tabindex="-1"></a>mp1 <span class="ot">&lt;-</span> <span class="fu">gg_GWAS_Hits</span>(xx, myG, <span class="at">myTitle =</span> <span class="st">&quot;It17&quot;</span>, <span class="at">myYlab =</span> <span class="st">&quot;&quot;</span>, </span>
 <span id="cb66-3"><a href="#cb66-3" tabindex="-1"></a>                    <span class="at">myTs =</span> myTraits[<span class="fu">grepl</span>(<span class="st">&quot;It17&quot;</span>, myTraits)], </span>
@@ -3443,12 +3443,12 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/M
 <span id="cb66-11"><a href="#cb66-11" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb66-12"><a href="#cb66-12" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">3</span>,</span>
 <span id="cb66-13"><a href="#cb66-13" tabindex="-1"></a>                <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb66-14"><a href="#cb66-14" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_06.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb66-14"><a href="#cb66-14" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_06.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="supplemental-figure-7" class="section level1">
 <h1>Supplemental Figure 7</h1>
-<p><img src="Supplemental_Figure_07.png" /></p>
+<p><img src="Supplemental_Figure_07.jpg" /></p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="co"># Plot</span></span>
 <span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a>mp1 <span class="ot">&lt;-</span> <span class="fu">gg_GWAS_Hits</span>(xx, myG, <span class="at">myTitle =</span> <span class="st">&quot;Height&quot;</span>, <span class="at">myYlab =</span> <span class="st">&quot;&quot;</span>, </span>
 <span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a>                    <span class="at">myTs =</span> myTraits[<span class="fu">grepl</span>(<span class="st">&quot;Height|gc.h|Plant.Length&quot;</span>, myTraits)], </span>
@@ -3462,12 +3462,12 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/M
 <span id="cb67-11"><a href="#cb67-11" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb67-12"><a href="#cb67-12" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">3</span>,</span>
 <span id="cb67-13"><a href="#cb67-13" tabindex="-1"></a>                <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb67-14"><a href="#cb67-14" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_07.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb67-14"><a href="#cb67-14" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_07.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 </div>
 <div id="figure-08---markers" class="section level1">
 <h1>Figure 08 - Markers</h1>
-<p><img src="Figure_08.png" /></p>
+<p><img src="Figure_08.jpg" /></p>
 <div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a><span class="co"># Prep data</span></span>
 <span id="cb68-2"><a href="#cb68-2" tabindex="-1"></a>myEs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Su17&quot;</span>, <span class="st">&quot;It17&quot;</span>)</span>
 <span id="cb68-3"><a href="#cb68-3" tabindex="-1"></a>myPCA <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;myPCA.csv&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -3550,7 +3550,7 @@ href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/M
 <span id="cb68-80"><a href="#cb68-80" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;D)&quot;</span>,myMarkers[<span class="dv">7</span>]), <span class="at">y =</span> <span class="st">&quot;Volume x.mid&quot;</span>, <span class="at">x =</span> <span class="cn">NULL</span>)</span>
 <span id="cb68-81"><a href="#cb68-81" tabindex="-1"></a><span class="co"># Append</span></span>
 <span id="cb68-82"><a href="#cb68-82" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp1, mp2, mp3, mp4, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">common.legend =</span> T, <span class="at">legend =</span> <span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb68-83"><a href="#cb68-83" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_08.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb68-83"><a href="#cb68-83" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Figure_08.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-11---ah-by-ftb" class="section level2">
 <h2>Additional Figures 11 - AH by FTb</h2>
@@ -3611,7 +3611,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental
 href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_It17.html">Additional/Supplemental_Figure_08_It17.html</a></li>
 </ul>
 </blockquote>
-<p><img src="Supplemental_Figure_08.png" /></p>
+<p><img src="Supplemental_Figure_08.jpg" /></p>
 <div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" tabindex="-1"></a><span class="co"># Create plotting function</span></span>
 <span id="cb70-2"><a href="#cb70-2" tabindex="-1"></a>gg_HAMarker <span class="ot">&lt;-</span> <span class="cf">function</span>(xh, xa, xf, xm, <span class="at">myTitle =</span> <span class="st">&quot;&quot;</span>, </span>
 <span id="cb70-3"><a href="#cb70-3" tabindex="-1"></a>                        <span class="at">dtf_range =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">62</span>), <span class="at">yield_limit =</span> <span class="dv">300</span>,</span>
@@ -3708,7 +3708,7 @@ href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental
 <span id="cb70-94"><a href="#cb70-94" tabindex="-1"></a>                   <span class="at">plotlyfilename =</span> <span class="st">&quot;Additional/Supplemental_Figure_08_It17.html&quot;</span>)</span>
 <span id="cb70-95"><a href="#cb70-95" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb70-96"><a href="#cb70-96" tabindex="-1"></a>mp <span class="ot">&lt;-</span> <span class="fu">ggarrange</span>(mp_a, mp_b, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">common.legend =</span> T)</span>
-<span id="cb70-97"><a href="#cb70-97" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_08.png&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<span id="cb70-97"><a href="#cb70-97" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Supplemental_Figure_08.jpg&quot;</span>, mp, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">bg =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
 <hr />
 <div id="additional-figures-12" class="section level2">
 <h2>Additional Figures 12</h2>

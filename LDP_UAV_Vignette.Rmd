@@ -974,7 +974,7 @@ x4 <- select(su18_d, -Value_f) %>% spread(Trait, Value) %>% filter(Sensor != "NA
 
 # Figure 1 - EnvData
 
-![](Figure_01.png)
+![](Figure_01.jpg)
 
 ```{r}
 # Prep data
@@ -1024,14 +1024,14 @@ mp3 <- ggplot(xE %>% filter(Trait == "Mean Temperature"),
 mp <- ggarrange(mp1, ggarrange(mp2, mp3, ncol = 2, nrow = 1, 
                                common.legend = T, legend = "bottom"), 
                 ncol = 1, nrow = 2, heights = c(0.75,1) )
-ggsave("Figure_01.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+ggsave("Figure_01.jpg", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ```
 
 ---
 
 # Figure 2 - Growth Curve Coefficients
 
-![](Figure_02.png)
+![](Figure_02.jpg)
 
 ```{r}
 # Create plotting function
@@ -1086,7 +1086,7 @@ ggGrowthCoefs <- function(xd, xf, myPlot, myYmax = NULL,
 #
 mp <- ggGrowthCoefs(xd = ro17_gc.v, xf = ro17_f, myPlot = 6322, 
                      myYmax = 0.175, minDAP = 20, maxDAP = 65)
-ggsave("Figure_02.png", mp, width = 6, height = 3, dpi = 600)
+ggsave("Figure_02.jpg", mp, width = 6, height = 3, dpi = 600)
 ```
 
 ---
@@ -1133,7 +1133,7 @@ ggsave("Additional/Additional_Figure_01_3.png", mp, width = 8, height = 6)
 
 # Supplemental Figure 1 - Drone Data
 
-![](Supplemental_Figure_01.png)
+![](Supplemental_Figure_01.jpg)
 
 ```{r}
 # Create plotting function
@@ -1197,7 +1197,7 @@ mp4 <- ggDroneTrait(xx = su18_d, myTitle = "D) Sutherland, Canada 2018 (Su18)",
 # Append
 mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 1, nrow = 4, 
                 common.legend = T, legend = "bottom")
-ggsave("Supplemental_Figure_01.png", mp, 
+ggsave("Supplemental_Figure_01.jpg", mp, 
        width = 8, height = 11, dpi = 600, bg = "white")
 ```
 
@@ -1220,7 +1220,7 @@ ggsave("Additional/Supplemental_Figure_01_D.png", mp4, width = 12, height = 3.5)
 
 # Supplemental Figure 2 - Correlation Plots
 
-![](Supplemental_Figure_02.png)
+![](Supplemental_Figure_02.jpg)
 
 ```{r}
 # Create plotting function
@@ -1309,7 +1309,7 @@ mp_c <- ggarrange(mp1, mp2, mp3, mp4, ncol = 4, nrow = 1)  %>%
   theme(plot.margin=unit(c(0.1,0,0,0), 'cm'))
 # Append All
 mp <- ggarrange(mp_a, mp_b, mp_c, nrow = 3)
-ggsave("Supplemental_Figure_02.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_02.jpg", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
@@ -1366,7 +1366,7 @@ ggsave("Additional/Additional_Figure_02.png", mp, width = 10, height = 6, dpi = 
 
 # Figure 3 - Growth Curves
 
-![](Figure_03.png)
+![](Figure_03.jpg)
 
 ```{r}
 # Create plotting function
@@ -1423,7 +1423,7 @@ mp9 <- ggGrowthCurve(xpm = ro17_gc.a[[4]], xF = ro17_f, xlab = "",
 # Append
 mp <- ggarrange(mp1, mp4, mp7, mp2, mp5, mp8, mp3, mp6, mp9, 
                 ncol = 3, nrow = 3, common.legend = T)
-ggsave("Figure_03.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+ggsave("Figure_03.jpg", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ```
 
 ---
@@ -1636,7 +1636,7 @@ dev.off() #dev.set(dev.next())
 
 # Supplemental Figure 3 
 
-![](Supplemental_Figure_03.png)
+![](Supplemental_Figure_03.jpg)
 
 ```{r}
 #
@@ -1694,7 +1694,7 @@ mp3 <- gg_GxE(it17_gc.v, ro17_gc.v, su17_gc.v, traitName = "Volume", myYlab = NU
 mp <- ggarrange(mp1, mp2, mp3, nrow = 3, align = "v",
                 common.legend = T, legend = "bottom")
 #mp
-ggsave("Supplemental_Figure_03.png", mp, width = 6, height = 8, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_03.jpg", mp, width = 6, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
@@ -1705,7 +1705,7 @@ ggsave("Supplemental_Figure_03.png", mp, width = 6, height = 8, dpi = 600, bg = 
 > - `r shiny::icon("chart-line")` [Additional/Figure_04_B.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_B.html)
 > - `r shiny::icon("chart-line")` [Additional/Figure_04_C.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_C.html)
 
-![](Figure_04.png)
+![](Figure_04.jpg)
 
 ```{r}
 # Prep data
@@ -1780,7 +1780,7 @@ mp3 <- ggplot(xx, aes(x = DTF, y = Volume, key1 = Origin, color = Group, alpha =
   labs(title = "C) Volume x DTF", x = "Days From Sowing To Flower (DTF)", y = "Plot Volume")
 # Append
 mp <- ggarrange(mp1, mp2, mp3, nrow = 3, ncol = 1, common.legend = T, legend = "bottom")
-ggsave("Figure_04.png", mp, width = 6, height = 7, dpi = 600, bg = "white")
+ggsave("Figure_04.jpg", mp, width = 6, height = 7, dpi = 600, bg = "white")
 #
 ggsave("Additional/Figure_04_A.png", mp1, width = 8, height = 2.5, dpi = 600)
 ggsave("Additional/Figure_04_B.png", mp2, width = 8, height = 2.5, dpi = 600)
@@ -1962,7 +1962,7 @@ ggsave("Additional/PCA_test/Cluster10.png", ggHC_test(10), width = 10, height = 
 
 # Supplemental Figure 4 - PCA
 
-![](Supplemental_Figure_04.png)
+![](Supplemental_Figure_04.jpg)
 
 ```{r}
 # Prep data
@@ -2019,14 +2019,14 @@ mp2 <- ggplot(xx, aes(x = x, y = y)) +
   labs(title = "B)", y = "Percent of Variation", x = NULL)
 # Append
 mp <- ggarrange(mp1, mp2, ncol = 1, nrow = 2, heights = c(0.75,1))
-ggsave("Supplemental_Figure_04.png", mp, width = 6, height = 4.5, dpi = 600)
+ggsave("Supplemental_Figure_04.jpg", mp, width = 6, height = 4.5, dpi = 600)
 ```
 
 ---
 
 # Figure 5 - PCA Summary 
 
-![](Figure_05.png)
+![](Figure_05.jpg)
 
 ```{r}
 # Prep data
@@ -2065,14 +2065,14 @@ mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
         axis.ticks.x = element_blank()) +
   guides(color = guide_legend(nrow = 1)) +
   labs(x = NULL, y = NULL)
-ggsave("Figure_05.png", mp, width = 12, height = 4, dpi = 600)
+ggsave("Figure_05.jpg", mp, width = 12, height = 4, dpi = 600)
 ```
 
 ---
 
 # Supplemental Figure 5 - PCA Inputs 
 
-![](Supplemental_Figure_05.png)
+![](Supplemental_Figure_05.jpg)
 
 ```{r}
 # Prep data
@@ -2106,7 +2106,7 @@ mp <- ggplot(xx, aes(x = Cluster, y = Value, color = Cluster)) +
         axis.ticks.x = element_blank()) +
   guides(colour = guide_legend(nrow = 1, override.aes = list(size = 3))) +
   labs(x = NULL, y = NULL)
-ggsave("Supplemental_Figure_05.png", mp, width = 15, height = 14, dpi = 600)
+ggsave("Supplemental_Figure_05.jpg", mp, width = 15, height = 14, dpi = 600)
 ```
 
 ---
@@ -2476,7 +2476,7 @@ ggsave("Additional/Additional_Figure_10.png", mp,
 
 # Figure 06 - EnvChange
 
-![](Figure_06.png)
+![](Figure_06.jpg)
 
 ```{r}
 # Prep data
@@ -2554,7 +2554,7 @@ mp3 <- ggplot(yy, aes(x = Expt, y = Value, color = Cluster)) +
   labs(title = "C)", y = "% of Volume Growth at Flowering")
 # Append
 mp <- ggarrange(mp1, ggarrange(mp2, mp3, ncol = 2, nrow = 1), ncol = 1, nrow = 2, align = "h")
-ggsave("Figure_06.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+ggsave("Figure_06.jpg", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ```
 
 ---
@@ -3368,7 +3368,7 @@ for(i in myTraits) {
 
 # Figure 07 - GWAS Summary
 
-![](Figure_07.png)
+![](Figure_07.jpg)
 
 ```{r}
 # Prep data
@@ -3444,14 +3444,14 @@ mp3 <- gg_GWAS_Hits(xx, myG, myTitle = "Growth Curves", myYlab = "",
 # Append
 mp <- ggarrange(mp1, mp2, mp3, ncol = 1, nrow = 3,
                 common.legend = T, legend = "bottom")
-ggsave("Figure_07.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Figure_07.jpg", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
 
 # Supplemental Figure 6
 
-![](Supplemental_Figure_06.png)
+![](Supplemental_Figure_06.jpg)
 
 ```{r}
 # Plot
@@ -3467,14 +3467,14 @@ mp3 <- gg_GWAS_Hits(xx, myG, myTitle = "Su17+Su18", myYlab = "",
 # Append
 mp <- ggarrange(mp1, mp2, mp3, ncol = 1, nrow = 3,
                 common.legend = T, legend = "bottom")
-ggsave("Supplemental_Figure_06.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_06.jpg", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
 
 # Supplemental Figure 7
 
-![](Supplemental_Figure_07.png)
+![](Supplemental_Figure_07.jpg)
 
 
 ```{r}
@@ -3491,14 +3491,14 @@ mp3 <- gg_GWAS_Hits(xx, myG, myTitle = "Volume", myYlab = "",
 # Append
 mp <- ggarrange(mp1, mp2, mp3, ncol = 1, nrow = 3,
                 common.legend = T, legend = "bottom")
-ggsave("Supplemental_Figure_07.png", mp, width = 10, height = 8, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_07.jpg", mp, width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
 ---
 
 # Figure 08 - Markers
 
-![](Figure_08.png)
+![](Figure_08.jpg)
 
 ```{r}
 # Prep data
@@ -3583,7 +3583,7 @@ mp4 <- ggplot(x1 %>% filter(!is.na(get(myMarkers[7]))),
   labs(title = paste("D)",myMarkers[7]), y = "Volume x.mid", x = NULL)
 # Append
 mp <- ggarrange(mp1, mp2, mp3, mp4, ncol = 2, nrow = 2, common.legend = T, legend = "bottom")
-ggsave("Figure_08.png", mp, width = 8, height = 6, dpi = 600, bg = "white")
+ggsave("Figure_08.jpg", mp, width = 8, height = 6, dpi = 600, bg = "white")
 ```
 
 ---
@@ -3640,7 +3640,7 @@ ggsave("Additional/Additional_Figure_11.png", mp, width = 6, height = 4, dpi = 6
 
 > - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_It17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_It17.html)
 
-![](Supplemental_Figure_08.png)
+![](Supplemental_Figure_08.jpg)
 
 ```{r}
 # Create plotting function
@@ -3739,7 +3739,7 @@ mp_b <- gg_HAMarker(xh = it17_gc.h, xa = it17_gc.a, xf = it17_f,
                    plotlyfilename = "Additional/Supplemental_Figure_08_It17.html")
 #
 mp <- ggarrange(mp_a, mp_b, nrow = 2, common.legend = T)
-ggsave("Supplemental_Figure_08.png", mp, width = 10, height = 7, dpi = 600, bg = "white")
+ggsave("Supplemental_Figure_08.jpg", mp, width = 10, height = 7, dpi = 600, bg = "white")
 ```
 
 ---
