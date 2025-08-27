@@ -74,16 +74,16 @@ Contents
 # Raw Data & Growth Curve Modeling
 
 > - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf"
+>   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_It17.pdf"
 >   target="_blank">Additional/ggDroneCheck_It17.pdf</a>
 > - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf"
+>   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Ro17.pdf"
 >   target="_blank">Additional/ggDroneCheck_Ro17.pdf</a>
 > - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf"
+>   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su17.pdf"
 >   target="_blank">Additional/ggDroneCheck_Su17.pdf</a>
 > - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf"
+>   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su18.pdf"
 >   target="_blank">Additional/ggDroneCheck_Su18.pdf</a>
 
 ------------------------------------------------------------------------
@@ -222,7 +222,7 @@ target="_blank">Additional/ggpGrowthCurves_Su17_height.html</a>
 
 ## Supplemental Table 1
 
-> - [Supplemental_Table_01.csv](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv)
+> - [Supplemental_Table_01.csv](Supplemental_Table_01.csv)
 
 ------------------------------------------------------------------------
 

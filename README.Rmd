@@ -4,15 +4,15 @@ subtitle: "*The Plant Phenome Journal*. (**2025**) 8(1): e70040."
 author: "Derek Michael Wright <derek.wright@usask.ca>"
 date: "01-08-2025"
 output:
-  pdf_document:
-    toc: yes
-  github_document: default
   rmdformats::readthedown:
     self_contained: no
     lightbox: true
     gallery: true
     highlight: tango
     css: custom.css
+  pdf_document:
+    toc: yes
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -60,10 +60,10 @@ Contents
 
 # Raw Data & Growth Curve Modeling
 
-> - [Additional/ggDroneCheck_It17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_It17.pdf){target="_blank"} 
-> - [Additional/ggDroneCheck_Ro17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Ro17.pdf){target="_blank"} 
-> - [Additional/ggDroneCheck_Su17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su17.pdf){target="_blank"} 
-> - [Additional/ggDroneCheck_Su18.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/Additional/ggDroneCheck_Su18.pdf){target="_blank"} 
+> - [Additional/ggDroneCheck_It17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_It17.pdf){target="_blank"} 
+> - [Additional/ggDroneCheck_Ro17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Ro17.pdf){target="_blank"} 
+> - [Additional/ggDroneCheck_Su17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su17.pdf){target="_blank"} 
+> - [Additional/ggDroneCheck_Su18.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su18.pdf){target="_blank"} 
 
 ---
 
@@ -179,7 +179,7 @@ Contents
 
 ## Supplemental Table 1
 
-> - [Supplemental_Table_01.csv](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/master/Supplemental_Table_01.csv)
+> - [Supplemental_Table_01.csv](Supplemental_Table_01.csv)
 
 ```{r echo = F, eval = F}
 DT::datatable(read.csv("Supplemental_Table_01.csv"))
