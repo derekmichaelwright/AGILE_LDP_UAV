@@ -1,5 +1,5 @@
 Dissecting lentil crop growth in contrasting environments using digital
-imaging and and genome-wide association studies
+imaging and genome-wide association studies
 ================
 Derek Michael Wright <derek.wright@usask.ca>
 01-08-2025
@@ -9,7 +9,7 @@ Derek Michael Wright <derek.wright@usask.ca>
 > <a href="https://doi.org/10.1002/ppj2.70040" target="_blank">Derek
 > Wright, Sandesh Neupane, Karsten Neilson, Tania Gioia &amp; Kirstin E
 > Bett. <strong>Dissecting lentil crop growth in contrasting environments
-> using digital imaging and and genome-wide association studies</strong>.
+> using digital imaging and genome-wide association studies</strong>.
 > <em>The Plant Phenome Journal</em>. (<strong>2025</strong>) 8(1):
 > e70040. doi.org/10.1002/ppj2.70040</a>
 
