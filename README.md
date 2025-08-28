@@ -43,9 +43,7 @@ Contents
 
 > - <a href="https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology"
 >   target="_blank">https://github.com/derekmichaelwright/AGILE_LDP_GWAS_Phenology</a>
-> - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/raw/master/README.pdf"
->   target="_blank">View as pdf</a>
+> - <a href="README.pdf" target="_blank">View as pdf</a>
 > - <a href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/README.html"
 >   target="_blank">View as HTML</a>
 > - <a
@@ -73,17 +71,13 @@ Contents
 
 # Raw Data & Growth Curve Modeling
 
-> - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_It17.pdf"
+> - <a href="Additional/ggDroneCheck_It17.pdf"
 >   target="_blank">Additional/ggDroneCheck_It17.pdf</a>
-> - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Ro17.pdf"
+> - <a href="Additional/ggDroneCheck_Ro17.pdf"
 >   target="_blank">Additional/ggDroneCheck_Ro17.pdf</a>
-> - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su17.pdf"
+> - <a href="Additional/ggDroneCheck_Su17.pdf"
 >   target="_blank">Additional/ggDroneCheck_Su17.pdf</a>
-> - <a
->   href="https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su18.pdf"
+> - <a href="Additional/ggDroneCheck_Su18.pdf"
 >   target="_blank">Additional/ggDroneCheck_Su18.pdf</a>
 
 ------------------------------------------------------------------------
@@ -155,6 +149,24 @@ target="_blank">Additional/ggpGrowthCurves_Su17_height.html</a>
 ------------------------------------------------------------------------
 
 ## Sutherland, Canada 2018
+
+<a
+href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_volume.html"
+target="_blank">Additional/ggpGrowthCurves_Su18_volume.html</a>
+
+![](Additional/ggGrowthCurves_Su18_volume.png)
+
+<a
+href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_area.html"
+target="_blank">Additional/ggpGrowthCurves_Su18_area.html</a>
+
+![](Additional/ggGrowthCurves_Su18_area.png)
+
+<a
+href="https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_height.html"
+target="_blank">Additional/ggpGrowthCurves_Su18_height.html</a>
+
+![](Additional/ggGrowthCurves_Su18_height.png)
 
 ------------------------------------------------------------------------
 

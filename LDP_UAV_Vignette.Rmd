@@ -510,7 +510,7 @@ ggDroneCheck <- function(xd = it17_d, xf = it17_f,
 
 ## Italy 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_It17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_It17.pdf){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_It17.pdf](Additional/ggDroneCheck_It17.pdf){target="_blank"}
 
 ```{r}
 ggDroneCheck(xd = it17_d, xf = it17_f, myTitle = "Italy 2017",
@@ -522,7 +522,7 @@ ggDroneCheck(xd = it17_d, xf = it17_f, myTitle = "Italy 2017",
 
 ## Rosthern 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Ro17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Ro17.pdf){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Ro17.pdf](Additional/ggDroneCheck_Ro17.pdf){target="_blank"}
 
 ```{r}
 ggDroneCheck(xd = ro17_d, xf = ro17_f, myTitle = "Rosthern 2017",
@@ -534,7 +534,7 @@ ggDroneCheck(xd = ro17_d, xf = ro17_f, myTitle = "Rosthern 2017",
 
 ## Sutherland 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Su17.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su17.pdf){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Su17.pdf](Additional/ggDroneCheck_Su17.pdf){target="_blank"}
 
 ```{r}
 ggDroneCheck(xd = su17_d, xf = su17_f, myTitle = "Sutherland 2017",
@@ -546,7 +546,7 @@ ggDroneCheck(xd = su17_d, xf = su17_f, myTitle = "Sutherland 2017",
 
 ## Sutherland 2018
 
-> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Su18.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/ggDroneCheck_Su18.pdf){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/ggDroneCheck_Su18.pdf](Additional/ggDroneCheck_Su18.pdf){target="_blank"}
 
 ```{r}
 ggDroneCheck(xd = su18_d, xf = su18_f, myTitle = "Sutherland 2018",
@@ -786,18 +786,18 @@ ggGrowthCurve <- function(xpm, myTitle = NULL,
 
 ## Italy 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_volume.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_It17_volume.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_volume.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_volume.pdf](Additional/PDF_It17_volume.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_volume.html](Additional/ggpGrowthCurves_It17_volume.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_It17_volume.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_area.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_It17_area.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_area.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_area.pdf](Additional/PDF_It17_area.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_area.html](Additional/ggpGrowthCurves_It17_area.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_It17_area.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_height.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_It17_height.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_It17_height.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_It17_height.pdf](Additional/PDF_It17_height.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_It17_height.html](Additional/ggpGrowthCurves_It17_height.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_It17_height.png)
 
@@ -830,18 +830,18 @@ htmlwidgets::saveWidget(mp, file="Additional/ggpGrowthCurves_It17_height.html")
 
 ## Rosthern 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_volume.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Ro17_volume.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_volume.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_volume.pdf](Additional/PDF_Ro17_volume.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_volume.html](Additional/ggpGrowthCurves_Ro17_volume.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Ro17_volume.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_area.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Ro17_area.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_area.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_area.pdf](Additional/PDF_Ro17_area.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_area.html](Additional/ggpGrowthCurves_Ro17_area.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Ro17_area.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_height.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Ro17_height.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Ro17_height.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Ro17_height.pdf](Additional/PDF_Ro17_height.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Ro17_height.html](Additional/ggpGrowthCurves_Ro17_height.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Ro17_height.png)
 
@@ -875,18 +875,18 @@ htmlwidgets::saveWidget(mp, file="Additional/ggpGrowthCurves_Ro17_height.html")
 
 ## Sutherland 2017
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_volume.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su17_volume.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_volume.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_volume.pdf](Additional/PDF_Su17_volume.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_volume.html](Additional/ggpGrowthCurves_Su17_volume.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su17_volume.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_area.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su17_area.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_area.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_area.pdf](Additional/PDF_Su17_area.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_area.html](Additional/ggpGrowthCurves_Su17_area.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su17_area.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_height.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su17_height.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su17_height.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su17_height.pdf](Additional/PDF_Su17_height.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su17_height.html](Additional/ggpGrowthCurves_Su17_height.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su17_height.png)
 
@@ -920,18 +920,18 @@ htmlwidgets::saveWidget(mp, file="Additional/ggpGrowthCurves_Su17_height.html")
 
 ## Sutherland 2018
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_volume.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su18_volume.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_volume.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_volume.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_volume.pdf](Additional/PDF_Su18_volume.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_volume.html](Additional/ggpGrowthCurves_Su18_volume.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su18_volume.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_area.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su18_area.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_area.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_area.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_area.pdf](Additional/PDF_Su18_area.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_area.html](Additional/ggpGrowthCurves_Su18_area.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su18_area.png)
 
-> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_height.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/PDF_Su18_height.pdf){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_height.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/ggpGrowthCurves_Su18_height.html){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/PDF_Su18_height.pdf](Additional/PDF_Su18_height.pdf){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/ggpGrowthCurves_Su18_height.html](Additional/ggpGrowthCurves_Su18_height.html){target="_blank"}
 
 ![](Additional/ggGrowthCurves_Su18_height.png)
 
@@ -1589,7 +1589,7 @@ ggsave("Additional/Additional_Figure_03_5.png", mpD,
        width = 10, height = 8, dpi = 600, bg = "white")
 ```
 
-> - `r shiny::icon("file-pdf")` [Additional/Additional_Figure_03.pdf](https://github.com/derekmichaelwright/AGILE_LDP_UAV/blob/main/Additional/Additional_Figure_03.pdf){target="_blank"}
+> - `r shiny::icon("file-pdf")` [Additional/Additional_Figure_03.pdf](Additional/Additional_Figure_03.pdf){target="_blank"}
 
 ```{r}
 # Note: this code chunk must be ran after the PCA analysis
@@ -1710,9 +1710,9 @@ ggsave("Supplemental_Figure_03.jpg", mp, width = 6, height = 8, dpi = 600, bg = 
 
 # Figure 4 - Canada vs Iran vs India
 
-> - `r shiny::icon("chart-line")` [Additional/Figure_04_A.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_A.html){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/Figure_04_B.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_B.html){target="_blank"}
-> - `r shiny::icon("chart-line")` [Additional/Figure_04_C.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Figure_04_C.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Figure_04_A.html](Additional/Figure_04_A.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Figure_04_B.html](Additional/Figure_04_B.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Figure_04_C.html](Additional/Figure_04_C.html){target="_blank"}
 
 ![](Figure_04.jpg)
 
@@ -2802,7 +2802,8 @@ x1 <- xx %>%
          PlantLength_1, PlantLength_2,
          LowestPodH_1, LowestPodH_2,
          CanopyWidth_1, CanopyWidth_2,
-         GrowthHabit_1, GrowthHabit_2, #Growth.Habit..1st..nominal., Growth.Habit..2nd..nominal.,
+         GrowthHabit_1, GrowthHabit_2, 
+         #Growth.Habit..1st..nominal., Growth.Habit..2nd..nominal.,
          NodeOfFlower_1, NodeOfFlower_2, 
          FlowerBranch_1, FlowerBranch_2,
          NodesAtFlower_1, NodesAtFlower_2,
@@ -2980,9 +2981,9 @@ myG <- read.table("Data_GWAS/myG_LDP_GRN_RD3_MAF5_MISS25.txt", header = T) %>%
 
 ## Significant Markers
 
-> - `r shiny::icon("globe")` [Additional/Markers/Chr](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr/){target="_blank"}
-> - `r shiny::icon("globe")` [Additional/Markers/Effect](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Effecp/){target="_blank"}
-> - `r shiny::icon("globe")` [Additional/Markers/Pvalue](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Pvalue/){target="_blank"}
+> - `r shiny::icon("globe")` [Additional/Markers/Chr/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Chr/){target="_blank"}
+> - `r shiny::icon("globe")` [Additional/Markers/Effect/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Effect/){target="_blank"}
+> - `r shiny::icon("globe")` [Additional/Markers/Pvalue/](https://github.com/derekmichaelwright/AGILE_LDP_UAV/tree/main/Additional/Markers/Pvalue/){target="_blank"}
 
 ![](Additional/Markers/Chr/Lcu.1GRN.Chr1p2884425.png)
 
@@ -3645,9 +3646,9 @@ ggsave("Additional/Additional_Figure_11.png", mp, width = 6, height = 4, dpi = 6
 
 # Supplemental Figure 8 - DTF Markers
 
-> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_Su17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_Su17.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_Su17.html](Additional/Supplemental_Figure_08_Su17.html){target="_blank"}
 
-> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_It17.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Supplemental_Figure_08_It17.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Supplemental_Figure_08_It17.html](Additional/Supplemental_Figure_08_It17.html){target="_blank"}
 
 ![](Supplemental_Figure_08.jpg)
 
@@ -3755,31 +3756,31 @@ ggsave("Supplemental_Figure_08.jpg", mp, width = 10, height = 7, dpi = 600, bg =
 
 ## Additional Figures 12
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_1.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_1.html](Additional/Additional_Figure_12_1.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_1.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_2.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_2.html](Additional/Additional_Figure_12_2.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_2.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_3.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_3.html](Additional/Additional_Figure_12_3.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_3.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_4.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_4.html](Additional/Additional_Figure_12_4.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_4.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_5.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_5.html](Additional/Additional_Figure_12_5.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_5.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_6.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_6.html](Additional/Additional_Figure_12_6.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_6.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_12_7.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_12_7.html](Additional/Additional_Figure_12_7.html){target="_blank"}
 
 ![](Additional/Additional_Figure_12_7.png)
 
@@ -3834,39 +3835,39 @@ saveWidget(ggplotly(mp7), file="Additional/Additional_Figure_12_7.html")
 
 ## Additional Figures 13
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_1.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_1.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_1.html](Additional/Additional_Figure_13_1.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_1.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_2.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_2.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_2.html](Additional/Additional_Figure_13_2.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_2.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_3.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_3.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_3.html](Additional/Additional_Figure_13_3.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_3.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_4.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_4.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_4.html](Additional/Additional_Figure_13_4.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_4.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_5.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_5.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_5.html](Additional/Additional_Figure_13_5.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_5.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_6.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_6.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_6.html](Additional/Additional_Figure_13_6.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_6.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_7.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_7.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_7.html](Additional/Additional_Figure_13_7.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_7.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_8.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_8.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_8.html](Additional/Additional_Figure_13_8.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_8.png)
 
-> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_9.html](https://derekmichaelwright.github.io/AGILE_LDP_UAV/Additional/Additional_Figure_13_9.html){target="_blank"}
+> - `r shiny::icon("chart-line")` [Additional/Additional_Figure_13_9.html](Additional/Additional_Figure_13_9.html){target="_blank"}
 
 ![](Additional/Additional_Figure_13_9.png)
 
